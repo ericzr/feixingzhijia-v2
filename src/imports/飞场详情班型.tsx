@@ -1,0 +1,2518 @@
+import svgPaths from "./svg-nsotalkwkd";
+import imgContainer from "figma:asset/bc04c8b86436de60e37006373742bcf2441b3e32.png";
+import imgFaceBlowingAKiss1 from "figma:asset/c4d66ad14a541aa69f81b292d69b3f7460ae1495.png";
+
+function Heading2() {
+  return (
+    <div className="h-[22.488px] relative shrink-0 w-full" data-name="Heading 3">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[24px] left-0 not-italic text-[#101828] text-[16px] text-nowrap top-[-0.77px] tracking-[-0.3125px]">垂直起降固定翼</p>
+    </div>
+  );
+}
+
+function Text() {
+  return (
+    <div className="absolute bg-[#fbf2db] h-[18.986px] left-0 rounded-[2px] top-0 w-[47.988px]" data-name="Text">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[15px] left-[3.99px] not-italic text-[#c99619] text-[10px] text-nowrap top-[2.48px] tracking-[0.1172px]">自行前往</p>
+    </div>
+  );
+}
+
+function Text1() {
+  return (
+    <div className="absolute bg-[#fbf2db] h-[18.986px] left-[53.98px] rounded-[2px] top-0 w-[47.988px]" data-name="Text">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[15px] left-[3.99px] not-italic text-[#c99619] text-[10px] text-nowrap top-[2.48px] tracking-[0.1172px]">一人一机</p>
+    </div>
+  );
+}
+
+function Container() {
+  return (
+    <div className="h-[18.986px] relative shrink-0 w-full" data-name="Container">
+      <Text />
+      <Text1 />
+    </div>
+  );
+}
+
+function Container1() {
+  return (
+    <div className="h-[45.464px] relative shrink-0 w-[213.15px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[3.99px] items-start relative size-full">
+        <Heading2 />
+        <Container />
+      </div>
+    </div>
+  );
+}
+
+function Text2() {
+  return (
+    <div className="absolute content-stretch flex h-[14.146px] items-start left-0 top-[8.19px] w-[8.062px]" data-name="Text">
+      <p className="basis-0 font-['Inter:Bold',sans-serif] font-bold grow leading-[16px] min-h-px min-w-px not-italic relative shrink-0 text-[#c99619] text-[12px]">¥</p>
+    </div>
+  );
+}
+
+function Text3() {
+  return (
+    <div className="absolute content-stretch flex h-[20.847px] items-start left-[8.06px] top-[2.98px] w-[47.104px]" data-name="Text">
+      <p className="font-['Inter:Bold',sans-serif] font-bold leading-[28px] not-italic relative shrink-0 text-[#c99619] text-[18px] text-nowrap tracking-[-0.4395px]">3680</p>
+    </div>
+  );
+}
+
+function Container2() {
+  return (
+    <div className="h-[27.99px] relative shrink-0 w-[55.166px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <Text2 />
+        <Text3 />
+      </div>
+    </div>
+  );
+}
+
+function Button() {
+  return (
+    <div className="bg-[#c99619] h-[29.968px] relative rounded-[2.49829e+07px] shadow-[0px_1px_3px_0px_#fbf2db,0px_1px_2px_-1px_#fbf2db] shrink-0 w-[55.992px]" data-name="Button">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Medium','Noto_Sans_JP:Medium','Noto_Sans_SC:Medium',sans-serif] font-medium leading-[18px] left-[28px] not-italic text-[12px] text-center text-nowrap text-white top-[6.48px] translate-x-[-50%]">咨询</p>
+      </div>
+    </div>
+  );
+}
+
+function Container3() {
+  return (
+    <div className="h-[30px] relative shrink-0 w-full" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-between relative size-full">
+        <Container2 />
+        <Button />
+      </div>
+    </div>
+  );
+}
+
+function Container4() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[84px] items-start justify-between left-[136px] pb-0 pt-[1.989px] px-0 top-[12px] w-[263px]" data-name="Container">
+      <Container1 />
+      <Container3 />
+    </div>
+  );
+}
+
+function ImageWithFallback() {
+  return <div className="absolute h-[79.992px] left-0 top-0 w-[111.996px]" data-name="ImageWithFallback" />;
+}
+
+function Container5() {
+  return (
+    <div className="absolute h-[79.992px] left-0 top-0 w-[111.996px]" data-name="Container">
+      <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+        <img alt="" className="absolute max-w-none object-50%-50% object-cover size-full" src={imgContainer} />
+        <div className="absolute bg-gradient-to-t from-[rgba(0,0,0,0.2)] inset-0 to-[rgba(0,0,0,0)]" />
+      </div>
+    </div>
+  );
+}
+
+function Container6() {
+  return (
+    <div className="absolute bg-[#c99619] h-[18.986px] left-0 rounded-br-[10px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] top-0 w-[71.989px]" data-name="Container">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold','Noto_Sans_SC:Bold',sans-serif] font-bold leading-[15px] left-[5.99px] not-italic text-[10px] text-nowrap text-white top-[2.48px] tracking-[0.1172px]">拒绝吃拿卡要</p>
+    </div>
+  );
+}
+
+function Container7() {
+  return (
+    <div className="absolute bg-[rgba(0,0,0,0.6)] h-[17.485px] left-0 rounded-br-[10px] top-[19.97px] w-[56.958px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_SC:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[13.5px] left-[5.99px] not-italic text-[9px] text-nowrap text-white top-[1.73px] tracking-[0.167px]">规范化教学</p>
+    </div>
+  );
+}
+
+function Container8() {
+  return (
+    <div className="absolute h-[18.986px] left-0 top-0 w-[71.989px]" data-name="Container">
+      <Container6 />
+      <Container7 />
+    </div>
+  );
+}
+
+function Container9() {
+  return (
+    <div className="absolute h-[79.992px] left-[11.99px] overflow-clip rounded-[10px] top-[11.99px] w-[111.996px]" data-name="Container">
+      <ImageWithFallback />
+      <Container5 />
+      <Container8 />
+    </div>
+  );
+}
+
+function ClassCard() {
+  return (
+    <div className="bg-white h-[107.389px] relative rounded-[14px] shadow-[0px_1px_3px_0px_rgba(251,242,219,0.1),0px_1px_2px_-1px_rgba(251,242,219,0.1)] shrink-0 w-full" data-name="ClassCard">
+      <Container4 />
+      <Container9 />
+    </div>
+  );
+}
+
+function Heading3() {
+  return (
+    <div className="absolute h-[22.488px] left-0 top-0 w-[213.15px]" data-name="Heading 3">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_SC:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[24px] left-0 not-italic text-[#101828] text-[16px] text-nowrap top-[-0.77px] tracking-[-0.3125px]">视距内驾驶员</p>
+    </div>
+  );
+}
+
+function Text4() {
+  return (
+    <div className="absolute bg-[#fbf2db] h-[18.986px] left-0 rounded-[2px] top-[26.48px] w-[47.988px]" data-name="Text">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[15px] left-[3.99px] not-italic text-[#c99619] text-[10px] text-nowrap top-[2.48px] tracking-[0.1172px]">自行前往</p>
+    </div>
+  );
+}
+
+function Container10() {
+  return (
+    <div className="h-[45.464px] relative shrink-0 w-[213.15px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <Heading3 />
+        <Text4 />
+      </div>
+    </div>
+  );
+}
+
+function Text5() {
+  return <p className="absolute font-['Inter:Medium','Noto_Sans_JP:Medium','Noto_Sans_SC:Medium',sans-serif] font-medium leading-[15px] left-[10.5px] not-italic text-[#45556c] text-[10px] text-center text-nowrap top-[0.49px] tracking-[0.1172px] translate-x-[-50%]">咨询</p>;
+}
+
+function Text6() {
+  return (
+    <div className="absolute content-stretch flex h-[20.847px] items-start left-[8.06px] top-[2.98px] w-[47.36px]" data-name="Text">
+      <p className="font-['Inter:Bold',sans-serif] font-bold leading-[28px] not-italic relative shrink-0 text-[#c99619] text-[18px] text-nowrap tracking-[-0.4395px]">3880</p>
+    </div>
+  );
+}
+
+function Container11() {
+  return (
+    <div className="absolute bg-white content-stretch flex gap-[15.996px] h-[76px] items-center left-0 pb-0 pt-[0.745px] px-[15.996px] top-[848px] w-[448px]" data-name="SchoolProfile">
+      <div aria-hidden="true" className="absolute border-[#f3f4f6] border-[0.745px_0px_0px] border-solid inset-0 pointer-events-none" />
+      <div className="h-[38.996px] relative shrink-0 w-[47.988px]" data-name="Button">
+        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[3.99px] items-center justify-center relative size-full">
+          <div className="relative shrink-0 size-[19.998px]" data-name="Icon">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19.9981 19.9981">
+              <g clipPath="url(#clip0_359_782)" id="Icon">
+                <path d={svgPaths.p2bdc7500} id="Vector" stroke="var(--stroke-0, #45556C)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.66651" />
+                <path d={svgPaths.p23dbb540} id="Vector_2" stroke="var(--stroke-0, #45556C)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.66651" />
+              </g>
+              <defs>
+                <clipPath id="clip0_359_782">
+                  <rect fill="white" height="19.9981" width="19.9981" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div className="h-[15.007px] relative shrink-0 w-[20.01px]" data-name="Text">
+            <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+              <Text5 />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="basis-0 bg-[#c99619] grow min-h-px min-w-px relative rounded-[2.49829e+07px] shadow-[0px_1px_3px_0px_rgba(251,242,219,0.1),0px_1px_2px_-1px_rgba(251,242,219,0.1)] shrink-0" data-name="Button">
+        <div className="flex flex-row items-center justify-center size-full">
+          <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[8px] items-center justify-center px-[113px] py-[9px] relative w-full">
+            <div className="relative shrink-0 size-[17.997px]" data-name="Icon">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 17.9971 17.9971">
+                <g clipPath="url(#clip0_359_779)" id="Icon">
+                  <path d={svgPaths.p2bd40a00} fill="var(--fill-0, white)" id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.49976" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_359_779">
+                    <rect fill="white" height="17.9971" width="17.9971" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <p className="font-['Inter:Bold','Noto_Sans_JP:Bold','Noto_Sans_SC:Bold',sans-serif] font-bold leading-[22.5px] not-italic relative shrink-0 text-[15px] text-center text-nowrap text-white tracking-[-0.2344px]">在线聊</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Button1() {
+  return (
+    <div className="bg-[#c99619] h-[29.968px] relative rounded-[2.49829e+07px] shadow-[0px_1px_3px_0px_#fbf2db,0px_1px_2px_-1px_#fbf2db] shrink-0 w-[55.992px]" data-name="Button">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Medium','Noto_Sans_JP:Medium','Noto_Sans_SC:Medium',sans-serif] font-medium leading-[18px] left-[28px] not-italic text-[12px] text-center text-nowrap text-white top-[6.48px] translate-x-[-50%]">咨询</p>
+      </div>
+    </div>
+  );
+}
+
+function Container12() {
+  return (
+    <div className="h-[30px] relative shrink-0 w-full" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-between relative size-full">
+        <div className="h-[27.99px] relative shrink-0 w-[55.422px]" data-name="Container">
+          <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+            <div className="absolute content-stretch flex h-[14.146px] items-start left-0 top-[8.19px] w-[8.062px]" data-name="Text">
+              <p className="basis-0 font-['Inter:Bold',sans-serif] font-bold grow leading-[16px] min-h-px min-w-px not-italic relative shrink-0 text-[#c99619] text-[12px]">¥</p>
+            </div>
+            <Text6 />
+          </div>
+        </div>
+        <Button1 />
+      </div>
+    </div>
+  );
+}
+
+function Container13() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[83px] items-start justify-between left-[136px] pb-0 pt-[1.989px] px-0 top-[12.15px] w-[263px]" data-name="Container">
+      <Container10 />
+      <Container12 />
+    </div>
+  );
+}
+
+function ImageWithFallback1() {
+  return <div className="absolute h-[79.992px] left-0 top-0 w-[111.996px]" data-name="ImageWithFallback" />;
+}
+
+function Container14() {
+  return (
+    <div className="absolute h-[79.992px] left-0 top-0 w-[111.996px]" data-name="Container">
+      <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+        <img alt="" className="absolute max-w-none object-50%-50% object-cover size-full" src={imgContainer} />
+        <div className="absolute bg-gradient-to-t from-[rgba(0,0,0,0.2)] inset-0 to-[rgba(0,0,0,0)]" />
+      </div>
+    </div>
+  );
+}
+
+function Container15() {
+  return (
+    <div className="absolute bg-[#c99619] h-[18.986px] left-0 rounded-br-[10px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] top-0 w-[71.989px]" data-name="Container">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold','Noto_Sans_SC:Bold',sans-serif] font-bold leading-[15px] left-[5.99px] not-italic text-[10px] text-nowrap text-white top-[2.48px] tracking-[0.1172px]">拒绝吃拿卡要</p>
+    </div>
+  );
+}
+
+function Container16() {
+  return (
+    <div className="absolute bg-[rgba(0,0,0,0.6)] h-[17.485px] left-0 rounded-br-[10px] top-[19.97px] w-[65.951px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[13.5px] left-[5.99px] not-italic text-[9px] text-nowrap text-white top-[1.73px] tracking-[0.167px]">专业教练团队</p>
+    </div>
+  );
+}
+
+function Container17() {
+  return (
+    <div className="absolute h-[18.986px] left-0 top-0 w-[71.989px]" data-name="Container">
+      <Container15 />
+      <Container16 />
+    </div>
+  );
+}
+
+function Container18() {
+  return (
+    <div className="absolute h-[79.992px] left-[11.99px] overflow-clip rounded-[10px] top-[11.99px] w-[111.996px]" data-name="Container">
+      <ImageWithFallback1 />
+      <Container14 />
+      <Container17 />
+    </div>
+  );
+}
+
+function ClassCard1() {
+  return (
+    <div className="bg-white h-[107.389px] relative rounded-[14px] shadow-[0px_1px_3px_0px_rgba(251,242,219,0.1),0px_1px_2px_-1px_rgba(251,242,219,0.1)] shrink-0 w-full" data-name="ClassCard">
+      <Container13 />
+      <Container18 />
+    </div>
+  );
+}
+
+function Heading4() {
+  return (
+    <div className="h-[22.488px] relative shrink-0 w-full" data-name="Heading 3">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_SC:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[22.5px] left-0 not-italic text-[#1d293d] text-[15px] text-nowrap top-[-0.77px] tracking-[-0.2344px]">B2 VIP班-超视距驾驶</p>
+    </div>
+  );
+}
+
+function Text7() {
+  return (
+    <div className="absolute bg-[#fbf2db] h-[18.986px] left-0 rounded-[2px] top-0 w-[50.885px]" data-name="Text">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[15px] left-[3.99px] not-italic text-[#c99619] text-[10px] text-nowrap top-[2.48px] tracking-[0.1172px]">60天拿本</p>
+    </div>
+  );
+}
+
+function Text8() {
+  return (
+    <div className="absolute bg-[#fbf2db] h-[18.986px] left-[56.88px] rounded-[2px] top-0 w-[47.988px]" data-name="Text">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[15px] left-[3.99px] not-italic text-[#c99619] text-[10px] text-nowrap top-[2.48px] tracking-[0.1172px]">自行前往</p>
+    </div>
+  );
+}
+
+function Text9() {
+  return (
+    <div className="absolute bg-[#fbf2db] h-[18.986px] left-[110.86px] rounded-[2px] top-0 w-[47.988px]" data-name="Text">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[15px] left-[3.99px] not-italic text-[#c99619] text-[10px] text-nowrap top-[2.48px] tracking-[0.1172px]">多人一机</p>
+    </div>
+  );
+}
+
+function Container19() {
+  return (
+    <div className="h-[18.986px] relative shrink-0 w-full" data-name="Container">
+      <Text7 />
+      <Text8 />
+      <Text9 />
+    </div>
+  );
+}
+
+function Container20() {
+  return (
+    <div className="h-[45.464px] relative shrink-0 w-[213.15px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[3.99px] items-start relative size-full">
+        <Heading4 />
+        <Container19 />
+      </div>
+    </div>
+  );
+}
+
+function Text10() {
+  return (
+    <div className="absolute content-stretch flex h-[14.146px] items-start left-0 top-[8.19px] w-[8.062px]" data-name="Text">
+      <p className="basis-0 font-['Inter:Bold',sans-serif] font-bold grow leading-[16px] min-h-px min-w-px not-italic relative shrink-0 text-[#c99619] text-[12px]">¥</p>
+    </div>
+  );
+}
+
+function Text11() {
+  return (
+    <div className="absolute content-stretch flex h-[20.847px] items-start left-[8.06px] top-[2.98px] w-[47.651px]" data-name="Text">
+      <p className="font-['Inter:Bold',sans-serif] font-bold leading-[28px] not-italic relative shrink-0 text-[#c99619] text-[18px] text-nowrap tracking-[-0.4395px]">8800</p>
+    </div>
+  );
+}
+
+function Container21() {
+  return (
+    <div className="h-[27.99px] relative shrink-0 w-[55.713px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <Text10 />
+        <Text11 />
+      </div>
+    </div>
+  );
+}
+
+function Button2() {
+  return (
+    <div className="bg-[#c99619] h-[29.968px] relative rounded-[2.49829e+07px] shadow-[0px_1px_3px_0px_#fbf2db,0px_1px_2px_-1px_#fbf2db] shrink-0 w-[55.992px]" data-name="Button">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Medium','Noto_Sans_JP:Medium','Noto_Sans_SC:Medium',sans-serif] font-medium leading-[18px] left-[28px] not-italic text-[12px] text-center text-nowrap text-white top-[6.48px] translate-x-[-50%]">咨询</p>
+      </div>
+    </div>
+  );
+}
+
+function Container22() {
+  return (
+    <div className="h-[30px] relative shrink-0 w-full" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-between relative size-full">
+        <Container21 />
+        <Button2 />
+      </div>
+    </div>
+  );
+}
+
+function Container23() {
+  return (
+    <div className="absolute content-stretch flex flex-col h-[84px] items-start justify-between left-[136px] pb-0 pt-[1.989px] px-0 top-[11.76px] w-[263px]" data-name="Container">
+      <Container20 />
+      <Container22 />
+    </div>
+  );
+}
+
+function ImageWithFallback2() {
+  return <div className="absolute h-[79.992px] left-0 top-0 w-[111.996px]" data-name="ImageWithFallback" />;
+}
+
+function Container24() {
+  return (
+    <div className="absolute h-[79.992px] left-0 top-0 w-[111.996px]" data-name="Container">
+      <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+        <img alt="" className="absolute max-w-none object-50%-50% object-cover size-full" src={imgContainer} />
+        <div className="absolute bg-gradient-to-t from-[rgba(0,0,0,0.2)] inset-0 to-[rgba(0,0,0,0)]" />
+      </div>
+    </div>
+  );
+}
+
+function Container25() {
+  return (
+    <div className="absolute bg-[#c99619] h-[18.986px] left-0 rounded-br-[10px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] top-0 w-[71.989px]" data-name="Container">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold','Noto_Sans_SC:Bold',sans-serif] font-bold leading-[15px] left-[5.99px] not-italic text-[10px] text-nowrap text-white top-[2.48px] tracking-[0.1172px]">拒绝吃拿卡要</p>
+    </div>
+  );
+}
+
+function Container26() {
+  return (
+    <div className="absolute bg-[rgba(0,0,0,0.6)] h-[17.485px] left-0 rounded-br-[10px] top-[19.97px] w-[44.661px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[13.5px] left-[5.99px] not-italic text-[9px] text-nowrap text-white top-[1.73px] tracking-[0.167px]">VIP服务</p>
+    </div>
+  );
+}
+
+function Container27() {
+  return (
+    <div className="absolute h-[18.986px] left-0 top-0 w-[71.989px]" data-name="Container">
+      <Container25 />
+      <Container26 />
+    </div>
+  );
+}
+
+function Container28() {
+  return (
+    <div className="absolute h-[79.992px] left-[11.99px] overflow-clip rounded-[10px] top-[11.99px] w-[111.996px]" data-name="Container">
+      <ImageWithFallback2 />
+      <Container24 />
+      <Container27 />
+    </div>
+  );
+}
+
+function ClassCard2() {
+  return (
+    <div className="bg-white h-[107.389px] relative rounded-[14px] shadow-[0px_1px_3px_0px_rgba(251,242,219,0.1),0px_1px_2px_-1px_rgba(251,242,219,0.1)] shrink-0 w-[416.008px]" data-name="ClassCard">
+      <Container23 />
+      <Container28 />
+    </div>
+  );
+}
+
+function Container29() {
+  return (
+    <div className="absolute content-stretch flex flex-col gap-[11.994px] h-[749px] items-start left-0 px-[15.996px] py-0 top-[550px] w-[448px]" data-name="Container">
+      <ClassCard />
+      <ClassCard1 />
+      <ClassCard2 />
+    </div>
+  );
+}
+
+function Container30() {
+  return <div className="absolute bg-[#c99619] h-[3.99px] left-[22.99px] rounded-[2.49829e+07px] top-[36.49px] w-[15.996px]" data-name="Container" />;
+}
+
+function Button3() {
+  return (
+    <div className="h-[46.476px] relative shrink-0 w-[61.984px]" data-name="Button">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[22.5px] left-[31px] not-italic text-[#1d293d] text-[15px] text-center text-nowrap top-[11.23px] tracking-[-0.2344px] translate-x-[-50%]">班型</p>
+      <Container30 />
+    </div>
+  );
+}
+
+function Button4() {
+  return (
+    <div className="h-[46.476px] relative shrink-0 w-[61.984px]" data-name="Button">
+      <p className="absolute font-['Inter:Medium','Noto_Sans_SC:Medium','Noto_Sans_JP:Medium',sans-serif] font-medium leading-[22.5px] left-[31px] not-italic text-[#99a1af] text-[15px] text-center text-nowrap top-[11.23px] tracking-[-0.2344px] translate-x-[-50%]">场地</p>
+    </div>
+  );
+}
+
+function SchoolProfile() {
+  return (
+    <div className="absolute content-stretch flex items-center justify-between left-0 px-[59px] py-0 top-[494px] w-[448px]" data-name="SchoolProfile">
+      <Button3 />
+      <Button4 />
+    </div>
+  );
+}
+
+function ImageWithFallback3() {
+  return (
+    <div className="absolute h-[301px] left-0 top-[-45px] w-[448px]" data-name="ImageWithFallback">
+      <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgContainer} />
+    </div>
+  );
+}
+
+function Icon() {
+  return (
+    <div className="relative shrink-0 size-[19.998px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19.9981 19.9981">
+        <g id="Icon">
+          <path d={svgPaths.p7100a80} id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.66651" />
+          <path d="M15.8318 9.99905H4.16627" id="Vector_2" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.66651" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button5() {
+  return (
+    <button className="bg-[rgba(0,0,0,0.2)] cursor-pointer relative rounded-[2.49829e+07px] shrink-0 size-[35.994px]" data-name="Button">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center pl-0 pr-[0.012px] py-0 relative size-full">
+        <Icon />
+      </div>
+    </button>
+  );
+}
+
+function Icon1() {
+  return (
+    <div className="relative shrink-0 size-[19.998px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19.9981 19.9981">
+        <g clipPath="url(#clip0_359_852)" id="Icon">
+          <path d={svgPaths.p279013f0} id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.66651" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_852">
+            <rect fill="white" height="19.9981" width="19.9981" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Button6() {
+  return (
+    <div className="bg-[rgba(0,0,0,0.2)] relative rounded-[2.49829e+07px] shrink-0 size-[35.994px]" data-name="Button">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center pl-0 pr-[0.012px] py-0 relative size-full">
+        <Icon1 />
+      </div>
+    </div>
+  );
+}
+
+function Icon2() {
+  return (
+    <div className="relative shrink-0 size-[19.998px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19.9981 19.9981">
+        <g clipPath="url(#clip0_359_847)" id="Icon">
+          <path d="M9.99905 1.66651V12.4988" id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.66651" />
+          <path d={svgPaths.p34ac9700} id="Vector_2" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.66651" />
+          <path d={svgPaths.p2292fba0} id="Vector_3" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.66651" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_847">
+            <rect fill="white" height="19.9981" width="19.9981" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Button7() {
+  return (
+    <div className="bg-[rgba(0,0,0,0.2)] relative rounded-[2.49829e+07px] shrink-0 size-[35.994px]" data-name="Button">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center pl-0 pr-[0.012px] py-0 relative size-full">
+        <Icon2 />
+      </div>
+    </div>
+  );
+}
+
+function Icon3() {
+  return (
+    <div className="relative shrink-0 size-[19.998px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 19.9981 19.9981">
+        <g id="Icon">
+          <path d={svgPaths.p2b2d380} id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.66651" />
+          <path d={svgPaths.p35abb300} id="Vector_2" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.66651" />
+          <path d={svgPaths.p3b0ef580} id="Vector_3" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.66651" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button8() {
+  return (
+    <div className="bg-[rgba(0,0,0,0.2)] relative rounded-[2.49829e+07px] shrink-0 size-[35.994px]" data-name="Button">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center pl-0 pr-[0.012px] py-0 relative size-full">
+        <Icon3 />
+      </div>
+    </div>
+  );
+}
+
+function Container31() {
+  return (
+    <div className="h-[35.994px] relative shrink-0 w-[131.971px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[11.994px] items-center relative size-full">
+        <Button6 />
+        <Button7 />
+        <Button8 />
+      </div>
+    </div>
+  );
+}
+
+function Container32() {
+  return (
+    <div className="absolute content-stretch flex h-[68px] items-center justify-between left-0 px-[15.996px] py-0 top-0 w-[448px]" data-name="Container">
+      <Button5 />
+      <Container31 />
+    </div>
+  );
+}
+
+function Container33() {
+  return (
+    <div className="absolute h-[256px] left-0 top-[45px] w-[448px]" data-name="Container">
+      <ImageWithFallback3 />
+      <Container32 />
+    </div>
+  );
+}
+
+function Heading() {
+  return (
+    <div className="h-[28px] relative shrink-0 w-[99px]" data-name="Heading 1">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Bold','Noto_Sans_SC:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[28px] left-0 not-italic text-[#0f172b] text-[20px] text-nowrap top-[-0.51px] tracking-[-0.4492px]">亚斯特科技</p>
+      </div>
+    </div>
+  );
+}
+
+function Component() {
+  return (
+    <div className="relative shrink-0 size-[16px]" data-name="认证">
+      <div className="absolute inset-[0_0_-0.04%_-0.44%]">
+        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.071 16.0068">
+          <g id="è®¤è¯">
+            <rect fill="var(--fill-0, #F5C244)" height="16" id="Rectangle 7" rx="5" width="16" y="0.00683594" />
+            <path d={svgPaths.p16f59a80} fill="var(--fill-0, #FBF2DB)" id="Vector" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  );
+}
+
+function Icon4() {
+  return (
+    <div className="relative shrink-0 size-[17.997px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 17.9971 17.9971">
+        <g clipPath="url(#clip0_2_1062)" id="Icon">
+          <path d={svgPaths.p2c9df200} fill="var(--fill-0, #C99619)" id="Vector" stroke="var(--stroke-0, #C99619)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.49976" />
+          <g id="Vector_2">
+            <path d="M3.7494 15.7475H14.2477Z" fill="var(--fill-0, #C99619)" />
+            <path d="M3.7494 15.7475H14.2477" stroke="var(--stroke-0, #C99619)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.49976" />
+          </g>
+        </g>
+        <defs>
+          <clipPath id="clip0_2_1062">
+            <rect fill="white" height="17.9971" width="17.9971" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Text12() {
+  return (
+    <div className="bg-[#fbf2db] h-[18.986px] relative rounded-[2px] shrink-0 w-[24.14px]" data-name="Text">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[15px] left-[3.99px] not-italic text-[#c99619] text-[10px] text-nowrap top-[2.48px] tracking-[0.1172px]">2年</p>
+      </div>
+    </div>
+  );
+}
+
+function Container34() {
+  return (
+    <div className="h-[18.986px] relative shrink-0 w-[66.09px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[3.99px] items-center relative size-full">
+        <Component />
+        <Icon4 />
+        <Text12 />
+      </div>
+    </div>
+  );
+}
+
+function Container35() {
+  return (
+    <div className="absolute content-stretch flex gap-[7.992px] h-[27.99px] items-center left-0 top-0 w-[321.133px]" data-name="Container">
+      <Heading />
+      <Container34 />
+    </div>
+  );
+}
+
+function Icon5() {
+  return (
+    <div className="relative shrink-0 size-[11.994px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.9942 11.9942">
+        <g clipPath="url(#clip0_359_820)" id="Icon">
+          <path d={svgPaths.p1f5d4f00} fill="var(--fill-0, #52C41A)" id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.999517" />
+          <g id="Vector_2">
+            <path d={svgPaths.p39df8600} fill="var(--fill-0, #52C41A)" />
+            <path d={svgPaths.p39df8600} stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.999517" />
+          </g>
+        </g>
+        <defs>
+          <clipPath id="clip0_359_820">
+            <rect fill="white" height="11.9942" width="11.9942" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Text13() {
+  return (
+    <div className="basis-0 grow h-[15.985px] min-h-px min-w-px relative shrink-0" data-name="Text">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#52c41a] text-[12px] text-nowrap top-[0.74px]">民航培训资质</p>
+      </div>
+    </div>
+  );
+}
+
+function Container36() {
+  return (
+    <div className="h-[15.985px] relative shrink-0 w-[87.961px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[3.99px] items-center relative size-full">
+        <Icon5 />
+        <Text13 />
+      </div>
+    </div>
+  );
+}
+
+function Icon6() {
+  return (
+    <div className="relative shrink-0 size-[11.994px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.9942 11.9942">
+        <g clipPath="url(#clip0_359_820)" id="Icon">
+          <path d={svgPaths.p1f5d4f00} fill="var(--fill-0, #52C41A)" id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.999517" />
+          <g id="Vector_2">
+            <path d={svgPaths.p39df8600} fill="var(--fill-0, #52C41A)" />
+            <path d={svgPaths.p39df8600} stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.999517" />
+          </g>
+        </g>
+        <defs>
+          <clipPath id="clip0_359_820">
+            <rect fill="white" height="11.9942" width="11.9942" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Text14() {
+  return (
+    <div className="h-[15.985px] relative shrink-0 w-[71.977px]" data-name="Text">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular','Noto_Sans_SC:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[16px] left-0 not-italic text-[#52c41a] text-[12px] text-nowrap top-[0.74px]">大黄蜂优质商家认证</p>
+      </div>
+    </div>
+  );
+}
+
+function Container37() {
+  return (
+    <div className="h-[15.985px] relative shrink-0 w-[87.961px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[3.99px] items-center relative size-full">
+        <Icon6 />
+        <Text14 />
+      </div>
+    </div>
+  );
+}
+
+function Container38() {
+  return (
+    <div className="absolute content-stretch flex gap-[11.994px] h-[16px] items-center left-0 top-[36px] w-[376px]" data-name="Container">
+      <Container36 />
+      <Container37 />
+    </div>
+  );
+}
+
+function Text15() {
+  return (
+    <div className="absolute bg-[#fff7e6] h-[20.487px] left-0 rounded-[2px] top-0 w-[95.453px]" data-name="Text">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_SC:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[16.5px] left-[5.99px] not-italic text-[#fa8c16] text-[11px] text-nowrap top-[2.48px] tracking-[0.0645px]">{`综合排行第2名 >`}</p>
+    </div>
+  );
+}
+
+function Text16() {
+  return (
+    <div className="absolute bg-[#fbf2db] h-[20.487px] left-[103.45px] rounded-[2px] top-0 w-[44.975px]" data-name="Text">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[16.5px] left-[5.99px] not-italic text-[#c99619] text-[11px] text-nowrap top-[2.48px] tracking-[0.0645px]">有接送</p>
+    </div>
+  );
+}
+
+function Text17() {
+  return (
+    <div className="absolute bg-[#fbf2db] h-[20.487px] left-[156.41px] rounded-[2px] top-0 w-[55.981px]" data-name="Text">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_SC:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[16.5px] left-[5.99px] not-italic text-[#c99619] text-[11px] text-nowrap top-[2.48px] tracking-[0.0645px]">约课方便</p>
+    </div>
+  );
+}
+
+function Text18() {
+  return (
+    <div className="absolute bg-[#fbf2db] h-[20.487px] left-[220.39px] rounded-[2px] top-0 w-[55.981px]" data-name="Text">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[16.5px] left-[5.99px] not-italic text-[#c99619] text-[11px] text-nowrap top-[2.48px] tracking-[0.0645px]">收费透明</p>
+    </div>
+  );
+}
+
+function Container39() {
+  return (
+    <div className="absolute h-[20px] left-0 top-[64px] w-[376px]" data-name="Container">
+      <Text15 />
+      <Text16 />
+      <Text17 />
+      <Text18 />
+    </div>
+  );
+}
+
+function Text19() {
+  return (
+    <div className="absolute h-[31.992px] left-0 top-0 w-[37.693px]" data-name="Text">
+      <p className="absolute font-['Inter:Bold',sans-serif] font-bold leading-[32px] left-0 not-italic text-[#fa8c16] text-[24px] text-nowrap top-[-0.51px] tracking-[0.0703px]">4.8</p>
+    </div>
+  );
+}
+
+function Text20() {
+  return (
+    <div className="absolute h-[15.985px] left-[39.68px] top-[11.91px] w-[12.006px]" data-name="Text">
+      <p className="absolute font-['Inter:Medium','Noto_Sans_JP:Medium',sans-serif] font-medium leading-[16px] left-0 not-italic text-[#fa8c16] text-[12px] text-nowrap top-[0.74px]">分</p>
+    </div>
+  );
+}
+
+function Container40() {
+  return (
+    <div className="h-[31.992px] relative shrink-0 w-full" data-name="Container">
+      <Text19 />
+      <Text20 />
+    </div>
+  );
+}
+
+function Container41() {
+  return (
+    <div className="h-[16.508px] relative shrink-0 w-full" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[16.5px] left-0 not-italic text-[#99a1af] text-[11px] text-nowrap top-[0.49px] tracking-[0.0645px]">{`134人评价>`}</p>
+    </div>
+  );
+}
+
+function Frame1() {
+  return (
+    <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[69px]">
+      <Container40 />
+      <Container41 />
+    </div>
+  );
+}
+
+function Icon7() {
+  return (
+    <div className="relative shrink-0 size-[15.996px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15.9962 15.9962">
+        <g clipPath="url(#clip0_359_814)" id="Icon">
+          <path d={svgPaths.p11369000} fill="var(--fill-0, #FA8C16)" id="Vector" stroke="var(--stroke-0, #FA8C16)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33301" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_814">
+            <rect fill="white" height="15.9962" width="15.9962" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container42() {
+  return (
+    <div className="bg-[rgba(250,140,22,0.1)] relative rounded-[2.49829e+07px] shrink-0 size-[31.992px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center pl-0 pr-[0.012px] py-0 relative size-full">
+        <Icon7 />
+      </div>
+    </div>
+  );
+}
+
+function Text21() {
+  return (
+    <div className="h-[15.007px] relative shrink-0 w-[30.003px]" data-name="Text">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular','Noto_Sans_SC:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[15px] left-0 not-italic text-[#6a7282] text-[10px] text-nowrap top-[0.49px] tracking-[0.1172px]">去评价</p>
+      </div>
+    </div>
+  );
+}
+
+function Container43() {
+  return (
+    <div className="content-stretch flex flex-col gap-[3.99px] h-[50.99px] items-center relative shrink-0 w-[31.992px]" data-name="Container">
+      <Container42 />
+      <Text21 />
+    </div>
+  );
+}
+
+function Container44() {
+  return (
+    <div className="content-stretch flex gap-[4px] items-center px-[2px] py-0 relative shrink-0 w-[142px]" data-name="Container">
+      <div aria-hidden="true" className="absolute border-[#f3f4f6] border-[0px_0.745px_0px_0px] border-solid inset-0 pointer-events-none" />
+      <Frame1 />
+      <Container43 />
+    </div>
+  );
+}
+
+function Container45() {
+  return (
+    <div className="absolute h-[65px] left-[0.01px] overflow-clip top-0 w-[217px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular','Noto_Sans_KR:Regular',sans-serif] font-normal leading-[17.875px] left-0 not-italic text-[#6a7282] text-[13px] top-[-0.26px] tracking-[-0.0762px] w-[170px]">内蒙古自治区鄂尔多斯市东胜区交通街道伊化北路祥...</p>
+    </div>
+  );
+}
+
+function Container46() {
+  return (
+    <div className="absolute h-[16.508px] left-0 top-[39.71px] w-[217.152px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[16.5px] left-0 not-italic text-[#99a1af] text-[11px] text-nowrap top-[0.49px] tracking-[0.0645px]">距您3.3 km | 乘车18分钟</p>
+    </div>
+  );
+}
+
+function Frame2() {
+  return (
+    <div className="h-[65px] relative shrink-0 w-[173px]">
+      <Container45 />
+      <Container46 />
+    </div>
+  );
+}
+
+function Icon8() {
+  return (
+    <div className="relative shrink-0 size-[17.997px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 17.9971 17.9971">
+        <g clipPath="url(#clip0_359_809)" id="Icon">
+          <path d={svgPaths.p2cfc29f0} fill="var(--fill-0, #C99619)" id="Vector" stroke="var(--stroke-0, #C99619)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.49976" />
+          <path d={svgPaths.p2be88c80} fill="var(--fill-0, #C99619)" id="Vector_2" stroke="var(--stroke-0, #C99619)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.49976" />
+          <circle cx="9.00055" cy="6.99756" fill="var(--fill-0, #FBF2DB)" id="Ellipse 1" r="3" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_809">
+            <rect fill="white" height="17.9971" width="17.9971" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container47() {
+  return (
+    <div className="bg-[#fbf2db] relative rounded-[2.49829e+07px] shrink-0 size-[31.992px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center pl-0 pr-[0.012px] py-0 relative size-full">
+        <Icon8 />
+      </div>
+    </div>
+  );
+}
+
+function Text22() {
+  return (
+    <div className="h-[15.007px] relative shrink-0 w-[30.003px]" data-name="Text">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[15px] left-0 not-italic text-[#6a7282] text-[10px] text-nowrap top-[0.49px] tracking-[0.1172px]">训练场</p>
+      </div>
+    </div>
+  );
+}
+
+function Container48() {
+  return (
+    <div className="content-stretch flex flex-col gap-[3.99px] h-[50.99px] items-center relative shrink-0 w-[31.992px]" data-name="Container">
+      <Container47 />
+      <Text22 />
+    </div>
+  );
+}
+
+function Container49() {
+  return (
+    <div className="content-stretch flex items-center justify-between relative shrink-0 w-[222px]" data-name="Container">
+      <Frame2 />
+      <Container48 />
+    </div>
+  );
+}
+
+function Container50() {
+  return (
+    <div className="absolute content-stretch flex items-start justify-between left-0 top-[104px] w-[376px]" data-name="Container">
+      <Container44 />
+      <Container49 />
+    </div>
+  );
+}
+
+function Container51() {
+  return (
+    <div className="h-[211.929px] relative shrink-0 w-full" data-name="Container">
+      <Container35 />
+      <Container38 />
+      <Container39 />
+      <Container50 />
+    </div>
+  );
+}
+
+function Container52() {
+  return (
+    <div className="absolute bg-white content-stretch flex flex-col h-[199px] items-start left-[16px] pb-0 pt-[19.998px] px-[19.998px] rounded-tl-[16px] rounded-tr-[16px] shadow-[0px_1px_3px_0px_rgba(251,242,219,0.1),0px_1px_2px_-1px_rgba(251,242,219,0.1)] top-0 w-[416px]" data-name="Container">
+      <Container51 />
+    </div>
+  );
+}
+
+function Icon9() {
+  return (
+    <div className="relative shrink-0 size-[11.994px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.9942 11.9942">
+        <g clipPath="url(#clip0_359_827)" id="Icon">
+          <path d={svgPaths.p1f5d4f00} fill="var(--fill-0, white)" id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.999517" />
+          <g id="Vector_2">
+            <path d={svgPaths.p2b8ce180} fill="var(--fill-0, white)" />
+            <path d={svgPaths.p2b8ce180} stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.999517" />
+          </g>
+          <g id="Vector_3">
+            <path d="M5.9971 8.4959H6.0021Z" fill="var(--fill-0, white)" />
+            <path d="M5.9971 8.4959H6.0021" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.999517" />
+          </g>
+        </g>
+        <defs>
+          <clipPath id="clip0_359_827">
+            <rect fill="white" height="11.9942" width="11.9942" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container53() {
+  return (
+    <div className="bg-[#fa8c16] relative rounded-[2.49829e+07px] shrink-0 size-[15.996px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
+        <Icon9 />
+      </div>
+    </div>
+  );
+}
+
+function Text23() {
+  return (
+    <div className="h-[19.486px] relative shrink-0 w-[116.999px]" data-name="Text">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Medium','Noto_Sans_JP:Medium','Noto_Sans_SC:Medium',sans-serif] font-medium leading-[19.5px] left-0 not-italic text-[#314158] text-[13px] text-nowrap top-[0.49px] tracking-[-0.0762px]">最快多久可以拿证？</p>
+      </div>
+    </div>
+  );
+}
+
+function Container54() {
+  return (
+    <div className="h-[19.486px] relative shrink-0 w-[140.987px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[7.992px] items-center relative size-full">
+        <Container53 />
+        <Text23 />
+      </div>
+    </div>
+  );
+}
+
+function Button9() {
+  return (
+    <div className="bg-[#fbf2db] h-[21.964px] relative rounded-[2.49829e+07px] shrink-0 w-[51.979px]" data-name="Button">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Medium','Noto_Sans_SC:Medium','Noto_Sans_JP:Medium',sans-serif] font-medium leading-[18px] left-[25.99px] not-italic text-[#c99619] text-[12px] text-center text-nowrap top-[2.48px] translate-x-[-50%]">问驾校</p>
+      </div>
+    </div>
+  );
+}
+
+function Container55() {
+  return (
+    <div className="absolute bg-white content-stretch flex h-[47px] items-center justify-between left-[16px] pb-0 pt-[0.745px] px-[11.994px] rounded-bl-[14px] rounded-br-[14px] top-[209px] w-[416px]" data-name="Container">
+      <div aria-hidden="true" className="absolute border-[#f9fafb] border-[0.745px_0px_0px] border-solid inset-0 pointer-events-none rounded-bl-[14px] rounded-br-[14px] shadow-[0px_1px_3px_0px_rgba(251,242,219,0.1),0px_1px_2px_-1px_rgba(251,242,219,0.1)]" />
+      <Container54 />
+      <Button9 />
+    </div>
+  );
+}
+
+function Container56() {
+  return (
+    <div className="absolute h-[256px] left-0 top-[221px] w-[448px]" data-name="Container">
+      <Container52 />
+      <Container55 />
+    </div>
+  );
+}
+
+function Container57() {
+  return (
+    <div className="h-[24px] relative shrink-0 w-[41.156px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[24px] left-0 not-italic text-[16px] text-black text-nowrap top-[-0.5px] tracking-[-0.3125px]">14:34</p>
+      </div>
+    </div>
+  );
+}
+
+function Icon10() {
+  return (
+    <div className="relative shrink-0 size-[16px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
+        <g id="Icon">
+          <path d="M1.33333 13.3333H1.34" id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+          <path d="M4.66667 13.3333V10.6667" id="Vector_2" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+          <path d="M8 13.3333V8" id="Vector_3" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+          <path d="M11.3333 13.3333V5.33333" id="Vector_4" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+          <path d="M14.6667 2.66667V13.3333" id="Vector_5" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Icon11() {
+  return (
+    <div className="relative shrink-0 size-[16px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
+        <g id="Icon">
+          <path d="M8 13.3333H8.00667" id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+          <path d={svgPaths.p3978c100} id="Vector_2" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+          <path d={svgPaths.p3aa7f280} id="Vector_3" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+          <path d={svgPaths.p3129d700} id="Vector_4" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Icon12() {
+  return (
+    <div className="basis-0 grow h-[16px] min-h-px min-w-px relative shrink-0" data-name="Icon">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid overflow-clip relative rounded-[inherit] size-full">
+        <div className="absolute inset-[41.67%_8.33%_41.67%_91.67%]" data-name="Vector">
+          <div className="absolute inset-[-25%_-0.67px]">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1.33333 4">
+              <g id="Vector">
+                <path d="M0.666667 3.33333V0.666667Z" fill="var(--fill-0, #00C950)" />
+                <path d="M0.666667 3.33333V0.666667" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div className="absolute bottom-1/4 left-[8.33%] right-1/4 top-1/4" data-name="Vector">
+          <div className="absolute inset-[-8.33%_-6.25%]">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12 9.33333">
+              <path d={svgPaths.p2bb6e180} fill="var(--fill-0, #00C950)" id="Vector" stroke="var(--stroke-0, black)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Container58() {
+  return (
+    <div className="h-[16px] relative shrink-0 w-[56px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[4px] items-center relative size-full">
+        <Icon10 />
+        <Icon11 />
+        <Icon12 />
+      </div>
+    </div>
+  );
+}
+
+function StatusBar() {
+  return (
+    <div className="absolute content-stretch flex h-[40px] items-center justify-between left-0 px-[16px] py-0 top-0 w-[448px]" data-name="StatusBar">
+      <Container57 />
+      <Container58 />
+    </div>
+  );
+}
+
+function Frame() {
+  return (
+    <div className="h-[40px] pointer-events-auto sticky top-0 w-[448px]">
+      <StatusBar />
+    </div>
+  );
+}
+
+function Heading1() {
+  return (
+    <div className="h-[25.489px] relative shrink-0 w-[105.109px]" data-name="Heading 2">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold','Noto_Sans_SC:Bold',sans-serif] font-bold leading-[25.5px] left-0 not-italic text-[#0f172b] text-[17px] text-nowrap top-[0.23px] tracking-[-0.4316px]">教练团队 (16)</p>
+      </div>
+    </div>
+  );
+}
+
+function Icon13() {
+  return (
+    <div className="absolute left-[55.99px] size-[13.995px] top-[2.75px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.9952 13.9952">
+        <g id="Icon">
+          <path d={svgPaths.p32f8c380} id="Vector" stroke="var(--stroke-0, #99A1AF)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16627" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button10() {
+  return (
+    <div className="h-[19.486px] relative shrink-0 w-[69.988px]" data-name="Button">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular','Noto_Sans_SC:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[19.5px] left-[26px] not-italic text-[#99a1af] text-[13px] text-center text-nowrap top-[0.49px] tracking-[-0.0762px] translate-x-[-50%]">查看全部</p>
+        <Icon13 />
+      </div>
+    </div>
+  );
+}
+
+function Container59() {
+  return (
+    <div className="h-[25.489px] relative shrink-0 w-full" data-name="Container">
+      <div className="flex flex-row items-center size-full">
+        <div className="content-stretch flex items-center justify-between px-[15.996px] py-0 relative size-full">
+          <Heading1 />
+          <Button10 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Container60() {
+  return (
+    <div className="absolute h-[20.987px] left-[33.99px] top-[84.72px] w-[41.997px]" data-name="Container">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_SC:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[21px] left-0 not-italic text-[#0f172b] text-[14px] text-nowrap top-[0.23px] tracking-[-0.1504px]">杨建君</p>
+    </div>
+  );
+}
+
+function Container61() {
+  return (
+    <div className="absolute h-[12.506px] left-[32.93px] top-[109.69px] w-[44.126px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[12.5px] left-0 not-italic text-[#6a7282] text-[10px] top-0 tracking-[0.1172px] w-[45px]">学员 1741</p>
+    </div>
+  );
+}
+
+function Container62() {
+  return (
+    <div className="absolute h-[12.506px] left-[33.24px] top-[122.2px] w-[43.51px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[12.5px] left-0 not-italic text-[#6a7282] text-[10px] top-0 tracking-[0.1172px] w-[44px]">教龄 17年</p>
+    </div>
+  );
+}
+
+function Container63() {
+  return <div className="absolute bg-[#c99619] left-[2.8px] rounded-[2.49829e+07px] size-[50.393px] top-[6.8px]" data-name="Container" />;
+}
+
+function ImageWithFallback4() {
+  return <div className="h-[53.014px] shrink-0 w-full" data-name="ImageWithFallback" />;
+}
+
+function Container64() {
+  return (
+    <div className="absolute bg-[#c99619] left-0 rounded-[2.49829e+07px] size-[55.992px] top-0" data-name="Container">
+      <div className="content-stretch flex flex-col items-start overflow-clip p-[1.489px] relative rounded-[inherit] size-full">
+        <ImageWithFallback4 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[1.489px] border-solid border-white inset-0 pointer-events-none rounded-[2.49829e+07px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Icon14() {
+  return (
+    <div className="absolute left-[5.99px] size-[7.992px] top-[4.75px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 7.99226 7.99226">
+        <g clipPath="url(#clip0_359_794)" id="Icon">
+          <path d={svgPaths.p3ee2ad00} fill="var(--fill-0, white)" id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.666022" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_794">
+            <rect fill="white" height="7.99226" width="7.99226" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container65() {
+  return (
+    <div className="absolute bg-gradient-to-r border-[0.745px] border-solid border-white from-[rgba(201,150,25,0.99)] h-[18.974px] left-[-1.73px] rounded-[4px] to-[#f5db9b] top-[41.01px] w-[59.436px]" data-name="Container">
+      <Icon14 />
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold','Noto_Sans_SC:Bold',sans-serif] font-bold leading-[13.5px] left-[15.97px] not-italic text-[9px] text-nowrap text-white top-[1.73px] tracking-[0.167px]">杰出教练</p>
+    </div>
+  );
+}
+
+function Container66() {
+  return (
+    <div className="absolute left-[27px] size-[55.992px] top-[16.74px]" data-name="Container">
+      <Container63 />
+      <Container64 />
+      <Container65 />
+    </div>
+  );
+}
+
+function CoachCard() {
+  return (
+    <div className="bg-white h-[147.444px] relative rounded-[14px] shrink-0 w-[109.995px]" data-name="CoachCard">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid overflow-clip relative rounded-[inherit] size-full">
+        <Container60 />
+        <Container61 />
+        <Container62 />
+        <Container66 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#f9fafb] border-[0.745px] border-solid inset-0 pointer-events-none rounded-[14px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.04)]" />
+    </div>
+  );
+}
+
+function Container67() {
+  return (
+    <div className="absolute h-[20.987px] left-[41px] top-[84.72px] w-[28.002px]" data-name="Container">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_SC:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[21px] left-0 not-italic text-[#0f172b] text-[14px] text-nowrap top-[0.23px] tracking-[-0.1504px]">乔梁</p>
+    </div>
+  );
+}
+
+function Container68() {
+  return (
+    <div className="absolute h-[12.506px] left-[31.55px] top-[109.69px] w-[46.895px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[12.5px] left-0 not-italic text-[#6a7282] text-[10px] top-0 tracking-[0.1172px] w-[47px]">学员 1284</p>
+    </div>
+  );
+}
+
+function Container69() {
+  return (
+    <div className="absolute h-[12.506px] left-[32.9px] top-[122.2px] w-[44.196px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[12.5px] left-0 not-italic text-[#6a7282] text-[10px] top-0 tracking-[0.1172px] w-[45px]">教龄 18年</p>
+    </div>
+  );
+}
+
+function Container70() {
+  return <div className="absolute bg-[#c99619] left-[2.8px] rounded-[2.49829e+07px] size-[50.393px] top-[6.8px]" data-name="Container" />;
+}
+
+function ImageWithFallback5() {
+  return <div className="h-[53.014px] shrink-0 w-full" data-name="ImageWithFallback" />;
+}
+
+function Container71() {
+  return (
+    <div className="absolute bg-[#c99619] left-0 rounded-[2.49829e+07px] size-[55.992px] top-0" data-name="Container">
+      <div className="content-stretch flex flex-col items-start overflow-clip p-[1.489px] relative rounded-[inherit] size-full">
+        <ImageWithFallback5 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[1.489px] border-solid border-white inset-0 pointer-events-none rounded-[2.49829e+07px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Icon15() {
+  return (
+    <div className="absolute left-[5.99px] size-[7.992px] top-[4.75px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 7.99226 7.99226">
+        <g clipPath="url(#clip0_359_824)" id="Icon">
+          <path d={svgPaths.pbe0100} fill="var(--fill-0, white)" id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.666022" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_824">
+            <rect fill="white" height="7.99226" width="7.99226" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container72() {
+  return (
+    <div className="absolute bg-gradient-to-r border-[0.745px] border-solid border-white from-[#ffb900] h-[18.974px] left-[-1.73px] rounded-[4px] to-[#fe9a00] top-[41.01px] w-[59.436px]" data-name="Container">
+      <Icon15 />
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold','Noto_Sans_SC:Bold',sans-serif] font-bold leading-[13.5px] left-[15.97px] not-italic text-[9px] text-nowrap text-white top-[1.73px] tracking-[0.167px]">五星教练</p>
+    </div>
+  );
+}
+
+function Container73() {
+  return (
+    <div className="absolute left-[27px] size-[55.992px] top-[16.74px]" data-name="Container">
+      <Container70 />
+      <Container71 />
+      <Container72 />
+    </div>
+  );
+}
+
+function CoachCard1() {
+  return (
+    <div className="bg-white h-[147.444px] relative rounded-[14px] shrink-0 w-[109.995px]" data-name="CoachCard">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid overflow-clip relative rounded-[inherit] size-full">
+        <Container67 />
+        <Container68 />
+        <Container69 />
+        <Container73 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#f9fafb] border-[0.745px] border-solid inset-0 pointer-events-none rounded-[14px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.04)]" />
+    </div>
+  );
+}
+
+function Container74() {
+  return (
+    <div className="absolute h-[20.987px] left-[33.99px] top-[84.72px] w-[41.997px]" data-name="Container">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[21px] left-0 not-italic text-[#0f172b] text-[14px] text-nowrap top-[0.23px] tracking-[-0.1504px]">王果香</p>
+    </div>
+  );
+}
+
+function Container75() {
+  return (
+    <div className="absolute h-[12.506px] left-[33.12px] top-[109.69px] w-[43.754px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[12.5px] left-0 not-italic text-[#6a7282] text-[10px] top-0 tracking-[0.1172px] w-[44px]">学员 1114</p>
+    </div>
+  );
+}
+
+function Container76() {
+  return (
+    <div className="absolute h-[12.506px] left-[33.77px] top-[122.2px] w-[42.451px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[12.5px] left-0 not-italic text-[#6a7282] text-[10px] top-0 tracking-[0.1172px] w-[43px]">教龄 11年</p>
+    </div>
+  );
+}
+
+function Container77() {
+  return <div className="absolute bg-[#c99619] left-[2.8px] rounded-[2.49829e+07px] size-[50.393px] top-[6.8px]" data-name="Container" />;
+}
+
+function ImageWithFallback6() {
+  return <div className="h-[53.014px] shrink-0 w-full" data-name="ImageWithFallback" />;
+}
+
+function Container78() {
+  return (
+    <div className="absolute bg-[#c99619] left-0 rounded-[2.49829e+07px] size-[55.992px] top-0" data-name="Container">
+      <div className="content-stretch flex flex-col items-start overflow-clip p-[1.489px] relative rounded-[inherit] size-full">
+        <ImageWithFallback6 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[1.489px] border-solid border-white inset-0 pointer-events-none rounded-[2.49829e+07px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Icon16() {
+  return (
+    <div className="absolute left-[5.99px] size-[7.992px] top-[4.75px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 7.99226 7.99226">
+        <g clipPath="url(#clip0_359_835)" id="Icon">
+          <path d={svgPaths.p37f07300} fill="var(--fill-0, white)" id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.666022" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_835">
+            <rect fill="white" height="7.99226" width="7.99226" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container79() {
+  return (
+    <div className="absolute bg-gradient-to-r border-[0.745px] border-solid border-white from-[#ffb900] h-[18.974px] left-[-1.73px] rounded-[4px] to-[#fe9a00] top-[41.01px] w-[59.436px]" data-name="Container">
+      <Icon16 />
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold','Noto_Sans_SC:Bold',sans-serif] font-bold leading-[13.5px] left-[15.97px] not-italic text-[9px] text-nowrap text-white top-[1.73px] tracking-[0.167px]">五星教练</p>
+    </div>
+  );
+}
+
+function Container80() {
+  return (
+    <div className="absolute left-[27px] size-[55.992px] top-[16.74px]" data-name="Container">
+      <Container77 />
+      <Container78 />
+      <Container79 />
+    </div>
+  );
+}
+
+function CoachCard2() {
+  return (
+    <div className="bg-white h-[147.444px] relative rounded-[14px] shrink-0 w-[109.995px]" data-name="CoachCard">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid overflow-clip relative rounded-[inherit] size-full">
+        <Container74 />
+        <Container75 />
+        <Container76 />
+        <Container80 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#f9fafb] border-[0.745px] border-solid inset-0 pointer-events-none rounded-[14px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.04)]" />
+    </div>
+  );
+}
+
+function Container81() {
+  return (
+    <div className="absolute h-[20.987px] left-[41px] top-[84.72px] w-[28.002px]" data-name="Container">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[21px] left-0 not-italic text-[#0f172b] text-[14px] text-nowrap top-[0.23px] tracking-[-0.1504px]">王宇</p>
+    </div>
+  );
+}
+
+function Container82() {
+  return (
+    <div className="absolute h-[12.506px] left-[34.37px] top-[109.69px] w-[41.253px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[12.5px] left-0 not-italic text-[#6a7282] text-[10px] top-0 tracking-[0.1172px] w-[42px]">学员 877</p>
+    </div>
+  );
+}
+
+function Container83() {
+  return (
+    <div className="absolute h-[12.506px] left-[32.96px] top-[122.2px] w-[44.08px]" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[12.5px] left-0 not-italic text-[#6a7282] text-[10px] top-0 tracking-[0.1172px] w-[45px]">教龄 13年</p>
+    </div>
+  );
+}
+
+function Container84() {
+  return <div className="absolute bg-[#c99619] left-[2.8px] rounded-[2.49829e+07px] size-[50.393px] top-[6.8px]" data-name="Container" />;
+}
+
+function ImageWithFallback7() {
+  return <div className="h-[53.014px] shrink-0 w-full" data-name="ImageWithFallback" />;
+}
+
+function Container85() {
+  return (
+    <div className="absolute bg-[#c99619] left-0 rounded-[2.49829e+07px] size-[55.992px] top-0" data-name="Container">
+      <div className="content-stretch flex flex-col items-start overflow-clip p-[1.489px] relative rounded-[inherit] size-full">
+        <ImageWithFallback7 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[1.489px] border-solid border-white inset-0 pointer-events-none rounded-[2.49829e+07px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)]" />
+    </div>
+  );
+}
+
+function Icon17() {
+  return (
+    <div className="absolute left-[5.99px] size-[7.992px] top-[4.75px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 7.99226 7.99226">
+        <g clipPath="url(#clip0_359_835)" id="Icon">
+          <path d={svgPaths.p37f07300} fill="var(--fill-0, white)" id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.666022" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_835">
+            <rect fill="white" height="7.99226" width="7.99226" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container86() {
+  return (
+    <div className="absolute bg-gradient-to-r border-[0.745px] border-solid border-white from-[#ffb900] h-[18.974px] left-[-1.73px] rounded-[4px] to-[#fe9a00] top-[41.01px] w-[59.436px]" data-name="Container">
+      <Icon17 />
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold','Noto_Sans_SC:Bold',sans-serif] font-bold leading-[13.5px] left-[15.97px] not-italic text-[9px] text-nowrap text-white top-[1.73px] tracking-[0.167px]">五星教练</p>
+    </div>
+  );
+}
+
+function Container87() {
+  return (
+    <div className="absolute left-[27px] size-[55.992px] top-[16.74px]" data-name="Container">
+      <Container84 />
+      <Container85 />
+      <Container86 />
+    </div>
+  );
+}
+
+function CoachCard3() {
+  return (
+    <div className="bg-white h-[147.444px] relative rounded-[14px] shrink-0 w-[109.995px]" data-name="CoachCard">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid overflow-clip relative rounded-[inherit] size-full">
+        <Container81 />
+        <Container82 />
+        <Container83 />
+        <Container87 />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#f9fafb] border-[0.745px] border-solid inset-0 pointer-events-none rounded-[14px] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.04)]" />
+    </div>
+  );
+}
+
+function Container88() {
+  return (
+    <div className="h-[163.44px] relative shrink-0 w-full" data-name="Container">
+      <div className="overflow-x-auto overflow-y-clip size-full">
+        <div className="content-stretch flex gap-[11.994px] items-start pl-[15.996px] pr-0 py-0 relative size-full">
+          <CoachCard />
+          <CoachCard1 />
+          <CoachCard2 />
+          <CoachCard3 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Container89() {
+  return (
+    <div className="absolute content-stretch flex flex-col gap-[15.996px] h-[237px] items-start left-0 pb-0 pt-[23.988px] px-0 top-[905px] w-[448px]" data-name="Container">
+      <Container59 />
+      <Container88 />
+    </div>
+  );
+}
+
+function Heading5() {
+  return (
+    <div className="h-[25.489px] relative shrink-0 w-[115.719px]" data-name="Heading 2">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Bold','Noto_Sans_SC:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[25.5px] left-0 not-italic text-[#0f172b] text-[17px] text-nowrap top-[0.23px] tracking-[-0.4316px]">学员评价 (135)</p>
+      </div>
+    </div>
+  );
+}
+
+function Icon18() {
+  return (
+    <div className="absolute left-[55.99px] size-[13.995px] top-[2.75px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.9952 13.9952">
+        <g id="Icon">
+          <path d={svgPaths.p32f8c380} id="Vector" stroke="var(--stroke-0, #99A1AF)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16627" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button11() {
+  return (
+    <div className="h-[19.486px] relative shrink-0 w-[69.988px]" data-name="Button">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular','Noto_Sans_SC:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[19.5px] left-[26px] not-italic text-[#99a1af] text-[13px] text-center text-nowrap top-[0.49px] tracking-[-0.0762px] translate-x-[-50%]">查看全部</p>
+        <Icon18 />
+      </div>
+    </div>
+  );
+}
+
+function Container90() {
+  return (
+    <div className="h-[25.489px] relative shrink-0 w-full" data-name="Container">
+      <div className="flex flex-row items-center size-full">
+        <div className="content-stretch flex items-center justify-between relative size-full">
+          <Heading5 />
+          <Button11 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Text24() {
+  return (
+    <div className="absolute h-[39.985px] left-0 top-0 w-[56.446px]" data-name="Text">
+      <p className="absolute font-['Inter:Bold',sans-serif] font-bold leading-[40px] left-0 not-italic text-[#c99619] text-[36px] text-nowrap top-[0.51px] tracking-[0.3691px]">4.8</p>
+    </div>
+  );
+}
+
+function Text25() {
+  return (
+    <div className="absolute h-[19.986px] left-[58.44px] top-[18.61px] w-[14.007px]" data-name="Text">
+      <p className="absolute font-['Inter:Medium','Noto_Sans_JP:Medium',sans-serif] font-medium leading-[20px] left-0 not-italic text-[#c99619] text-[14px] text-nowrap top-[0.49px] tracking-[-0.1504px]">分</p>
+    </div>
+  );
+}
+
+function Container91() {
+  return (
+    <div className="h-[39.985px] relative shrink-0 w-[72.442px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <Text24 />
+        <Text25 />
+      </div>
+    </div>
+  );
+}
+
+function Icon19() {
+  return (
+    <div className="absolute left-0 size-[9.993px] top-[3.26px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 9.99323 9.99323">
+        <g clipPath="url(#clip0_359_805)" id="Icon">
+          <g id="Vector">
+            <path d="M2.91469 4.16384V9.16045Z" fill="var(--fill-0, #C99619)" />
+            <path d="M2.91469 4.16384V9.16045" stroke="var(--stroke-0, #C99619)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.832769" />
+          </g>
+          <path d={svgPaths.pac1ba80} fill="var(--fill-0, #C99619)" id="Vector_2" stroke="var(--stroke-0, #C99619)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.832769" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_805">
+            <rect fill="white" height="9.99323" width="9.99323" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container92() {
+  return (
+    <div className="absolute h-[16.508px] left-[2px] top-[63.98px] w-[55.981px]" data-name="Container">
+      <Icon19 />
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[16.5px] left-[11.98px] not-italic text-[#6a7282] text-[11px] text-nowrap top-[0.49px] tracking-[0.0645px]">教学服务</p>
+    </div>
+  );
+}
+
+function Icon20() {
+  return (
+    <div className="relative size-[59.994px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 59.9943 59.9943">
+        <g id="Icon">
+          <path d={svgPaths.p2d88bd80} id="Vector" stroke="var(--stroke-0, #FBF2DB)" strokeWidth="5" />
+          <path d={svgPaths.p2d88bd80} id="Vector_2" stroke="var(--stroke-0, #C99619)" strokeDasharray="150.8 150.8" strokeLinecap="round" strokeWidth="5" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Text26() {
+  return (
+    <div className="absolute content-stretch flex h-[11.913px] items-start left-[17.67px] top-[4.47px] w-[10.482px]" data-name="Text">
+      <p className="basis-0 font-['Inter:Bold',sans-serif] font-bold grow leading-[15px] min-h-px min-w-px not-italic relative shrink-0 text-[#c99619] text-[10px] tracking-[0.1172px]">%</p>
+    </div>
+  );
+}
+
+function Text27() {
+  return (
+    <div className="absolute h-[19.486px] left-[15.91px] top-[20.24px] w-[28.153px]" data-name="Text">
+      <p className="absolute font-['Inter:Bold',sans-serif] font-bold leading-[19.5px] left-0 not-italic text-[#c99619] text-[13px] text-nowrap top-[0.49px] tracking-[-0.0762px]">94</p>
+      <Text26 />
+    </div>
+  );
+}
+
+function Container93() {
+  return (
+    <div className="absolute left-0 size-[59.994px] top-0" data-name="Container">
+      <div className="absolute flex items-center justify-center left-0 size-[59.994px] top-[0.46px]" style={{ "--transform-inner-width": "300", "--transform-inner-height": "150" } as React.CSSProperties}>
+        <div className="flex-none rotate-[270deg]">
+          <Icon20 />
+        </div>
+      </div>
+      <Text27 />
+    </div>
+  );
+}
+
+function CircularProgress() {
+  return (
+    <div className="h-[80.493px] relative shrink-0 w-[59.994px]" data-name="CircularProgress">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <Container92 />
+        <Container93 />
+      </div>
+    </div>
+  );
+}
+
+function Icon21() {
+  return (
+    <div className="absolute left-0 size-[9.993px] top-[3.26px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 9.99323 9.99323">
+        <g clipPath="url(#clip0_359_797)" id="Icon">
+          <g id="Vector">
+            <path d="M2.9147 4.16384V9.16045Z" fill="var(--fill-0, #C99619)" />
+            <path d="M2.9147 4.16384V9.16045" stroke="var(--stroke-0, #C99619)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.832769" />
+          </g>
+          <path d={svgPaths.p39cb94f0} fill="var(--fill-0, #C99619)" id="Vector_2" stroke="var(--stroke-0, #C99619)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.832769" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_797">
+            <rect fill="white" height="9.99323" width="9.99323" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container94() {
+  return (
+    <div className="absolute h-[16.508px] left-[2px] top-[63.98px] w-[55.981px]" data-name="Container">
+      <Icon21 />
+      <p className="absolute font-['Inter:Regular','Noto_Sans_SC:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[16.5px] left-[11.98px] not-italic text-[#6a7282] text-[11px] text-nowrap top-[0.49px] tracking-[0.0645px]">环境设施</p>
+    </div>
+  );
+}
+
+function Icon22() {
+  return (
+    <div className="relative size-[59.994px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 59.9943 59.9943">
+        <g id="Icon">
+          <path d={svgPaths.p2d88bd80} id="Vector" stroke="var(--stroke-0, #FBF2DB)" strokeWidth="5" />
+          <path d={svgPaths.p2d88bd80} id="Vector_2" stroke="var(--stroke-0, #C99619)" strokeDasharray="150.8 150.8" strokeLinecap="round" strokeWidth="5" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Text28() {
+  return (
+    <div className="absolute content-stretch flex h-[11.913px] items-start left-[17.67px] top-[4.47px] w-[10.482px]" data-name="Text">
+      <p className="basis-0 font-['Inter:Bold',sans-serif] font-bold grow leading-[15px] min-h-px min-w-px not-italic relative shrink-0 text-[#c99619] text-[10px] tracking-[0.1172px]">%</p>
+    </div>
+  );
+}
+
+function Text29() {
+  return (
+    <div className="absolute h-[19.486px] left-[15.91px] top-[20.24px] w-[28.153px]" data-name="Text">
+      <p className="absolute font-['Inter:Bold',sans-serif] font-bold leading-[19.5px] left-0 not-italic text-[#c99619] text-[13px] text-nowrap top-[0.49px] tracking-[-0.0762px]">94</p>
+      <Text28 />
+    </div>
+  );
+}
+
+function Container95() {
+  return (
+    <div className="absolute left-0 size-[59.994px] top-0" data-name="Container">
+      <div className="absolute flex items-center justify-center left-0 size-[59.994px] top-[0.46px]" style={{ "--transform-inner-width": "300", "--transform-inner-height": "150" } as React.CSSProperties}>
+        <div className="flex-none rotate-[270deg]">
+          <Icon22 />
+        </div>
+      </div>
+      <Text29 />
+    </div>
+  );
+}
+
+function CircularProgress1() {
+  return (
+    <div className="h-[80.493px] relative shrink-0 w-[59.994px]" data-name="CircularProgress">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <Container94 />
+        <Container95 />
+      </div>
+    </div>
+  );
+}
+
+function Icon23() {
+  return (
+    <div className="absolute left-0 size-[9.993px] top-[3.26px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 9.99323 9.99323">
+        <g clipPath="url(#clip0_359_790)" id="Icon">
+          <g id="Vector">
+            <path d="M2.91468 4.16384V9.16045Z" fill="var(--fill-0, #C99619)" />
+            <path d="M2.91468 4.16384V9.16045" stroke="var(--stroke-0, #C99619)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.832769" />
+          </g>
+          <path d={svgPaths.p189ef400} fill="var(--fill-0, #C99619)" id="Vector_2" stroke="var(--stroke-0, #C99619)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.832769" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_790">
+            <rect fill="white" height="9.99323" width="9.99323" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Container96() {
+  return (
+    <div className="absolute h-[16.508px] left-[2px] top-[63.98px] w-[55.981px]" data-name="Container">
+      <Icon23 />
+      <p className="absolute font-['Inter:Regular','Noto_Sans_SC:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[16.5px] left-[11.98px] not-italic text-[#6a7282] text-[11px] text-nowrap top-[0.49px] tracking-[0.0645px]">练机速度</p>
+    </div>
+  );
+}
+
+function Icon24() {
+  return (
+    <div className="relative size-[59.994px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 59.9943 59.9943">
+        <g id="Icon">
+          <path d={svgPaths.p2d88bd80} id="Vector" stroke="var(--stroke-0, #FBF2DB)" strokeWidth="5" />
+          <path d={svgPaths.p2d88bd80} id="Vector_2" stroke="var(--stroke-0, #C99619)" strokeDasharray="150.8 150.8" strokeLinecap="round" strokeWidth="5" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Text30() {
+  return (
+    <div className="absolute content-stretch flex h-[11.913px] items-start left-[17.67px] top-[4.47px] w-[10.482px]" data-name="Text">
+      <p className="basis-0 font-['Inter:Bold',sans-serif] font-bold grow leading-[15px] min-h-px min-w-px not-italic relative shrink-0 text-[#c99619] text-[10px] tracking-[0.1172px]">%</p>
+    </div>
+  );
+}
+
+function Text31() {
+  return (
+    <div className="absolute h-[19.486px] left-[15.91px] top-[20.24px] w-[28.153px]" data-name="Text">
+      <p className="absolute font-['Inter:Bold',sans-serif] font-bold leading-[19.5px] left-0 not-italic text-[#c99619] text-[13px] text-nowrap top-[0.49px] tracking-[-0.0762px]">94</p>
+      <Text30 />
+    </div>
+  );
+}
+
+function Container97() {
+  return (
+    <div className="absolute left-0 size-[59.994px] top-0" data-name="Container">
+      <div className="absolute flex items-center justify-center left-0 size-[59.994px] top-[0.46px]" style={{ "--transform-inner-width": "300", "--transform-inner-height": "150" } as React.CSSProperties}>
+        <div className="flex-none rotate-[270deg]">
+          <Icon24 />
+        </div>
+      </div>
+      <Text31 />
+    </div>
+  );
+}
+
+function CircularProgress2() {
+  return (
+    <div className="h-[80.493px] relative shrink-0 w-[59.994px]" data-name="CircularProgress">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <Container96 />
+        <Container97 />
+      </div>
+    </div>
+  );
+}
+
+function Container98() {
+  return (
+    <div className="basis-0 grow h-[80.493px] min-h-px min-w-px relative shrink-0" data-name="Container">
+      <div className="size-full">
+        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start justify-between relative size-full">
+          <CircularProgress />
+          <CircularProgress1 />
+          <CircularProgress2 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Container99() {
+  return (
+    <div className="content-stretch flex gap-[23.988px] h-[80.493px] items-center relative shrink-0 w-full" data-name="Container">
+      <Container91 />
+      <Container98 />
+    </div>
+  );
+}
+
+function Container100() {
+  return (
+    <div className="absolute h-[19.486px] left-0 top-0 w-[195.002px]" data-name="Container">
+      <p className="absolute font-['Inter:Medium','Noto_Sans_JP:Medium','Noto_Sans_SC:Medium',sans-serif] font-medium leading-[19.5px] left-0 not-italic text-[#314158] text-[13px] text-nowrap top-[0.49px] tracking-[-0.0762px]">你的评价可以帮助驾校做得更好！</p>
+    </div>
+  );
+}
+
+function Icon25() {
+  return (
+    <div className="absolute left-[91.96px] size-[11.994px] top-[8.98px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 11.9942 11.9942">
+        <g id="Icon">
+          <path d={svgPaths.p34add800} id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.999517" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Button12() {
+  return (
+    <div className="absolute bg-[#c99619] h-[29.968px] left-0 rounded-[2.49829e+07px] shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)] top-[31.48px] w-[119.954px]" data-name="Button">
+      <p className="absolute font-['Inter:Medium','Noto_Sans_SC:Medium','Noto_Sans_JP:Medium',sans-serif] font-medium leading-[18px] left-[52px] not-italic text-[12px] text-center text-nowrap text-white top-[6.48px] translate-x-[-50%]">我要贡献评价</p>
+      <Icon25 />
+    </div>
+  );
+}
+
+function Container101() {
+  return (
+    <div className="absolute h-[61.448px] left-[16px] top-[25.27px] w-[195.002px]" data-name="Container">
+      <Container100 />
+      <Button12 />
+    </div>
+  );
+}
+
+function Container102() {
+  return (
+    <div className="bg-gradient-to-r from-[#f5db9b] h-[111.985px] overflow-clip relative rounded-[14px] shrink-0 to-[#fbf2db] w-full" data-name="Container">
+      <Container101 />
+      <div className="absolute h-[67px] left-[300px] top-[22.06px] w-[73.69px]" data-name="Face blowing a kiss 1">
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgFaceBlowingAKiss1} />
+      </div>
+    </div>
+  );
+}
+
+function Tag() {
+  return (
+    <div className="absolute bg-[#fbf2db] border-[0.745px] border-[rgba(243,244,246,0.5)] border-solid h-[25.978px] left-0 rounded-[2.49829e+07px] top-0 w-[64.822px]" data-name="Tag">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_SC:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[16.5px] left-[9.99px] not-italic text-[#c99619] text-[11px] text-nowrap top-[4.48px] tracking-[0.0645px]">好评 127</p>
+    </div>
+  );
+}
+
+function Tag1() {
+  return (
+    <div className="absolute bg-[#fbf2db] border-[0.745px] border-[rgba(243,244,246,0.5)] border-solid h-[25.978px] left-[72.81px] rounded-[2.49829e+07px] top-0 w-[73.129px]" data-name="Tag">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[16.5px] left-[9.99px] not-italic text-[#c99619] text-[11px] text-nowrap top-[4.48px] tracking-[0.0645px]">服务好 111</p>
+    </div>
+  );
+}
+
+function Tag2() {
+  return (
+    <div className="absolute bg-[#fbf2db] border-[0.745px] border-[rgba(243,244,246,0.5)] border-solid h-[25.978px] left-[153.94px] rounded-[2.49829e+07px] top-0 w-[87.845px]" data-name="Tag">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[16.5px] left-[9.99px] not-italic text-[#c99619] text-[11px] text-nowrap top-[4.48px] tracking-[0.0645px]">收费透明 106</p>
+    </div>
+  );
+}
+
+function Container103() {
+  return (
+    <div className="h-[25.978px] relative shrink-0 w-full" data-name="Container">
+      <Tag />
+      <Tag1 />
+      <Tag2 />
+    </div>
+  );
+}
+
+function ImageWithFallback8() {
+  return <div className="h-[35.994px] shrink-0 w-full" data-name="ImageWithFallback" />;
+}
+
+function Container104() {
+  return (
+    <div className="bg-[#e5e7eb] relative rounded-[2.49829e+07px] shrink-0 size-[35.994px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start overflow-clip relative rounded-[inherit] size-full">
+        <ImageWithFallback8 />
+      </div>
+    </div>
+  );
+}
+
+function Container105() {
+  return (
+    <div className="h-[20.987px] relative shrink-0 w-full" data-name="Container">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[21px] left-0 not-italic text-[#0f172b] text-[14px] text-nowrap top-[0.23px] tracking-[-0.1504px]">勤勉的芒果</p>
+    </div>
+  );
+}
+
+function Container106() {
+  return (
+    <div className="h-[17.985px] relative shrink-0 w-[34.412px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[18px] left-0 not-italic text-[#fa8c16] text-[12px] top-[0.49px] w-[35px]">5.0 分</p>
+      </div>
+    </div>
+  );
+}
+
+function Text32() {
+  return (
+    <div className="h-[16.508px] relative shrink-0 w-[65.904px]" data-name="Text">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[16.5px] left-0 not-italic text-[#99a1af] text-[11px] text-nowrap top-[0.49px] tracking-[0.0645px]">2025-08-06</p>
+      </div>
+    </div>
+  );
+}
+
+function Text33() {
+  return (
+    <div className="h-[16.508px] relative shrink-0 w-[79.213px]" data-name="Text">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[16.5px] left-0 not-italic text-[#99a1af] text-[11px] top-[0.49px] tracking-[0.0645px] w-[80px]">IP 属地内蒙古区</p>
+      </div>
+    </div>
+  );
+}
+
+function Container107() {
+  return (
+    <div className="content-stretch flex gap-[5.991px] h-[17.985px] items-center relative shrink-0 w-full" data-name="Container">
+      <Container106 />
+      <Text32 />
+      <Text33 />
+    </div>
+  );
+}
+
+function Container108() {
+  return (
+    <div className="h-[40.962px] relative shrink-0 w-[191.512px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[1.989px] items-start relative size-full">
+        <Container105 />
+        <Container107 />
+      </div>
+    </div>
+  );
+}
+
+function Icon26() {
+  return (
+    <div className="relative shrink-0 size-[13.995px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.9952 13.9952">
+        <g clipPath="url(#clip0_359_786)" id="Icon">
+          <path d="M4.08194 5.8313V12.8289" id="Vector" stroke="var(--stroke-0, #99A1AF)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16627" />
+          <path d={svgPaths.p29d96b80} id="Vector_2" stroke="var(--stroke-0, #99A1AF)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16627" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_786">
+            <rect fill="white" height="13.9952" width="13.9952" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Text34() {
+  return (
+    <div className="h-[16.508px] relative shrink-0 w-[5.177px]" data-name="Text">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[16.5px] left-0 not-italic text-[#99a1af] text-[11px] text-nowrap top-[0.49px] tracking-[0.0645px]">1</p>
+      </div>
+    </div>
+  );
+}
+
+function Container109() {
+  return (
+    <div className="h-[16.508px] relative shrink-0 w-[23.162px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[3.99px] items-center relative size-full">
+        <Icon26 />
+        <Text34 />
+      </div>
+    </div>
+  );
+}
+
+function Container110() {
+  return (
+    <div className="h-[40.962px] relative shrink-0 w-full" data-name="Container">
+      <div className="size-full">
+        <div className="content-stretch flex items-start justify-between relative size-full">
+          <Container108 />
+          <Container109 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Container111() {
+  return (
+    <div className="h-[42.23px] relative shrink-0 w-full" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[21.125px] left-0 not-italic text-[#1d293d] text-[13px] top-[0.23px] tracking-[-0.0762px] w-[313px]">考无人机驾照就去内蒙古亚斯特科技找刘一横校长报名，讲解细致，服务周到。\n服务态度：好</p>
+    </div>
+  );
+}
+
+function Container112() {
+  return (
+    <div className="basis-0 grow h-[107.18px] min-h-px min-w-px relative shrink-0" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[7.992px] items-start relative size-full">
+        <Container110 />
+        <Container111 />
+      </div>
+    </div>
+  );
+}
+
+function ReviewItem() {
+  return (
+    <div className="h-[107.18px] relative shrink-0 w-full" data-name="ReviewItem">
+      <div className="size-full">
+        <div className="content-stretch flex gap-[11.994px] items-start relative size-full">
+          <Container104 />
+          <Container112 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ImageWithFallback9() {
+  return <div className="h-[35.994px] shrink-0 w-full" data-name="ImageWithFallback" />;
+}
+
+function Container113() {
+  return (
+    <div className="bg-[#e5e7eb] relative rounded-[2.49829e+07px] shrink-0 size-[35.994px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start overflow-clip relative rounded-[inherit] size-full">
+        <ImageWithFallback9 />
+      </div>
+    </div>
+  );
+}
+
+function Container114() {
+  return (
+    <div className="h-[20.987px] relative shrink-0 w-full" data-name="Container">
+      <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold','Noto_Sans_SC:Bold',sans-serif] font-bold leading-[21px] left-0 not-italic text-[#0f172b] text-[14px] text-nowrap top-[0.23px] tracking-[-0.1504px]">快乐的小鸟</p>
+    </div>
+  );
+}
+
+function Container115() {
+  return (
+    <div className="h-[17.985px] relative shrink-0 w-[35.005px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[18px] left-0 not-italic text-[#fa8c16] text-[12px] top-[0.49px] w-[36px]">4.9 分</p>
+      </div>
+    </div>
+  );
+}
+
+function Text35() {
+  return (
+    <div className="h-[16.508px] relative shrink-0 w-[65.695px]" data-name="Text">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[16.5px] left-0 not-italic text-[#99a1af] text-[11px] text-nowrap top-[0.49px] tracking-[0.0645px]">2025-08-05</p>
+      </div>
+    </div>
+  );
+}
+
+function Text36() {
+  return (
+    <div className="h-[16.508px] relative shrink-0 w-[79.213px]" data-name="Text">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+        <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[16.5px] left-0 not-italic text-[#99a1af] text-[11px] top-[0.49px] tracking-[0.0645px] w-[80px]">IP 属地内蒙古区</p>
+      </div>
+    </div>
+  );
+}
+
+function Container116() {
+  return (
+    <div className="content-stretch flex gap-[5.991px] h-[17.985px] items-center relative shrink-0 w-full" data-name="Container">
+      <Container115 />
+      <Text35 />
+      <Text36 />
+    </div>
+  );
+}
+
+function Container117() {
+  return (
+    <div className="h-[40.962px] relative shrink-0 w-[191.896px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[1.989px] items-start relative size-full">
+        <Container114 />
+        <Container116 />
+      </div>
+    </div>
+  );
+}
+
+function Icon27() {
+  return (
+    <div className="relative shrink-0 size-[13.995px]" data-name="Icon">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.9952 13.9952">
+        <g clipPath="url(#clip0_359_786)" id="Icon">
+          <path d="M4.08194 5.8313V12.8289" id="Vector" stroke="var(--stroke-0, #99A1AF)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16627" />
+          <path d={svgPaths.p29d96b80} id="Vector_2" stroke="var(--stroke-0, #99A1AF)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.16627" />
+        </g>
+        <defs>
+          <clipPath id="clip0_359_786">
+            <rect fill="white" height="13.9952" width="13.9952" />
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function Text37() {
+  return <div className="shrink-0 size-0" data-name="Text" />;
+}
+
+function Container118() {
+  return (
+    <div className="h-[13.995px] relative shrink-0 w-[17.985px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[3.99px] items-center relative size-full">
+        <Icon27 />
+        <Text37 />
+      </div>
+    </div>
+  );
+}
+
+function Container119() {
+  return (
+    <div className="h-[40.962px] relative shrink-0 w-full" data-name="Container">
+      <div className="size-full">
+        <div className="content-stretch flex items-start justify-between relative size-full">
+          <Container117 />
+          <Container118 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Container120() {
+  return (
+    <div className="h-[21.115px] relative shrink-0 w-full" data-name="Container">
+      <p className="absolute font-['Inter:Regular','Noto_Sans_JP:Regular','Noto_Sans_SC:Regular',sans-serif] font-normal leading-[21.125px] left-0 not-italic text-[#1d293d] text-[13px] text-nowrap top-[0.23px] tracking-[-0.0762px]">教练很有耐心，场地也很大，练车不用排队。</p>
+    </div>
+  );
+}
+
+function Container121() {
+  return (
+    <div className="basis-0 grow h-[86.065px] min-h-px min-w-px relative shrink-0" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[7.992px] items-start relative size-full">
+        <Container119 />
+        <Container120 />
+      </div>
+    </div>
+  );
+}
+
+function ReviewItem1() {
+  return (
+    <div className="h-[86.065px] relative shrink-0 w-full" data-name="ReviewItem">
+      <div className="size-full">
+        <div className="content-stretch flex gap-[11.994px] items-start relative size-full">
+          <Container113 />
+          <Container121 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Container122() {
+  return (
+    <div className="content-stretch flex flex-col gap-[23.988px] h-[217.234px] items-start relative shrink-0 w-full" data-name="Container">
+      <ReviewItem />
+      <ReviewItem1 />
+    </div>
+  );
+}
+
+function Container123() {
+  return (
+    <div className="absolute content-stretch flex flex-col gap-[23.988px] h-[581px] items-start left-0 pb-0 pt-[23.988px] px-[15.996px] top-[1154px] w-[448px]" data-name="Container">
+      <Container90 />
+      <Container99 />
+      <Container102 />
+      <Container103 />
+      <Container122 />
+    </div>
+  );
+}
+
+export default function Component1() {
+  return (
+    <div className="bg-[#fefbf4] relative size-full" data-name="飞场详情-班型">
+      <Container11 />
+      <Container29 />
+      <SchoolProfile />
+      <Container33 />
+      <Container56 />
+      <div className="absolute bottom-0 h-[924px] left-0 pointer-events-none top-0">
+        <Frame />
+      </div>
+      <Container89 />
+      <Container123 />
+    </div>
+  );
+}
