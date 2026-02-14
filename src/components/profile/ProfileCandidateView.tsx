@@ -6,16 +6,24 @@ interface ProfileCandidateViewProps {
   onSwitchRole: () => void;
   onMyMistakesClick: () => void;
   onMyFavoritesClick: () => void;
+  onCollectionsClick?: () => void;
   onInvitationCodeClick: () => void;
   onCaacBindingClick: () => void;
+  onSettingsClick?: () => void;
+  isLoggedIn?: boolean;
+  onLoginClick?: () => void;
 }
 
 export function ProfileCandidateView({ 
   onSwitchRole, 
   onMyMistakesClick, 
   onMyFavoritesClick,
+  onCollectionsClick,
   onInvitationCodeClick,
-  onCaacBindingClick
+  onCaacBindingClick,
+  onSettingsClick,
+  isLoggedIn = false,
+  onLoginClick
 }: ProfileCandidateViewProps) {
   return (
     <div className="flex flex-col w-full h-full bg-[#fefbf4]">
@@ -33,7 +41,10 @@ export function ProfileCandidateView({
 
         {/* User Info & VIP */}
         <div className="content-stretch flex items-center justify-between px-[8px] py-0 relative w-full md:px-4">
-          <div className="content-stretch flex gap-[15.996px] h-[63.996px] items-center relative shrink-0 w-[200.644px]">
+          <div 
+            className="content-stretch flex gap-[15.996px] h-[63.996px] items-center relative shrink-0 cursor-pointer active:opacity-80"
+            onClick={!isLoggedIn ? onLoginClick : undefined}
+          >
             {/* Avatar */}
             <div className="bg-[#fbf2db] relative rounded-full shrink-0 size-[63.996px]">
               <div aria-hidden="true" className="absolute border-[1.489px] border-solid border-white inset-0 pointer-events-none rounded-full shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)]" />
@@ -49,11 +60,11 @@ export function ProfileCandidateView({
               </div>
             </div>
             
-            {/* Login/Register Text */}
+            {/* Login/Register Text or Username */}
             <div className="h-[51.967px] relative shrink-0 w-[120.652px]">
               <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[3.99px] items-start relative size-full">
                 <div className="h-[27.99px] relative shrink-0 w-full">
-                  <p className="absolute font-['Inter'] font-bold leading-[28px] left-0 not-italic text-[#0f172b] text-[20px] top-[-0.51px] tracking-[-0.4492px] whitespace-pre">登录/注册</p>
+                  <p className="absolute font-['Inter'] font-bold leading-[28px] left-0 not-italic text-[#0f172b] text-[20px] top-[-0.51px] tracking-[-0.4492px] whitespace-pre">{isLoggedIn ? "大黄蜂用户" : "登录/注册"}</p>
                 </div>
                 <div className="h-[19.986px] relative shrink-0 w-full">
                   <p className="absolute font-['Inter'] font-normal leading-[20px] left-0 not-italic text-[#7c7c7c] text-[14px] top-[0.49px] tracking-[-0.1504px] whitespace-pre">一分耕耘一分收获~</p>
@@ -286,6 +297,7 @@ export function ProfileCandidateView({
             }
             label="我的收藏" 
             iconSize="size-[16px]"
+            onClick={onCollectionsClick}
           />
           <MenuItem 
             icon={
@@ -305,6 +317,7 @@ export function ProfileCandidateView({
             label="设置" 
             isLast
             iconSize="size-[18px]"
+            onClick={onSettingsClick}
           />
         </div>
       </div>

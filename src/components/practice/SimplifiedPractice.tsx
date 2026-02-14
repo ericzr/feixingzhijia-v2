@@ -36,7 +36,7 @@ function Header({ onBack }: { onBack: () => void }) {
       <div className="absolute left-4 top-[50px] z-20">
         <BackButton onClick={onBack} />
       </div>
-      <span className="font-bold text-[#1d293d] text-[18px]">精简题库</span>
+      <span className="font-bold text-[#685622] text-[18px]">精简题库</span>
     </div>
   );
 }

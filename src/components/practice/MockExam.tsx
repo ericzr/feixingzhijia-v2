@@ -130,7 +130,7 @@ function TopBar({ onBack }: { onBack?: () => void }) {
       </div>
       
       {/* Title */}
-      <p className="font-sans font-bold text-[#1d293d] text-[18px]">模拟考试</p>
+      <p className="font-sans font-bold text-[#685622] text-[18px]">模拟考试</p>
       
       {/* Right Action */}
       <div className="absolute right-[16px] cursor-pointer opacity-90">

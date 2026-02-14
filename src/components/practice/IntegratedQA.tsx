@@ -123,78 +123,78 @@ export function IntegratedQA({ onBack }: { onBack: () => void }) {
 
   return (
     <div 
-      className="relative size-full min-h-screen flex flex-col overflow-hidden" 
+      className="relative w-full h-full flex flex-col overflow-hidden" 
       style={{ backgroundImage: "linear-gradient(rgb(245, 219, 155) 11.201%, rgba(251, 242, 219, 0.18) 100%), linear-gradient(90deg, rgb(254, 251, 244) 0%, rgb(254, 251, 244) 100%)" }}
     >
       {/* Header */}
-      <div className="flex items-center left-0 p-[12px] pt-[50px] w-full relative z-10">
+      <div className="shrink-0 flex items-center left-0 p-[12px] pt-[50px] md:pt-[20px] w-full relative z-10">
         <BackButton onClick={onBack} />
         <div className="flex-1 flex justify-center pr-[36px]">
-          <h1 className="text-[#1d293d] text-[18px] font-bold tracking-tight">AI问答助手</h1>
+          <h1 className="text-[#685622] text-[18px] font-bold tracking-tight">AI问答助手</h1>
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto scrollbar-hide flex flex-col gap-[18px] pt-[16px]">
-        {/* Horizontal scrollable buttons */}
-        <div className="overflow-x-auto [&::-webkit-scrollbar]:hidden px-[16px]">
-          <div className="flex items-center gap-[12px] min-w-max pb-2">
-            <FeatureButton 
-              label="综合知识" 
-              isActive={activeTab === 'comprehensive'}
-              onClick={() => setActiveTab('comprehensive')}
-              icon={
-                <svg className="size-[24px]" fill="none" viewBox="0 0 24 24">
-                  <path d={svgPaths.p2ab0f800} fill={activeTab === 'comprehensive' ? "#C99619" : "#8A7D60"} />
-                </svg>
-              } 
-            />
-            <FeatureButton 
-              label="UOM公告" 
-              isActive={activeTab === 'uom'}
-              onClick={() => setActiveTab('uom')}
-              icon={
-                <svg className="size-[24px]" fill="none" viewBox="0 0 24 24">
-                  <path d={svgPaths.pdf1bc80} fill={activeTab === 'uom' ? "#C99619" : "#8A7D60"} stroke={activeTab === 'uom' ? "#C99619" : "#8A7D60"} strokeWidth="0.4" />
-                </svg>
-              } 
-            />
-            <FeatureButton 
-              label="题库问答" 
-              isActive={activeTab === 'qa'}
-              onClick={() => setActiveTab('qa')}
-              icon={
-                <svg className="h-[24px] w-[23px]" fill="none" viewBox="0 0 23 24">
-                  <path d={svgPaths.p34d8ac00} fill={activeTab === 'qa' ? "#C99619" : "#8A7D60"} stroke={activeTab === 'qa' ? "#C99619" : "#8A7D60"} strokeWidth="0.4" />
-                  <path d={svgPaths.p1f451080} fill={activeTab === 'qa' ? "#C99619" : "#8A7D60"} stroke={activeTab === 'qa' ? "#C99619" : "#8A7D60"} strokeWidth="0.4" />
-                </svg>
-              } 
-            />
-            <FeatureButton 
-              label="政策法规" 
-              isActive={activeTab === 'policy'}
-              onClick={() => setActiveTab('policy')}
-              icon={
-                <svg className="size-[24px]" fill="none" viewBox="0 0 24 24">
-                  <path d={svgPaths.pb4bcb00} fill={activeTab === 'policy' ? "#C99619" : "#8A7D60"} />
-                  <path d={svgPaths.p3d7292a0} fill={activeTab === 'policy' ? "#C99619" : "#8A7D60"} />
-                </svg>
-              } 
-            />
-            <FeatureButton 
-              label="操作指南" 
-              isActive={activeTab === 'guide'}
-              onClick={() => setActiveTab('guide')}
-              icon={
-                <svg className="size-[22px]" fill="none" viewBox="0 0 22 22">
-                  <path d={svgPaths.p27176800} fill={activeTab === 'guide' ? "#C99619" : "#8A7D60"} />
-                </svg>
-              } 
-            />
-          </div>
+      {/* Tab Bar - shrink-0 keeps it visible */}
+      <div className="shrink-0 overflow-x-auto [&::-webkit-scrollbar]:hidden px-[16px] pt-[8px] pb-[8px]">
+        <div className="flex items-center gap-[12px] min-w-max">
+          <FeatureButton 
+            label="综合知识" 
+            isActive={activeTab === 'comprehensive'}
+            onClick={() => setActiveTab('comprehensive')}
+            icon={
+              <svg className="size-[24px]" fill="none" viewBox="0 0 24 24">
+                <path d={svgPaths.p2ab0f800} fill={activeTab === 'comprehensive' ? "#C99619" : "#8A7D60"} />
+              </svg>
+            } 
+          />
+          <FeatureButton 
+            label="UOM公告" 
+            isActive={activeTab === 'uom'}
+            onClick={() => setActiveTab('uom')}
+            icon={
+              <svg className="size-[24px]" fill="none" viewBox="0 0 24 24">
+                <path d={svgPaths.pdf1bc80} fill={activeTab === 'uom' ? "#C99619" : "#8A7D60"} stroke={activeTab === 'uom' ? "#C99619" : "#8A7D60"} strokeWidth="0.4" />
+              </svg>
+            } 
+          />
+          <FeatureButton 
+            label="题库问答" 
+            isActive={activeTab === 'qa'}
+            onClick={() => setActiveTab('qa')}
+            icon={
+              <svg className="h-[24px] w-[23px]" fill="none" viewBox="0 0 23 24">
+                <path d={svgPaths.p34d8ac00} fill={activeTab === 'qa' ? "#C99619" : "#8A7D60"} stroke={activeTab === 'qa' ? "#C99619" : "#8A7D60"} strokeWidth="0.4" />
+                <path d={svgPaths.p1f451080} fill={activeTab === 'qa' ? "#C99619" : "#8A7D60"} stroke={activeTab === 'qa' ? "#C99619" : "#8A7D60"} strokeWidth="0.4" />
+              </svg>
+            } 
+          />
+          <FeatureButton 
+            label="政策法规" 
+            isActive={activeTab === 'policy'}
+            onClick={() => setActiveTab('policy')}
+            icon={
+              <svg className="size-[24px]" fill="none" viewBox="0 0 24 24">
+                <path d={svgPaths.pb4bcb00} fill={activeTab === 'policy' ? "#C99619" : "#8A7D60"} />
+                <path d={svgPaths.p3d7292a0} fill={activeTab === 'policy' ? "#C99619" : "#8A7D60"} />
+              </svg>
+            } 
+          />
+          <FeatureButton 
+            label="操作指南" 
+            isActive={activeTab === 'guide'}
+            onClick={() => setActiveTab('guide')}
+            icon={
+              <svg className="size-[22px]" fill="none" viewBox="0 0 22 22">
+                <path d={svgPaths.p27176800} fill={activeTab === 'guide' ? "#C99619" : "#8A7D60"} />
+              </svg>
+            } 
+          />
         </div>
+      </div>
 
-        {/* Content Section */}
-        <div className="flex flex-col gap-[16px] w-full px-[16px]">
+      {/* Scrollable Content Section */}
+      <div className="flex-1 min-h-0 overflow-y-auto scrollbar-hide">
+        <div className="flex flex-col gap-[16px] w-full px-[16px] py-[8px] pb-[16px]">
           <p className="text-[#4a5565] text-[14px] leading-[20px] font-normal tracking-tight">
             我是大黄蜂智能AI助手，为您提供行业全方位的支持和解答～
           </p>
@@ -208,7 +208,7 @@ export function IntegratedQA({ onBack }: { onBack: () => void }) {
       </div>
 
       {/* Bottom Input Area */}
-      <div className="bg-white border-t border-[#e5e7eb] px-[16px] py-[12px] pb-[34px] flex flex-col gap-[12px]">
+      <div className="shrink-0 bg-white border-t border-[#e5e7eb] px-[16px] py-[12px] pb-[34px] md:pb-[16px] flex flex-col gap-[12px]">
         <div className="flex items-center gap-[8px]">
           <div className="flex-1 bg-[rgba(251,242,219,0.67)] h-[36px] rounded-full px-[16px] flex items-center">
             <input 

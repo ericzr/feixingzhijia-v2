@@ -92,7 +92,8 @@ export function CaacUploadSuccess({ onBackToHome }: CaacUploadSuccessProps) {
       <div className="absolute bottom-0 left-0 right-0 p-[24px] pb-[40px] bg-gradient-to-t from-[#FEFBF4] via-[#FEFBF4] to-transparent pt-[40px] pointer-events-none">
         <button 
           onClick={onBackToHome}
-          className="pointer-events-auto w-full max-w-[340px] mx-auto h-[56px] bg-gradient-to-r from-[#edc764] to-[#c99619] rounded-[28px] shadow-[0px_4px_12px_rgba(237,199,100,0.4)] flex items-center justify-center cursor-pointer active:scale-[0.98] transition-all"
+          className="pointer-events-auto w-full max-w-[340px] mx-auto bg-gradient-to-r from-[#edc764] to-[#c99619] rounded-[28px] shadow-[0px_4px_12px_rgba(237,199,100,0.4)] flex items-center justify-center cursor-pointer active:scale-[0.98] transition-all"
+          style={{ height: "48px", minHeight: "48px" }}
         >
           <span className="font-medium text-[#685622] text-[18px] tracking-[-0.44px]">返回首页</span>
         </button>

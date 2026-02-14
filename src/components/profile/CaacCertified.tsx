@@ -21,7 +21,7 @@ export function CaacCertified({ onBack, onUpdate, onViewImage }: CaacCertifiedPr
             <path d="M8.5 1L1.5 8L8.5 15" stroke="#1D293D" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.33" />
           </svg>
         </button>
-        <h1 className="text-[18px] font-bold text-[#1D293D] tracking-[-0.44px]">CAAC证书</h1>
+        <h1 className="text-[18px] font-bold text-[#685622] tracking-[-0.44px]">CAAC证书</h1>
         <div className="size-[36px]" />
       </div>
 

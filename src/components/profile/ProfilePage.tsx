@@ -8,10 +8,18 @@ interface ProfilePageProps {
   onSwitchType?: () => void;
   onMyMistakesClick: () => void;
   onMyFavoritesClick: () => void;
+  onCollectionsClick?: () => void;
+  onFlightApplicationClick?: () => void;
+  onAirspaceClick?: () => void;
+  onClimateQueryClick?: () => void;
+  onResumeClick?: () => void;
   onInvitationCodeClick: () => void;
   onCaacBindingClick: () => void;
+  onSettingsClick?: () => void;
   role: 'candidate' | 'pilot';
   onRoleToggle: () => void;
+  isLoggedIn?: boolean;
+  onLoginClick?: () => void;
 }
 
 export default function ProfilePage({ 
@@ -19,8 +27,16 @@ export default function ProfilePage({
   onRoleToggle,
   onMyMistakesClick,
   onMyFavoritesClick,
+  onCollectionsClick,
+  onFlightApplicationClick,
+  onAirspaceClick,
+  onClimateQueryClick,
+  onResumeClick,
   onInvitationCodeClick,
-  onCaacBindingClick
+  onCaacBindingClick,
+  onSettingsClick,
+  isLoggedIn = false,
+  onLoginClick
 }: ProfilePageProps) {
   
   if (role === 'pilot') {
@@ -28,9 +44,17 @@ export default function ProfilePage({
       <div className="flex-1 bg-[#fefbf4] relative overflow-y-auto scrollbar-hide pb-[80px]">
         <ProfilePilotView 
           onSwitchRole={onRoleToggle} 
-          onMyFavoritesClick={onMyFavoritesClick} 
+          onMyFavoritesClick={onMyFavoritesClick}
+          onCollectionsClick={onCollectionsClick}
+          onFlightApplicationClick={onFlightApplicationClick}
+          onAirspaceClick={onAirspaceClick}
+          onClimateQueryClick={onClimateQueryClick}
+          onResumeClick={onResumeClick}
           onInvitationCodeClick={onInvitationCodeClick}
           onCaacBindingClick={onCaacBindingClick}
+          onSettingsClick={onSettingsClick}
+          isLoggedIn={isLoggedIn}
+          onLoginClick={onLoginClick}
         />
       </div>
     );
@@ -42,8 +66,12 @@ export default function ProfilePage({
         onSwitchRole={onRoleToggle} 
         onMyMistakesClick={onMyMistakesClick}
         onMyFavoritesClick={onMyFavoritesClick}
+        onCollectionsClick={onCollectionsClick}
         onInvitationCodeClick={onInvitationCodeClick}
         onCaacBindingClick={onCaacBindingClick}
+        onSettingsClick={onSettingsClick}
+        isLoggedIn={isLoggedIn}
+        onLoginClick={onLoginClick}
       />
     </div>
   );

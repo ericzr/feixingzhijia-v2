@@ -23,7 +23,7 @@ export function CaacBinding({ onBack, onSuccess }: CaacBindingProps) {
           </div>
         </button>
         <div className="flex-1 text-center">
-          <p className="font-bold text-[#1d293d] text-[18px] tracking-[-0.44px]">CAAC证书</p>
+          <p className="font-bold text-[#685622] text-[18px] tracking-[-0.44px]">CAAC证书</p>
         </div>
         <div className="size-[36px]" /> {/* Placeholder for balance */}
       </div>
@@ -137,13 +137,13 @@ export function CaacBinding({ onBack, onSuccess }: CaacBindingProps) {
 
         {/* Title & Description */}
         <h2 className="font-bold text-[#685622] text-[26px] tracking-[0.22px] mb-[8px] text-center">上传CAAC证书</h2>
-        <div className="text-[#8b7355] text-[14px] leading-[22px] tracking-[-0.15px] text-center mb-[52px]">
+        <div className="text-[#8b7355] text-[14px] leading-[22px] tracking-[-0.15px] text-center mb-[24px]">
           <p>请上传您的中国民用航空局（CAAC）证书</p>
           <p>支持 PDF、JPG、PNG 格式，大小不超过 10MB</p>
         </div>
 
         {/* Upload Container */}
-        <div className="w-full h-[178px] rounded-[20px] relative flex flex-col items-center justify-center gap-[16px] mb-[12px] cursor-pointer active:scale-[0.99] transition-transform" style={{ backgroundImage: "linear-gradient(153.702deg, rgba(237, 199, 100, 0.2) 0%, rgba(246, 230, 186, 0.2) 100%)" }}>
+        <div className="w-full py-[32px] rounded-[20px] relative flex flex-col items-center justify-center gap-[16px] mb-[12px] cursor-pointer active:scale-[0.99] transition-transform" style={{ backgroundImage: "linear-gradient(153.702deg, rgba(237, 199, 100, 0.2) 0%, rgba(246, 230, 186, 0.2) 100%)" }}>
           <div aria-hidden="true" className="absolute border-[#edc764] border-[2px] border-solid inset-0 pointer-events-none rounded-[20px]" />
           
           {/* Upload Icon */}
@@ -172,7 +172,7 @@ export function CaacBinding({ onBack, onSuccess }: CaacBindingProps) {
         </div>
 
         {/* Info Box */}
-        <div className="w-full bg-[rgba(246,230,186,0.4)] rounded-[16px] p-[16px] relative flex gap-[12px] items-start mb-[44px]">
+        <div className="w-full bg-[rgba(246,230,186,0.4)] rounded-[16px] p-[16px] relative flex gap-[12px] items-start">
           <div aria-hidden="true" className="absolute border-[#edc764] border-[0.6px] border-solid inset-0 pointer-events-none rounded-[16px]" />
           
           <div className="size-[20px] shrink-0 mt-[2px]">
@@ -184,11 +184,14 @@ export function CaacBinding({ onBack, onSuccess }: CaacBindingProps) {
           </div>
           <p className="text-[#8b7355] text-[12px] leading-[18px]">请确保证书清晰可见，包含完整的姓名、证书编号及有效期信息</p>
         </div>
+      </div>
 
-        {/* Submit Button */}
+      {/* Submit Button - Fixed at Bottom */}
+      <div className="shrink-0 px-[44px] pb-[34px] md:pb-[24px] pt-[12px]">
         <button 
           onClick={onSuccess}
-          className="w-full h-[56px] bg-gradient-to-r from-[rgba(237,199,100,1)] to-[rgba(201,150,25,1)] rounded-[28px] flex items-center justify-center cursor-pointer mb-[20px] active:scale-[0.98] transition-all"
+          style={{height:"48px",minHeight:"48px"}}
+          className="w-full bg-gradient-to-r from-[rgba(237,199,100,1)] to-[rgba(201,150,25,1)] rounded-[28px] flex items-center justify-center cursor-pointer active:scale-[0.98] transition-all"
         >
           <span className="font-medium text-[#685622] text-[18px] tracking-[-0.44px]">确认上传</span>
         </button>

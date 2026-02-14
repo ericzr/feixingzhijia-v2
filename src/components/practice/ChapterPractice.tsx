@@ -96,7 +96,7 @@ function Header({ onBack, onToggleMode }: { onBack: () => void, onToggleMode: ()
       <div className="absolute left-[12px] top-[50px] z-20">
         <BackButton onClick={onBack} />
       </div>
-      <p className="font-bold text-[#1d293d] text-[18px] text-center tracking-[-0.44px] leading-[28px]">章节练习</p>
+      <p className="font-bold text-[#685622] text-[18px] text-center tracking-[-0.44px] leading-[28px]">章节练习</p>
       <div className="absolute right-[12px] top-[46px] z-20"> {/* Adjusted top slightly for alignment */}
         <ShuffleButton onClick={onToggleMode} />
       </div>

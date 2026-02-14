@@ -5,11 +5,19 @@ import svgStar from "../../imports/svg-jja46fubuc";
 interface ProfilePilotViewProps {
   onSwitchRole: () => void;
   onMyFavoritesClick: () => void;
+  onCollectionsClick?: () => void;
+  onFlightApplicationClick?: () => void;
+  onAirspaceClick?: () => void;
+  onClimateQueryClick?: () => void;
+  onResumeClick?: () => void;
   onInvitationCodeClick: () => void;
   onCaacBindingClick: () => void;
+  onSettingsClick?: () => void;
+  isLoggedIn?: boolean;
+  onLoginClick?: () => void;
 }
 
-export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onInvitationCodeClick, onCaacBindingClick }: ProfilePilotViewProps) {
+export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectionsClick, onFlightApplicationClick, onAirspaceClick, onClimateQueryClick, onResumeClick, onInvitationCodeClick, onCaacBindingClick, onSettingsClick, isLoggedIn = false, onLoginClick }: ProfilePilotViewProps) {
   return (
     <div className="flex flex-col w-full h-full bg-[#fefbf4]">
       {/* Safety Area - 40px (Hidden on Tablet/Desktop) */}
@@ -28,7 +36,10 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onInvitatio
         {/* User Info & Winged VIP */}
         <div className="content-stretch flex items-center justify-between px-[8px] py-0 relative w-full h-[63.996px] md:px-4">
           {/* Avatar & Text */}
-          <div className="content-stretch flex gap-[15.996px] h-[63.996px] items-center relative shrink-0 w-[200.644px]">
+          <div 
+            className="content-stretch flex gap-[15.996px] h-[63.996px] items-center relative shrink-0 cursor-pointer active:opacity-80"
+            onClick={!isLoggedIn ? onLoginClick : undefined}
+          >
             {/* Avatar */}
              <div className="bg-[#fbf2db] relative rounded-full shrink-0 size-[63.996px]">
               <div aria-hidden="true" className="absolute border-[1.489px] border-solid border-white inset-0 pointer-events-none rounded-full shadow-[0px_1px_3px_0px_rgba(0,0,0,0.1),0px_1px_2px_-1px_rgba(0,0,0,0.1)]" />
@@ -44,11 +55,11 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onInvitatio
               </div>
             </div>
             
-            {/* Text */}
+            {/* Login/Register Text or Username */}
             <div className="h-[51.967px] relative shrink-0 w-[120.652px]">
               <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[3.99px] items-start relative size-full">
                 <div className="h-[27.99px] relative shrink-0 w-full">
-                  <p className="absolute font-['Inter'] font-bold leading-[28px] left-0 not-italic text-[#0f172b] text-[20px] top-[-0.51px] tracking-[-0.4492px] whitespace-pre">登录/注册</p>
+                  <p className="absolute font-['Inter'] font-bold leading-[28px] left-0 not-italic text-[#0f172b] text-[20px] top-[-0.51px] tracking-[-0.4492px] whitespace-pre">{isLoggedIn ? "大黄蜂用户" : "登录/注册"}</p>
                 </div>
                 <div className="h-[19.986px] relative shrink-0 w-full">
                   <p className="absolute font-['Inter'] font-normal leading-[20px] left-0 not-italic text-[#7c7c7c] text-[14px] top-[0.49px] tracking-[-0.1504px] whitespace-pre">一分耕耘一分收获~</p>
@@ -166,7 +177,10 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onInvitatio
         {/* Tools Section */}
         <div className="flex flex-col gap-[10px] md:col-span-2 md:grid md:grid-cols-2 md:gap-4">
           {/* Route Application */}
-          <div className="bg-white content-stretch flex h-[85px] items-center justify-between pl-[7.992px] pr-[7.981px] py-0 relative rounded-[14px] shadow-[0px_1px_3px_0px_rgba(251,242,219,0.1),0px_1px_2px_-1px_rgba(251,242,219,0.1)] shrink-0 w-full active:bg-gray-50 cursor-pointer md:col-span-1 md:h-full">
+          <div 
+            className="bg-white content-stretch flex h-[85px] items-center justify-between pl-[7.992px] pr-[7.981px] py-0 relative rounded-[14px] shadow-[0px_1px_3px_0px_rgba(251,242,219,0.1),0px_1px_2px_-1px_rgba(251,242,219,0.1)] shrink-0 w-full active:bg-gray-50 cursor-pointer md:col-span-1 md:h-full"
+            onClick={onFlightApplicationClick}
+          >
              <div className="bg-[#f3f4f6] h-[31.992px] shrink-0 w-[0.989px]" />
              <div className="flex-[1_0_0] h-[43.975px] min-h-px min-w-px relative rounded-[10px]">
                <div className="flex flex-row items-center justify-center size-full">
@@ -234,7 +248,7 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onInvitatio
           {/* Airspace & Weather */}
           <div className="bg-white content-stretch flex h-[76px] items-center justify-between pl-[7.992px] pr-[7.981px] py-0 relative rounded-[14px] shadow-[0px_1px_3px_0px_rgba(251,242,219,0.1),0px_1px_2px_-1px_rgba(251,242,219,0.1)] shrink-0 w-full md:col-span-1 md:h-[85px]">
             {/* Airspace */}
-             <div className="h-[44px] relative rounded-[10px] shrink-0 w-[204px] flex-1 active:bg-gray-50 cursor-pointer">
+             <div className="h-[44px] relative rounded-[10px] shrink-0 w-[204px] flex-1 active:bg-gray-50 cursor-pointer" onClick={onAirspaceClick}>
               <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[11.994px] items-center justify-center relative size-full">
                 <div className="relative shrink-0 size-[48px]">
                   <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
@@ -303,8 +317,8 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onInvitatio
             
             <div className="bg-[#f3f4f6] h-[31.992px] shrink-0 w-[0.989px]" />
 
-            {/* Weather */}
-            <div className="h-[44px] relative rounded-[10px] shrink-0 w-[196px] flex-1 active:bg-gray-50 cursor-pointer">
+            {/* Weather - 气候查询 */}
+            <div className="h-[44px] relative rounded-[10px] shrink-0 w-[196px] flex-1 active:bg-gray-50 cursor-pointer" onClick={onClimateQueryClick}>
               <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[11.994px] items-center justify-center relative size-full">
                 <div className="h-[40px] relative shrink-0 w-[43px]">
                    <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 43 40">
@@ -354,6 +368,7 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onInvitatio
             icon={<svg className="block size-full" preserveAspectRatio="none" viewBox="0 0 19 19"><path d={svgPaths.p2fb80b00} fill="#584B31" stroke="#584B31" strokeWidth="0.4" /></svg>} 
             label="我的简历" 
             iconSize="size-[19px]"
+            onClick={onResumeClick}
           />
           <MenuItem 
             icon={
@@ -363,6 +378,7 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onInvitatio
             }
             label="我的收藏" 
             iconSize="size-[16px]"
+            onClick={onCollectionsClick}
           />
           <MenuItem 
             icon={
@@ -382,6 +398,7 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onInvitatio
             label="设置" 
             isLast
             iconSize="size-[18px]"
+            onClick={onSettingsClick}
           />
         </div>
       </div>

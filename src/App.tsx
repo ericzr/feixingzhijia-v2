@@ -38,6 +38,16 @@ import { MobileLayout } from "./components/common/MobileLayout";
 
 import JobsPage from "./components/jobs/JobsPage";
 import JobDetailPage from "./components/jobs/JobDetailPage";
+import { LoginPage } from "./components/profile/LoginPage";
+import { SettingsPage } from "./components/profile/SettingsPage";
+import { MyCollectionsPage } from "./components/profile/MyCollectionsPage";
+import { FlightApplicationPage } from "./components/profile/FlightApplicationPage";
+import { FlightProxyApplyPage } from "./components/profile/FlightProxyApplyPage";
+import { FlightRecordsPage } from "./components/profile/FlightRecordsPage";
+import { AirspaceViewPage } from "./components/profile/AirspaceViewPage";
+import { ClimateQueryPage } from "./components/profile/ClimateQueryPage";
+import { ResumeEditPage } from "./components/profile/ResumeEditPage";
+import { InstitutionCertPage } from "./components/profile/InstitutionCertPage";
 
 type Page =
   | "home"
@@ -62,7 +72,17 @@ type Page =
   | "school_reviews"
   | "school_coach_list"
   | "school_introduction"
-  | "job_detail";
+  | "job_detail"
+  | "login"
+  | "settings"
+  | "my_collections"
+  | "flight_application"
+  | "flight_proxy_apply"
+  | "flight_records"
+  | "airspace_view"
+  | "climate_query"
+  | "resume_edit"
+  | "institution_cert";
 
 export default function App() {
   const [showCitySelector, setShowCitySelector] =
@@ -80,6 +100,7 @@ export default function App() {
     "candidate" | "pilot"
   >("candidate");
   const [hasCertified, setHasCertified] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const schoolListRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLElement>(null);
@@ -370,6 +391,107 @@ export default function App() {
     );
   }
 
+  if (currentPage === "login") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <LoginPage
+          onBack={() => setCurrentPage("home")}
+          onLoginSuccess={() => {
+            setIsLoggedIn(true);
+            setActiveTab("profile");
+            setCurrentPage("home");
+          }}
+        />
+      </MobileLayout>
+    );
+  }
+
+  if (currentPage === "settings") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <SettingsPage
+          onBack={() => setCurrentPage("home")}
+          onLogout={() => {
+            setIsLoggedIn(false);
+            setCurrentPage("home");
+          }}
+          onLogin={() => setCurrentPage("login")}
+          isLoggedIn={isLoggedIn}
+          username="大黄蜂用户"
+          phoneNumber="138****8888"
+        />
+      </MobileLayout>
+    );
+  }
+
+  if (currentPage === "my_collections") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <MyCollectionsPage onBack={() => setCurrentPage("home")} />
+      </MobileLayout>
+    );
+  }
+
+  if (currentPage === "flight_application") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <FlightApplicationPage onBack={() => setCurrentPage("home")} onProxyApply={() => setCurrentPage("flight_proxy_apply")} onRecords={() => setCurrentPage("flight_records")} />
+      </MobileLayout>
+    );
+  }
+
+  if (currentPage === "flight_proxy_apply") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <FlightProxyApplyPage onBack={() => setCurrentPage("flight_application")} onSubmitSuccess={() => setCurrentPage("flight_records")} />
+      </MobileLayout>
+    );
+  }
+
+  if (currentPage === "airspace_view") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <AirspaceViewPage onBack={() => setCurrentPage("home")} />
+      </MobileLayout>
+    );
+  }
+
+  if (currentPage === "climate_query") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <ClimateQueryPage onBack={() => setCurrentPage("home")} />
+      </MobileLayout>
+    );
+  }
+
+  if (currentPage === "resume_edit") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <ResumeEditPage
+          onBack={() => setCurrentPage("home")}
+          onSave={() => setCurrentPage("home")}
+          onInstitutionCertClick={() => setCurrentPage("institution_cert")}
+        />
+      </MobileLayout>
+    );
+  }
+
+  if (currentPage === "institution_cert") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <InstitutionCertPage onBack={() => setCurrentPage("resume_edit")} />
+      </MobileLayout>
+    );
+  }
+
+  if (currentPage === "flight_records") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <FlightRecordsPage onBack={() => setCurrentPage("flight_application")} />
+      </MobileLayout>
+    );
+  }
+
   if (currentPage === "job_detail") {
     return (
       <MobileLayout bgClass="bg-white">
@@ -499,6 +621,21 @@ export default function App() {
           onMyFavoritesClick={() =>
             setCurrentPage("my_favorites")
           }
+          onCollectionsClick={() =>
+            setCurrentPage("my_collections")
+          }
+          onFlightApplicationClick={() =>
+            setCurrentPage("flight_application")
+          }
+          onAirspaceClick={() =>
+            setCurrentPage("airspace_view")
+          }
+          onClimateQueryClick={() =>
+            setCurrentPage("climate_query")
+          }
+          onResumeClick={() =>
+            setCurrentPage("resume_edit")
+          }
           onInvitationCodeClick={() =>
             setCurrentPage("invitation_code")
           }
@@ -509,12 +646,15 @@ export default function App() {
               setCurrentPage("caac_binding");
             }
           }}
+          onSettingsClick={() => setCurrentPage("settings")}
           role={profileRole}
           onRoleToggle={() =>
             setProfileRole((prev) =>
               prev === "candidate" ? "pilot" : "candidate",
             )
           }
+          isLoggedIn={isLoggedIn}
+          onLoginClick={() => setCurrentPage("login")}
         />
       )}
 

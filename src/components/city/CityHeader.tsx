@@ -20,7 +20,7 @@ export function CityHeader({ onClose }: { onClose: () => void }) {
       >
         <CloseIcon />
       </div>
-      <h1 className="text-[#1d293d] text-[18px] font-bold tracking-[-0.44px]">选择城市</h1>
+      <h1 className="text-[#685622] text-[18px] font-bold tracking-[-0.44px]">选择城市</h1>
     </div>
   );
 }

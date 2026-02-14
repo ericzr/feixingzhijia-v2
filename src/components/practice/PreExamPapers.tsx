@@ -31,7 +31,7 @@ function SelectCity({ onBack }: { onBack: () => void }) {
       <div className="absolute left-[12px]">
         <BackButton onClick={onBack} />
       </div>
-      <div className="text-[18px] font-bold text-[#1d293d]">考前密卷</div>
+      <div className="text-[18px] font-bold text-[#685622]">考前密卷</div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import svgPaths from "../../imports/svg-v2ulsplseo";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Mock Data
 const CATEGORIES = [
