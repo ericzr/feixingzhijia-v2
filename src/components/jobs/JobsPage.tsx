@@ -317,7 +317,14 @@ export default function JobsPage({ onCityClick, onJobClick }: JobsPageProps) {
                   className="absolute top-full left-0 w-full bg-white z-[60] flex flex-col rounded-b-[20px] shadow-[0px_8px_16px_rgba(0,0,0,0.05)] overflow-hidden"
                 >
                   {activeDropdown === 'filter' ? (
-                    <div className="flex flex-col max-h-[70vh] min-h-0">
+                    <div
+                      className="flex flex-col min-h-0"
+                      style={{
+                        // 下拉从 sticky 头部底边开始，头部总高 = 40+56+44+44 = 184px；底部预留 86px（导航 65px + 边距）
+                        // 使用 100dvh 与 MobileLayout 一致，避免移动端地址栏导致 100vh 偏大
+                        maxHeight: 'min(70vh, calc(100dvh - 184px - 86px))',
+                      }}
+                    >
                       <div className="flex-1 min-h-0 p-[20px] overflow-y-auto">
                         {/* Certificate Type */}
                         <div className="mb-6">

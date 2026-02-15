@@ -22,8 +22,11 @@ function SubText({ text }: { text: string }) {
 
 function Button1() {
   return (
-    <div className="absolute bg-[rgba(245,219,155,0.36)] h-[32px] left-[16px] rounded-[1.67772e+07px] top-[226px] w-[167px]" data-name="Button">
-      <p className="absolute font-['Inter:Regular','Noto_Sans_SC:Regular','Noto_Sans_JP:Regular',sans-serif] font-normal leading-[20px] left-[83px] not-italic text-[#755609] text-[14px] text-center text-nowrap top-[6.5px] tracking-[-0.1504px] translate-x-[-50%]">开始练习</p>
+    <div
+      className="absolute left-1/2 top-[226px] -translate-x-1/2 flex h-[32px] min-w-0 max-w-[calc(100%-32px)] w-[167px] items-center justify-center rounded-[1.67772e+07px] bg-[rgba(245,219,155,0.36)] px-4"
+      data-name="Button"
+    >
+      <p className="font-['Inter:Regular','Noto_Sans_SC:Regular','Noto_Sans_JP:Regular',sans-serif] text-nowrap font-normal leading-[20px] not-italic text-[#755609] text-[14px] tracking-[-0.1504px]">开始练习</p>
     </div>
   );
 }

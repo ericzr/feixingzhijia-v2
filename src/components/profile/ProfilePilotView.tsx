@@ -19,12 +19,9 @@ interface ProfilePilotViewProps {
 
 export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectionsClick, onFlightApplicationClick, onAirspaceClick, onClimateQueryClick, onResumeClick, onInvitationCodeClick, onCaacBindingClick, onSettingsClick, isLoggedIn = false, onLoginClick }: ProfilePilotViewProps) {
   return (
-    <div className="flex flex-col w-full h-full bg-[#fefbf4]">
-      {/* Safety Area - 40px (Hidden on Tablet/Desktop) */}
-      <div className="bg-[#fbf2db] h-[40px] shrink-0 sticky top-0 z-50 w-full md:hidden" />
-
-      {/* Header Section with Gradient - Fixed Height 163px */}
-      <div className="w-full h-[163px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-0 pb-[0px] flex flex-col gap-[20px] shrink-0 md:h-auto md:py-6 md:rounded-b-2xl">
+    <div className="flex flex-col w-full min-h-0 bg-[#fefbf4]">
+      {/* Header Section with Gradient - 顶部 40px 安全区并入，不再使用 sticky 色条避免滚动时多出一块遮挡 */}
+      <div className="w-full h-[163px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-[40px] pb-[0px] flex flex-col gap-[20px] shrink-0 md:h-auto md:py-6 md:rounded-b-2xl">
         {/* Top Icons */}
         <div className="flex items-center justify-between w-full h-[39.973px]">
            {/* Scan Icon - Unified with Candidate View (Search Icon Removed) */}
@@ -140,7 +137,7 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectio
       </div>
 
       {/* Main Content Body */}
-      <div className="px-[16px] -mt-[10px] flex flex-col gap-[16px] relative z-10 pb-[20px] md:mt-0 md:px-8 md:grid md:grid-cols-2 md:gap-6 md:pb-8">
+      <div className="px-[16px] mt-4 flex flex-col gap-[16px] relative z-10 pb-[20px] md:mt-6 md:px-8 md:grid md:grid-cols-2 md:gap-6 md:pb-8">
         {/* Role Switcher */}
         <div 
           className="bg-white content-stretch flex h-[48px] items-center justify-between px-[16px] py-0 relative rounded-[14px] shadow-[0px_1px_3px_0px_rgba(251,242,219,0.1),0px_1px_2px_-1px_rgba(251,242,219,0.1)] shrink-0 w-full cursor-pointer active:opacity-80 md:col-span-2"
