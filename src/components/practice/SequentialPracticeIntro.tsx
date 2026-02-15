@@ -31,21 +31,13 @@ function BackButton({ onClick }: { onClick: () => void }) {
   );
 }
 
-function HeaderTitle() {
-  return (
-    <div className="content-stretch flex flex-col items-center justify-center px-[116px] py-0 relative shrink-0 w-full" data-name="Heading 1">
-      <p className="font-['Inter:Bold','Noto_Sans_SC:Bold','Noto_Sans_JP:Bold',sans-serif] font-bold leading-[28px] not-italic relative shrink-0 text-[#1d293d] text-[18px] text-center text-nowrap tracking-[-0.4395px]">顺序练习</p>
-    </div>
-  );
-}
-
 function Header({ onBack }: { onBack: () => void }) {
   return (
     <div className="relative flex items-center justify-center w-full pt-[40px] pb-[12px] h-[80px]">
       <div className="absolute left-[12px] top-[40px] z-10">
         <BackButton onClick={onBack} />
       </div>
-      <div className="text-[18px] font-bold text-[#1d293d] mt-[4px]">顺序练习</div>
+      <div className="text-[18px] font-bold text-[#685622] mt-[4px]">顺序练习</div>
     </div>
   );
 }
@@ -212,9 +204,16 @@ function IconBox({ path, clipPath }: { path: React.ReactNode, clipPath?: string 
   );
 }
 
-function FeatureButton({ title, iconPath, clipPath }: { title: string, iconPath: React.ReactNode, clipPath?: string }) {
+function FeatureButton({ title, iconPath, clipPath, onClick }: { title: string, iconPath: React.ReactNode, clipPath?: string, onClick?: () => void }) {
   return (
-    <div className="bg-white content-stretch flex flex-col gap-[12px] h-[112px] items-center justify-center relative rounded-[14px] shadow-[0px_1px_3px_0px_#fbf2db,0px_1px_2px_-1px_#fbf2db] flex-1 min-w-[100px]" data-name="Button">
+    <div
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onClick={onClick}
+      onKeyDown={onClick ? (e) => { if (e.key === "Enter" || e.key === " ") onClick(); } : undefined}
+      className={`bg-white content-stretch flex flex-col gap-[12px] h-[112px] items-center justify-center relative rounded-[14px] shadow-[0px_1px_3px_0px_#fbf2db,0px_1px_2px_-1px_#fbf2db] flex-1 min-w-[100px] ${onClick ? "cursor-pointer active:scale-[0.98] transition-transform" : ""}`}
+      data-name="Button"
+    >
       <div className="bg-[#fbf2db] relative rounded-[10px] shrink-0 size-[40px]" data-name="Container">
         <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center size-full">
           <IconBox path={iconPath} clipPath={clipPath} />
@@ -227,7 +226,7 @@ function FeatureButton({ title, iconPath, clipPath }: { title: string, iconPath:
   );
 }
 
-function EfficientPracticeRow() {
+function EfficientPracticeRow({ onRandomPracticeClick, onChapterPracticeClick, onDailyPracticeClick }: { onRandomPracticeClick?: () => void; onChapterPracticeClick?: () => void; onDailyPracticeClick?: () => void }) {
   const iconPaths1 = (
     <>
       <path d={svgPaths.p23525180} id="Vector" stroke="var(--stroke-0, #C99619)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.29157" />
@@ -254,9 +253,9 @@ function EfficientPracticeRow() {
 
   return (
     <div className="content-stretch flex items-center justify-between gap-[12px] w-full" data-name="Container">
-      <FeatureButton title="随机练习" iconPath={iconPaths1} clipPath="clip0_33_2339" />
-      <FeatureButton title="章节练习" iconPath={iconPaths2} />
-      <FeatureButton title="每日一练" iconPath={iconPaths3} clipPath="clip0_33_2335" />
+      <FeatureButton title="随机练习" iconPath={iconPaths1} clipPath="clip0_33_2339" onClick={onRandomPracticeClick} />
+      <FeatureButton title="章节练习" iconPath={iconPaths2} onClick={onChapterPracticeClick} />
+      <FeatureButton title="每日一练" iconPath={iconPaths3} clipPath="clip0_33_2335" onClick={onDailyPracticeClick} />
     </div>
   );
 }
@@ -269,7 +268,7 @@ function Heading2() {
   );
 }
 
-export function SequentialPracticeIntro({ onBack, onStartPractice }: { onBack: () => void, onStartPractice: () => void }) {
+export function SequentialPracticeIntro({ onBack, onStartPractice, onRandomPracticeClick, onChapterPracticeClick, onDailyPracticeClick }: { onBack: () => void, onStartPractice: () => void, onRandomPracticeClick?: () => void, onChapterPracticeClick?: () => void, onDailyPracticeClick?: () => void }) {
   return (
     <div className="relative size-full min-h-screen" data-name="顺序练习" style={{ backgroundImage: "linear-gradient(rgb(245, 219, 155) 11.201%, rgba(251, 242, 219, 0.18) 100%), linear-gradient(90deg, rgb(254, 251, 244) 0%, rgb(254, 251, 244) 100%)" }}>
       <Header onBack={onBack} />
@@ -277,7 +276,7 @@ export function SequentialPracticeIntro({ onBack, onStartPractice }: { onBack: (
         <LearningDataCard onStart={onStartPractice} />
         <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-name="Container">
           <Heading2 />
-          <EfficientPracticeRow />
+          <EfficientPracticeRow onRandomPracticeClick={onRandomPracticeClick} onChapterPracticeClick={onChapterPracticeClick} onDailyPracticeClick={onDailyPracticeClick} />
         </div>
       </div>
     </div>
