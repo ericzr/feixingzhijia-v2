@@ -78,7 +78,7 @@ function TopBar({ onBack, isAnswered, onToggleAnswer }: { onBack: () => void, is
        <div className="h-[40px] bg-white w-full" />
        <div className="bg-white border-[#f3f4f6] border-b-[0.745px] border-solid h-[65px] relative w-full shrink-0">
           <BackButton onClick={onBack} />
-          <p className="absolute font-sans font-bold leading-[25.5px] left-[50%] translate-x-[-50%] not-italic text-[#685622] text-[17px] text-nowrap top-[19.13px] tracking-[-0.4316px]">顺序练习</p>
+          <p className="absolute font-sans font-bold leading-[25.5px] left-[50%] translate-x-[-50%] not-italic text-[#685622] text-[17px] text-nowrap top-[19.13px] tracking-[-0.4316px]">随机练习</p>
       
           {/* Right side buttons (Show Answer, Settings) */}
           <div className="absolute content-stretch flex gap-[12px] h-[32px] items-center right-[16px] top-[16.13px]">
@@ -412,7 +412,7 @@ function FloatingInterface() {
   return null;
 }
 
-export function SequentialPracticeDetail({ onBack }: { onBack: () => void }) {
+export function RandomPracticeDetail({ onBack }: { onBack: () => void }) {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [showAnswer, setShowAnswer] = useState(false);
   const [showAnswerSheet, setShowAnswerSheet] = useState(false);
@@ -493,7 +493,7 @@ export function SequentialPracticeDetail({ onBack }: { onBack: () => void }) {
   };
 
   return (
-    <div className="relative size-full min-h-screen bg-[#fefbf4] flex flex-col" data-name="顺序练习题">
+    <div className="relative size-full min-h-screen bg-[#fefbf4] flex flex-col" data-name="随机练习题">
       <TopBar onBack={onBack} isAnswered={isAnswered} onToggleAnswer={handleToggleAnswer} />
       
       <div className="flex-1 overflow-y-auto p-[16px] pb-[100px] flex flex-col gap-[24px]">

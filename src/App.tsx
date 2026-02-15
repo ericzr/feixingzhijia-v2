@@ -14,6 +14,7 @@ import ExamTypeSelector, {
 } from "./components/exam/ExamTypeSelector";
 import { SequentialPracticeIntro } from "./components/practice/SequentialPracticeIntro";
 import { SequentialPracticeDetail } from "./components/practice/SequentialPracticeDetail";
+import { RandomPracticeDetail } from "./components/practice/RandomPracticeDetail";
 import { MockExam } from "./components/practice/MockExam";
 import { SimulationSetup } from "./components/simulation/SimulationSetup";
 import { SimplifiedPractice } from "./components/practice/SimplifiedPractice";
@@ -53,6 +54,7 @@ type Page =
   | "home"
   | "sequential_intro"
   | "sequential_detail"
+  | "random_practice_detail"
   | "mock_exam"
   | "simulation_setup"
   | "simplified_practice"
@@ -175,6 +177,9 @@ export default function App() {
           onStartPractice={() =>
             setCurrentPage("sequential_detail")
           }
+          onRandomPracticeClick={() => setCurrentPage("random_practice_detail")}
+          onChapterPracticeClick={() => setCurrentPage("chapter_practice")}
+          onDailyPracticeClick={() => setCurrentPage("daily_practice")}
         />
       </MobileLayout>
     );
@@ -184,6 +189,16 @@ export default function App() {
     return (
       <MobileLayout bgClass="bg-[#fefbf4]">
         <SequentialPracticeDetail
+          onBack={() => setCurrentPage("sequential_intro")}
+        />
+      </MobileLayout>
+    );
+  }
+
+  if (currentPage === "random_practice_detail") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <RandomPracticeDetail
           onBack={() => setCurrentPage("sequential_intro")}
         />
       </MobileLayout>

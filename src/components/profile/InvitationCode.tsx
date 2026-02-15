@@ -6,11 +6,32 @@ interface InvitationCodeProps {
   onBack: () => void;
 }
 
+const INVITATION_STORAGE_KEY = "dahuangfeng_my_invitation_code";
+
+function getStoredMyCode(): string | null {
+  try {
+    return localStorage.getItem(INVITATION_STORAGE_KEY);
+  } catch {
+    return null;
+  }
+}
+
 export function InvitationCode({ onBack }: InvitationCodeProps) {
   const [code, setCode] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
-  const handleSubmit = () => { if (code.trim()) setIsSuccess(true); };
-  if (isSuccess) return <InvitationSuccessView onBack={() => setIsSuccess(false)} onStart={onBack} />;
+  const [myInvitationCode, setMyInvitationCode] = useState<string | null>(() => getStoredMyCode());
+
+  const handleSubmit = () => {
+    const trimmed = code.trim();
+    if (!trimmed) return;
+    try {
+      localStorage.setItem(INVITATION_STORAGE_KEY, trimmed);
+      setMyInvitationCode(trimmed);
+    } catch (_) {}
+    setIsSuccess(true);
+  };
+
+  if (isSuccess) return <InvitationSuccessView onBack={() => setIsSuccess(false)} onStart={onBack} myInvitationCode={myInvitationCode} />;
 
   return (
     <div className="flex flex-col w-full h-full relative overflow-hidden" style={{ backgroundImage: "linear-gradient(rgba(245,219,155,0.4) 11.201%,rgba(251,242,219,0.18) 100%),linear-gradient(90deg,rgb(254,251,244) 0%,rgb(254,251,244) 100%)" }}>
@@ -53,12 +74,17 @@ export function InvitationCode({ onBack }: InvitationCodeProps) {
           </div>
           <button onClick={handleSubmit} className="w-full h-[48px] bg-[#c99619] rounded-[40px] text-white font-medium text-[16px] shadow-[0px_10px_15px_-3px_#fbf2db,0px_4px_6px_-4px_#fbf2db] active:scale-[0.98] transition-all tracking-[-0.3125px]">提交</button>
         </div>
+        {myInvitationCode ? (
+          <p className="w-full text-center text-[#afa199] text-[10px] font-normal tracking-normal mt-auto pt-[32px] pb-[24px] shrink-0">
+            我的邀请码：{myInvitationCode}
+          </p>
+        ) : null}
       </div>
     </div>
   );
 }
 
-function InvitationSuccessView({ onBack, onStart }: { onBack: () => void; onStart: () => void }) {
+function InvitationSuccessView({ onBack, onStart, myInvitationCode }: { onBack: () => void; onStart: () => void; myInvitationCode: string | null }) {
   return (
     <div className="relative w-full h-full flex flex-col overflow-hidden" style={{ backgroundImage: "linear-gradient(rgba(245,219,155,0.4) 11.201%,rgba(251,242,219,0.18) 100%),linear-gradient(90deg,rgb(254,251,244) 0%,rgb(254,251,244) 100%)" }}>
       {/* Header */}
@@ -129,7 +155,7 @@ function InvitationSuccessView({ onBack, onStart }: { onBack: () => void; onStar
           </button>
 
           {/* Footer */}
-          <p className="text-[#afa199] text-[10px] tracking-normal font-normal mt-[24px] shrink-0">我的邀请码：88888888</p>
+          <p className="text-[#afa199] text-[10px] tracking-normal font-normal mt-[24px] shrink-0">我的邀请码：{myInvitationCode ?? "—"}</p>
         </div>
       </div>
     </div>
