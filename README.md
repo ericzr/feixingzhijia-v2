@@ -135,7 +135,7 @@ npm run preview
    **Source** 必须选 **GitHub Actions**（不能选 "Deploy from a branch"）。选错会导致根路径 404。
 
 3. **确认 Actions 已成功**  
-   仓库 **Actions** 里找到 "Deploy to GitHub Pages" 工作流，点进最新一次运行：  
+   仓库 **Actions** 里找到 "Deploy to GitHub Pages" 工作流，点进最新一次运行：
    - 若 **build** 或 **deploy** 为红色失败，点进去看报错并修复后重新推送。  
    - 若为绿色成功，等 1～2 分钟再访问链接（有时部署有延迟）。
 
