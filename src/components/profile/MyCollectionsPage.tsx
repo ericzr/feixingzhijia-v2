@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getPublicUrl } from "../../utils/publicPath";
 
 interface MyCollectionsPageProps {
   onBack: () => void;
@@ -198,7 +199,7 @@ export function MyCollectionsPage({ onBack }: MyCollectionsPageProps) {
       <div className="shrink-0 flex items-center justify-center w-full relative z-10" style={{ paddingTop: "50px", paddingBottom: "12px" }}>
         <div className="absolute z-20" style={{ left: "12px", top: "50px" }}>
           <button onClick={onBack} className="size-[36px] flex items-center justify-center cursor-pointer active:opacity-70">
-            <img alt="" src="/icons/settings/back-arrow.svg" className="block w-[7px] h-[14px]" />
+            <img alt="" src={getPublicUrl("icons/settings/back-arrow.svg")} className="block w-[7px] h-[14px]" />
           </button>
         </div>
         <p className="font-bold text-[#685622] text-[18px] text-center" style={{ letterSpacing: "-0.4395px", lineHeight: "28px" }}>

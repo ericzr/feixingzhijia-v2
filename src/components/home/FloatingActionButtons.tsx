@@ -74,7 +74,7 @@ export function FloatingActionButtons({
   if (!visible) return null;
 
   return (
-    <div className="absolute bottom-[80px] right-[16px] flex flex-col gap-[10px] z-30 animate-in fade-in zoom-in duration-300">
+    <div className="absolute bottom-[80px] right-[16px] flex flex-col gap-[10px] z-[100] animate-in fade-in zoom-in duration-300" style={{ isolation: 'isolate' }}>
       <PhoneButton onClick={onPhoneClick} />
       <ScrollTopButton onClick={onScrollTopClick} />
     </div>

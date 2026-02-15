@@ -1,4 +1,5 @@
 import React from "react";
+import { getPublicUrl } from "../../utils/publicPath";
 
 interface FlightApplicationPageProps {
   onBack: () => void;
@@ -35,7 +36,7 @@ export function FlightApplicationPage({ onBack, onProxyApply, onRecords }: Fligh
       <div className="shrink-0 flex items-center justify-center pt-[50px] pb-3 w-full relative z-10">
         <div className="absolute left-[12px] top-[50px] z-20">
           <button onClick={onBack} className="size-[36px] flex items-center justify-center cursor-pointer active:opacity-70">
-            <img alt="" src="/icons/settings/back-arrow.svg" className="block w-[7px] h-[14px]" />
+            <img alt="" src={getPublicUrl("icons/settings/back-arrow.svg")} className="block w-[7px] h-[14px]" />
           </button>
         </div>
         <p className="font-bold text-[#685622] text-[20px] text-center" style={{ letterSpacing: "-0.4492px", lineHeight: "30px" }}>
@@ -153,7 +154,7 @@ export function FlightApplicationPage({ onBack, onProxyApply, onRecords }: Fligh
               padding: "17px",
             }}
           >
-            <img alt="" src="/icons/flight/info-icon.svg" style={{ display: "block", width: "20px", height: "20px", flexShrink: 0 }} />
+            <img alt="" src={getPublicUrl("icons/flight/info-icon.svg")} style={{ display: "block", width: "20px", height: "20px", flexShrink: 0 }} />
             <p className="text-[#685622] text-[13px] leading-[20px]" style={{ letterSpacing: "-0.0762px" }}>
               温馨提示：所有申请信息需真实有效，虚假申请将被驳回并可能影响后续申请。
             </p>

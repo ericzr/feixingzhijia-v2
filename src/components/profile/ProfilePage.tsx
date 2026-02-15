@@ -41,7 +41,7 @@ export default function ProfilePage({
   
   if (role === 'pilot') {
     return (
-      <div className="flex-1 bg-[#fefbf4] relative overflow-y-auto scrollbar-hide pb-[80px]">
+      <div className="flex-1 min-h-0 bg-[#fefbf4] relative overflow-y-auto scrollbar-hide pb-[80px]">
         <ProfilePilotView 
           onSwitchRole={onRoleToggle} 
           onMyFavoritesClick={onMyFavoritesClick}
@@ -61,7 +61,7 @@ export default function ProfilePage({
   }
 
   return (
-    <div className="flex-1 bg-[#fefbf4] relative overflow-y-auto scrollbar-hide pb-[80px]">
+    <div className="flex-1 min-h-0 bg-[#fefbf4] relative overflow-y-auto scrollbar-hide pb-[80px]">
       <ProfileCandidateView 
         onSwitchRole={onRoleToggle} 
         onMyMistakesClick={onMyMistakesClick}

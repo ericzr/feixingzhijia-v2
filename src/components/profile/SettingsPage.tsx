@@ -9,6 +9,8 @@ interface SettingsPageProps {
   phoneNumber?: string;
 }
 
+import { getPublicUrl } from "../../utils/publicPath";
+
 /**
  * 设置页面 - 严格按照 Figma 设计稿 node-id=7690-1512 1:1 复刻
  */
@@ -35,7 +37,7 @@ export function SettingsPage({
             onClick={onBack}
             className="size-[36px] flex items-center justify-center cursor-pointer active:opacity-70"
           >
-            <img alt="" src="/icons/settings/back-arrow.svg" className="block w-[7px] h-[14px]" />
+            <img alt="" src={getPublicUrl("icons/settings/back-arrow.svg")} className="block w-[7px] h-[14px]" />
           </button>
         </div>
         <p
@@ -69,7 +71,7 @@ export function SettingsPage({
                 boxShadow: "0px 4px 12px 0px rgba(237,199,100,0.3)",
               }}
             >
-              <img alt="" src="/icons/settings/user-avatar.svg" style={{ display: "block", width: "32px", height: "32px", flexShrink: 0 }} />
+              <img alt="" src={getPublicUrl("icons/settings/user-avatar.svg")} style={{ display: "block", width: "32px", height: "32px", flexShrink: 0 }} />
             </div>
             <div className="flex-1 min-w-0 flex flex-col gap-[4px]">
               <p className="font-medium text-[#685622] text-[18px] leading-[27px] truncate" style={{ letterSpacing: "-0.4395px" }}>
@@ -100,20 +102,20 @@ export function SettingsPage({
             >
               <div className="flex gap-[16px] items-center">
                 <div className="shrink-0 size-[40px] rounded-full flex items-center justify-center" style={{ backgroundColor: "rgba(237,199,100,0.2)" }}>
-                  <img alt="" src="/icons/settings/contact-us.svg" className="block size-[22px]" />
+                  <img alt="" src={getPublicUrl("icons/settings/contact-us.svg")} className="block size-[22px]" />
                 </div>
                 <p className="text-[#685622] text-[15px] leading-[22.5px]" style={{ letterSpacing: "-0.2344px" }}>联系我们</p>
               </div>
-              <img alt="" src="/icons/settings/chevron-right.svg" className="block size-[20px]" />
+              <img alt="" src={getPublicUrl("icons/settings/chevron-right.svg")} className="block size-[20px]" />
             </div>
             <div className="shrink-0 w-full h-[80px] flex items-center justify-between px-[20px] cursor-pointer active:bg-[rgba(237,199,100,0.05)]">
               <div className="flex gap-[16px] items-center">
                 <div className="shrink-0 size-[40px] rounded-full flex items-center justify-center" style={{ backgroundColor: "rgba(237,199,100,0.2)" }}>
-                  <img alt="" src="/icons/settings/about-us.svg" className="block size-[22px]" />
+                  <img alt="" src={getPublicUrl("icons/settings/about-us.svg")} className="block size-[22px]" />
                 </div>
                 <p className="text-[#685622] text-[15px] leading-[22.5px]" style={{ letterSpacing: "-0.2344px" }}>关于我们</p>
               </div>
-              <img alt="" src="/icons/settings/chevron-right.svg" className="block size-[20px]" />
+              <img alt="" src={getPublicUrl("icons/settings/chevron-right.svg")} className="block size-[20px]" />
             </div>
           </div>
 
@@ -124,7 +126,7 @@ export function SettingsPage({
           >
             <div className="flex gap-[16px] items-center">
               <div className="shrink-0 size-[40px] rounded-full flex items-center justify-center" style={{ backgroundColor: "rgba(237,199,100,0.2)" }}>
-                <img alt="" src="/icons/settings/question-bank.svg" className="block size-[22px]" />
+                <img alt="" src={getPublicUrl("icons/settings/question-bank.svg")} className="block size-[22px]" />
               </div>
               <div className="flex flex-col gap-[2px]">
                 <p className="text-[#685622] text-[15px] leading-[22.5px]" style={{ letterSpacing: "-0.2344px" }}>题库版本</p>
@@ -141,7 +143,7 @@ export function SettingsPage({
           >
             <div className="flex gap-[16px] items-center">
               <div className="shrink-0 size-[40px] rounded-full flex items-center justify-center" style={{ backgroundColor: "rgba(237,199,100,0.2)" }}>
-                <img alt="" src="/icons/settings/current-version.svg" className="block size-[22px]" />
+                <img alt="" src={getPublicUrl("icons/settings/current-version.svg")} className="block size-[22px]" />
               </div>
               <p className="text-[#685622] text-[15px] leading-[22.5px]" style={{ letterSpacing: "-0.2344px" }}>当前版本</p>
             </div>

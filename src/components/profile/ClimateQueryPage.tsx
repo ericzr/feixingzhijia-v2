@@ -1,4 +1,5 @@
 import React from "react";
+import { getPublicUrl } from "../../utils/publicPath";
 
 interface ClimateQueryPageProps {
   onBack: () => void;
@@ -77,7 +78,7 @@ export function ClimateQueryPage({ onBack }: ClimateQueryPageProps) {
       >
         <div className="absolute z-20" style={{ left: "12px", top: "50px" }}>
           <button onClick={onBack} className="size-[36px] flex items-center justify-center cursor-pointer active:opacity-70">
-            <img alt="" src="/icons/settings/back-arrow.svg" className="block w-[7px] h-[14px]" />
+            <img alt="" src={getPublicUrl("icons/settings/back-arrow.svg")} className="block w-[7px] h-[14px]" />
           </button>
         </div>
         <p className="font-bold text-[#685622] text-[20px] text-center" style={{ letterSpacing: "-0.4492px", lineHeight: "30px" }}>

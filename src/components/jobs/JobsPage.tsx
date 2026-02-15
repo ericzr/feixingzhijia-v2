@@ -317,8 +317,8 @@ export default function JobsPage({ onCityClick, onJobClick }: JobsPageProps) {
                   className="absolute top-full left-0 w-full bg-white z-[60] flex flex-col rounded-b-[20px] shadow-[0px_8px_16px_rgba(0,0,0,0.05)] overflow-hidden"
                 >
                   {activeDropdown === 'filter' ? (
-                    <div className="flex flex-col max-h-[70vh]">
-                      <div className="p-[20px] overflow-y-auto">
+                    <div className="flex flex-col max-h-[70vh] min-h-0">
+                      <div className="flex-1 min-h-0 p-[20px] overflow-y-auto">
                         {/* Certificate Type */}
                         <div className="mb-6">
                           <p className="text-[15px] font-medium text-[#101828] mb-3">证书类型</p>
@@ -400,8 +400,8 @@ export default function JobsPage({ onCityClick, onJobClick }: JobsPageProps) {
                         </div>
                       </div>
 
-                      {/* Footer Buttons */}
-                      <div className="p-[16px] border-t border-[#f3f4f6] flex gap-3 bg-white">
+                      {/* Footer Buttons - 始终贴底，不被挤出视口 */}
+                      <div className="shrink-0 p-[16px] border-t border-[#f3f4f6] flex gap-3 bg-white">
                         <button 
                           className="flex-1 h-[44px] rounded-[22px] border border-[#e5e7eb] text-[15px] font-medium text-[#4a5565] bg-white"
                           onClick={handleReset}

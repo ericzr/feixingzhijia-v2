@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getPublicUrl } from "../../utils/publicPath";
 
 interface FlightRecordsPageProps {
   onBack: () => void;
@@ -110,7 +111,7 @@ export function FlightRecordsPage({ onBack }: FlightRecordsPageProps) {
       <div className="shrink-0 flex items-center justify-center pt-[50px] pb-3 w-full relative z-10">
         <div className="absolute left-[12px] top-[50px] z-20">
           <button onClick={onBack} className="size-[36px] flex items-center justify-center cursor-pointer active:opacity-70">
-            <img alt="" src="/icons/settings/back-arrow.svg" className="block w-[7px] h-[14px]" />
+            <img alt="" src={getPublicUrl("icons/settings/back-arrow.svg")} className="block w-[7px] h-[14px]" />
           </button>
         </div>
         <p className="font-bold text-[#685622] text-[20px] text-center" style={{ letterSpacing: "-0.4492px", lineHeight: "30px" }}>申请记录</p>
