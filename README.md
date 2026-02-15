@@ -87,6 +87,62 @@ npm run build
 npm run preview
 ```
 
+## 部署到 GitHub Pages（在线预览）
+
+将应用部署到 GitHub 后，可生成预览链接发给他人访问（如手机扫码打开）。
+
+### 步骤
+
+1. **在 GitHub 创建新仓库**  
+   例如仓库名为 `feixingzhijia-v2`（或任意名称），不要勾选「Initialize with README」。
+
+2. **本地关联并推送**（若尚未关联过远程）  
+   ```bash
+   git remote add origin https://github.com/<你的用户名>/<仓库名>.git
+   git push -u origin main
+   ```  
+   若已有 `origin`，直接执行：  
+   ```bash
+   git push origin main
+   ```
+
+3. **开启 GitHub Pages**  
+   - 仓库页 → **Settings** → **Pages**  
+   - **Source** 选择 **GitHub Actions**（不要选 Deploy from a branch）。
+
+4. **自动部署**  
+   每次推送到 `main` 分支后，Actions 会自动构建并部署。  
+   预览地址为：  
+   **`https://<你的用户名>.github.io/<仓库名>/`**  
+   例如：`https://yourname.github.io/feixingzhijia-v2/`
+
+5. **分享链接**  
+   把上述预览链接发给朋友即可在浏览器或手机中打开。
+
+### 说明
+
+- 构建使用 `npm run build:pages`（仅 Vite 构建，适用于 Pages 部署）。
+- 本地完整类型检查请使用：`npm run build`。
+
+### 若链接打不开（404 或点击没反应）
+
+1. **确认预览地址**  
+   必须带末尾斜杠：`https://<用户名>.github.io/<仓库名>/`  
+   例如：`https://ericzr.github.io/feixingzhijia-v2/`（不要漏掉最后的 `/`）。
+
+2. **确认 Pages 来源**  
+   仓库 **Settings** → **Pages** → **Build and deployment**：  
+   **Source** 必须选 **GitHub Actions**（不能选 "Deploy from a branch"）。选错会导致根路径 404。
+
+3. **确认 Actions 已成功**  
+   仓库 **Actions** 里找到 "Deploy to GitHub Pages" 工作流，点进最新一次运行：  
+   - 若 **build** 或 **deploy** 为红色失败，点进去看报错并修复后重新推送。  
+   - 若为绿色成功，等 1～2 分钟再访问链接（有时部署有延迟）。
+
+4. **首次部署或刚改过 Source**  
+   若刚把 Source 改成 "GitHub Actions"，需要触发一次部署：  
+   - 在 **Actions** 里打开 "Deploy to GitHub Pages"，点 **Run workflow** → **Run workflow**，等跑完后再访问链接。
+
 ## 项目结构
 
 ```
