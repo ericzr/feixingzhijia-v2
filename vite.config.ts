@@ -2,9 +2,25 @@
   import { defineConfig } from 'vite';
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
+  import fs from 'fs';
 
   export default defineConfig({
-    plugins: [react()],
+    base: process.env.VITE_BASE_PATH || '/',
+    plugins: [
+      react(),
+      // GitHub Pages：复制 index.html 为 404.html，使任意路径都回退到 SPA
+      {
+        name: 'copy-404',
+        closeBundle() {
+          const outDir = 'build';
+          const indexPath = path.resolve(__dirname, outDir, 'index.html');
+          const errPath = path.resolve(__dirname, outDir, '404.html');
+          if (fs.existsSync(indexPath)) {
+            fs.copyFileSync(indexPath, errPath);
+          }
+        },
+      },
+    ],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
