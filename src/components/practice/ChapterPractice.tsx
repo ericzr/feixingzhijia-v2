@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-mclhiw6gyp";
 
 const chapters = [
@@ -152,10 +153,10 @@ export function ChapterPractice({ onBack }: { onBack: () => void }) {
   const [isRandomMode, setIsRandomMode] = useState(false);
 
   return (
-    <div className="bg-[#fefbf4] min-h-screen flex flex-col relative w-full overflow-hidden">
+    <div className="flex flex-col flex-1 min-h-0 relative w-full" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       <Header onBack={onBack} onToggleMode={() => setIsRandomMode(!isRandomMode)} />
       
-      <div className="flex-1 overflow-y-auto px-[24px] pt-[20px] pb-[40px] flex flex-col gap-[32px]">
+      <div className="flex-1 min-h-0 overflow-y-auto px-[24px] pt-[20px] pb-[40px] flex flex-col gap-[32px]">
         {chapters.map(chapter => (
           <ChapterItem key={chapter.id} chapter={chapter} isRandomMode={isRandomMode} />
         ))}

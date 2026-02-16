@@ -1,5 +1,7 @@
 import React from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-tptb4rj5km";
+import svgPathsPilot from "../../imports/svg-bzywbymcdw";
 import svgStar from "../../imports/svg-jja46fubuc";
 
 interface ProfileCandidateViewProps {
@@ -26,7 +28,7 @@ export function ProfileCandidateView({
   onLoginClick
 }: ProfileCandidateViewProps) {
   return (
-    <div className="flex flex-col w-full min-h-0 bg-[#fefbf4]">
+    <div className="flex flex-col w-full min-h-0 flex-1" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       {/* Header Section with Gradient - 顶部 40px 安全区并入，不再使用 sticky 色条避免滚动时多出一块遮挡 */}
       <div className="w-full h-[163px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-[40px] pb-[0px] flex flex-col gap-[20px] shrink-0 md:h-auto md:py-6 md:rounded-b-2xl">
         {/* Top Icons - Scan Icon (Search Icon Removed) */}
@@ -281,7 +283,7 @@ export function ProfileCandidateView({
             onClick={onInvitationCodeClick}
           />
           <MenuItem 
-            icon={<svg className="block size-full" fill="none" viewBox="0 0 15 15"><path d={svgPaths.p32f8f000} fill="#584B31" /></svg>}
+            icon={<svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 15"><path d={svgPathsPilot.p32f8f000} fill="#584B31" stroke="#584B31" strokeWidth="0.4" /></svg>}
             label="绑定caac证书" 
             iconSize="size-[15px]"
             onClick={onCaacBindingClick}

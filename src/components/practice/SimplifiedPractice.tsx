@@ -1,4 +1,5 @@
 import React from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "./SimplifiedPracticeSvgs";
 
 function IconBack() {
@@ -138,9 +139,9 @@ export function SimplifiedPractice({ onBack }: { onBack: () => void }) {
   const [showVIP, setShowVIP] = React.useState(false);
 
   return (
-    <div 
-      className="flex flex-col h-full relative bg-[#fefbf4] overflow-hidden"
-      style={{ backgroundImage: "linear-gradient(rgb(245, 219, 155) 11.201%, rgba(251, 242, 219, 0.18) 100%), linear-gradient(90deg, rgb(254, 251, 244) 0%, rgb(254, 251, 244) 100%)" }}
+    <div
+      className="flex flex-col h-full flex-1 min-h-0 relative overflow-hidden"
+      style={{ backgroundImage: SECONDARY_PAGE_BG }}
     >
       <Header onBack={onBack} />
       

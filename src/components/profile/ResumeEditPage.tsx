@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import { getPublicUrl } from "../../utils/publicPath";
 
 interface ResumeEditPageProps {
@@ -302,11 +303,8 @@ export function ResumeEditPage({ onBack, onSave, onInstitutionCertClick }: Resum
 
   return (
     <div
-      className="relative w-full h-full flex flex-col overflow-hidden"
-      style={{
-        minHeight: "100%",
-        background: "linear-gradient(180deg, #f5db9b 0%, #fbf2db 28%, #fef8eb 55%, #fefbf4 100%)",
-      }}
+      className="relative w-full h-full flex flex-col flex-1 min-h-0 overflow-hidden"
+      style={{ backgroundImage: SECONDARY_PAGE_BG }}
     >
       {/* Header */}
       <div className="shrink-0 flex items-center justify-center w-full sticky top-0 z-30" style={{ paddingTop: "50px", paddingBottom: "12px" }}>

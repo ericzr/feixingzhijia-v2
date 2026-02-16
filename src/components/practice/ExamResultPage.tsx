@@ -1,4 +1,5 @@
 import React from 'react';
+import { SECONDARY_PAGE_BG } from '../../constants/theme';
 import svgPaths from '../../imports/svg-4q09br32sd';
 
 // --- Icons ---
@@ -139,7 +140,7 @@ function ActionRow({ label, value, showArrow = true }: { label: string, value: s
 
 export function ExamResultPage({ onBack, onRetake }: { onBack: () => void, onRetake: () => void }) {
   return (
-    <div className="bg-[#fefbf4] relative size-full min-h-screen flex flex-col overflow-hidden">
+    <div className="relative size-full flex flex-col flex-1 min-h-0 overflow-hidden" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
         {/* Background Gradient & Pattern */}
         <div className="absolute top-0 left-0 w-full h-[349px] bg-gradient-to-b from-[#c99619] to-[#f5c244] z-0">
              {/* Wave Pattern */}

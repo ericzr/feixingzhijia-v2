@@ -1,4 +1,5 @@
 import React from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-bzywbymcdw";
 import svgStar from "../../imports/svg-jja46fubuc";
 
@@ -19,9 +20,9 @@ interface ProfilePilotViewProps {
 
 export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectionsClick, onFlightApplicationClick, onAirspaceClick, onClimateQueryClick, onResumeClick, onInvitationCodeClick, onCaacBindingClick, onSettingsClick, isLoggedIn = false, onLoginClick }: ProfilePilotViewProps) {
   return (
-    <div className="flex flex-col w-full min-h-0 bg-[#fefbf4]">
+    <div className="flex flex-col w-full min-h-0 flex-1" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       {/* Header Section with Gradient - 顶部 40px 安全区并入，不再使用 sticky 色条避免滚动时多出一块遮挡 */}
-      <div className="w-full h-[163px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-[40px] pb-[0px] flex flex-col gap-[20px] shrink-0 md:h-auto md:py-6 md:rounded-b-2xl">
+      <div className="w-full h-[163px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-[40px] pb-[0px] flex flex-col gap-[20px] shrink-0 overflow-x-hidden md:h-auto md:py-6 md:rounded-b-2xl">
         {/* Top Icons */}
         <div className="flex items-center justify-between w-full h-[39.973px]">
            {/* Scan Icon - Unified with Candidate View (Search Icon Removed) */}

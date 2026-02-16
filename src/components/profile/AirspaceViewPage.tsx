@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useRef } from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import { getPublicUrl } from "../../utils/publicPath";
 
 interface AirspaceViewPageProps {
@@ -48,11 +49,8 @@ export function AirspaceViewPage({ onBack }: AirspaceViewPageProps) {
 
   return (
     <div
-      className="relative w-full h-full flex flex-col overflow-hidden"
-      style={{
-        minHeight: "100%",
-        background: "linear-gradient(180deg, #f5db9b 0%, #fbf2db 28%, #fef8eb 55%, #fefbf4 100%)",
-      }}
+      className="relative w-full h-full flex flex-col flex-1 min-h-0 overflow-hidden"
+      style={{ backgroundImage: SECONDARY_PAGE_BG }}
     >
       {/* Header */}
       <div className="shrink-0 flex items-center justify-center w-full relative z-30" style={{ paddingTop: "50px", paddingBottom: "12px" }}>
@@ -86,16 +84,18 @@ export function AirspaceViewPage({ onBack }: AirspaceViewPageProps) {
         </div>
       </div>
 
-      {/* Map Area - 可拖动空域地图，无单独背景以保持整页渐变一体 */}
+      {/* Map Area - 可拖动空域地图，touch-action: none 避免移动端触摸被页面滚动抢占 */}
       <div
         className="flex-1 relative overflow-hidden select-none"
         style={{
           cursor: isDragging ? "grabbing" : "grab",
+          touchAction: "none",
         }}
         onPointerDown={onMapPointerDown}
         onPointerMove={onMapPointerMove}
         onPointerUp={onMapPointerUp}
         onPointerLeave={onMapPointerUp}
+        onPointerCancel={onMapPointerUp}
       >
         {/* 可拖动的地图内容层 */}
         <div

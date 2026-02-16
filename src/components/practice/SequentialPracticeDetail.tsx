@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import { FavoriteButton } from "./FavoriteButton";
 import { AnswerSheet } from "./AnswerSheet";
 
@@ -493,7 +494,7 @@ export function SequentialPracticeDetail({ onBack }: { onBack: () => void }) {
   };
 
   return (
-    <div className="relative size-full min-h-screen bg-[#fefbf4] flex flex-col" data-name="顺序练习题">
+    <div className="relative size-full flex flex-col flex-1 min-h-0" data-name="顺序练习题" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       <TopBar onBack={onBack} isAnswered={isAnswered} onToggleAnswer={handleToggleAnswer} />
       
       <div className="flex-1 overflow-y-auto p-[16px] pb-[100px] flex flex-col gap-[24px]">

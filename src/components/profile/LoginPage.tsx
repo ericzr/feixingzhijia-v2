@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 
 interface LoginPageProps {
   onBack: () => void;
@@ -14,7 +15,7 @@ export function LoginPage({ onBack, onLoginSuccess }: LoginPageProps) {
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col overflow-hidden" style={{ backgroundImage: "linear-gradient(180deg, rgba(245,219,155,0.4) 11.201%, rgba(251,242,219,0.18) 100%), linear-gradient(90deg, rgb(254,251,244) 0%, rgb(254,251,244) 100%)" }}>
+    <div className="relative w-full h-full flex flex-col flex-1 min-h-0 overflow-hidden" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       <div className="flex-1 min-h-0 overflow-y-auto w-full">
         <div className="w-full max-w-[448px] mx-auto flex flex-col items-center" style={{paddingTop:"103px",paddingBottom:"40px"}}>
 

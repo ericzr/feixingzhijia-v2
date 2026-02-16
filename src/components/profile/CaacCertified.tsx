@@ -1,4 +1,5 @@
 import React from 'react';
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-28a56f6xyf";
 
 interface CaacCertifiedProps {
@@ -9,7 +10,7 @@ interface CaacCertifiedProps {
 
 export function CaacCertified({ onBack, onUpdate, onViewImage }: CaacCertifiedProps) {
   return (
-    <div className="relative size-full flex flex-col font-sans overflow-hidden" style={{ backgroundImage: "linear-gradient(rgba(245, 219, 155, 0.4) 11.201%, rgba(251, 242, 219, 0.18) 100%), linear-gradient(90deg, rgb(254, 251, 244) 0%, rgb(254, 251, 244) 100%)" }}>
+    <div className="relative size-full flex flex-col flex-1 min-h-0 font-sans overflow-hidden" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       
       {/* Header */}
       <div className="flex items-center justify-between px-[16px] h-[44px] shrink-0 mt-[40px] relative z-10">

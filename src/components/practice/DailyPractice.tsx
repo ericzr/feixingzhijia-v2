@@ -1,4 +1,5 @@
 import React from 'react';
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-944xmjgtm7";
 
 function IconBack() {
@@ -204,12 +205,12 @@ function SettingsLink({ onClick }: { onClick?: () => void }) {
 
 export function DailyPractice({ onBack, onStart }: { onBack: () => void, onStart?: () => void }) {
   return (
-    <div 
-      className="relative size-full min-h-screen flex flex-col items-center" 
-      style={{ backgroundImage: "linear-gradient(rgb(245, 219, 155) 11.201%, rgba(251, 242, 219, 0.18) 100%), linear-gradient(90deg, rgb(254, 251, 244) 0%, rgb(254, 251, 244) 100%)" }}
+    <div
+      className="relative w-full flex flex-col flex-1 min-h-0 items-center"
+      style={{ backgroundImage: SECONDARY_PAGE_BG }}
     >
       <Header onBack={onBack} />
-      <div className="flex flex-col items-center w-full px-[16px] mt-[16px] gap-[30px] pb-[40px]">
+      <div className="flex-1 min-h-0 overflow-y-auto w-full flex flex-col items-center px-[16px] mt-[16px] gap-[30px] pb-[80px]">
         <MainCard />
         <div className="flex flex-col gap-[20px] w-full items-center">
           <StartButton onClick={onStart} />

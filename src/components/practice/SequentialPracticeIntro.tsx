@@ -1,4 +1,5 @@
 import React from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-wrrjx9dyaw";
 
 function Icon3() {
@@ -270,7 +271,7 @@ function Heading2() {
 
 export function SequentialPracticeIntro({ onBack, onStartPractice, onRandomPracticeClick, onChapterPracticeClick, onDailyPracticeClick }: { onBack: () => void, onStartPractice: () => void, onRandomPracticeClick?: () => void, onChapterPracticeClick?: () => void, onDailyPracticeClick?: () => void }) {
   return (
-    <div className="relative size-full min-h-screen" data-name="顺序练习" style={{ backgroundImage: "linear-gradient(rgb(245, 219, 155) 11.201%, rgba(251, 242, 219, 0.18) 100%), linear-gradient(90deg, rgb(254, 251, 244) 0%, rgb(254, 251, 244) 100%)" }}>
+    <div className="relative size-full flex flex-col flex-1 min-h-0" data-name="顺序练习" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       <Header onBack={onBack} />
       <div className="absolute content-stretch flex flex-col gap-[24px] items-start left-0 px-[16px] py-0 top-[107px] w-full" data-name="Container">
         <LearningDataCard onStart={onStartPractice} />

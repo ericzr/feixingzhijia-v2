@@ -21,6 +21,7 @@ import { SimplifiedPractice } from "./components/practice/SimplifiedPractice";
 import { RealExamExternal } from "./components/practice/RealExamExternal";
 import { PreExamPapers } from "./components/practice/PreExamPapers";
 import { IntegratedQA } from "./components/practice/IntegratedQA";
+import ComprehensiveQAPage from "./imports/综合问答";
 import { DailyPractice } from "./components/practice/DailyPractice";
 import { ChapterPractice } from "./components/practice/ChapterPractice";
 import { ExamRecord } from "./components/practice/ExamRecord";
@@ -61,6 +62,7 @@ type Page =
   | "real_exam_external"
   | "pre_exam_papers"
   | "integrated_qa"
+  | "comprehensive_qa"
   | "daily_practice"
   | "chapter_practice"
   | "exam_record"
@@ -260,6 +262,16 @@ export default function App() {
     return (
       <MobileLayout bgClass="bg-[#fefbf4]">
         <IntegratedQA onBack={() => setCurrentPage("home")} />
+      </MobileLayout>
+    );
+  }
+
+  if (currentPage === "comprehensive_qa") {
+    return (
+      <MobileLayout bgClass="bg-[#fefbf4]">
+        <div className="flex-1 min-h-0 overflow-y-auto">
+          <ComprehensiveQAPage onBack={() => setCurrentPage("home")} />
+        </div>
       </MobileLayout>
     );
   }
@@ -572,7 +584,7 @@ export default function App() {
                     setCurrentPage("pre_exam_papers")
                   }
                   onIntegratedQAClick={() =>
-                    setCurrentPage("integrated_qa")
+                    setCurrentPage("comprehensive_qa")
                   }
                   onDailyPracticeClick={() =>
                     setCurrentPage("daily_practice")

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SECONDARY_PAGE_BG } from '../../constants/theme';
 import { ChevronLeft, Check, Plane, Crosshair, Map, AlertTriangle, Wind, Zap, Navigation } from 'lucide-react';
 import { cn } from '../ui/utils';
 import { Button } from '../ui/button';
@@ -67,9 +68,9 @@ export function SimulationSetup({ onBack }: SimulationSetupProps) {
   };
 
   return (
-    <div className="flex flex-col h-full bg-[#fefbf4] overflow-hidden">
+    <div className="flex flex-col flex-1 min-h-0 w-full overflow-hidden" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       {/* Header */}
-      <div className="bg-[#fefbf4] pt-[50px] px-4 shrink-0">
+      <div className="pt-[50px] px-4 shrink-0">
         <div className="relative flex items-center justify-center h-[44px]">
           <button 
             onClick={step === 1 ? onBack : () => setStep(1)} 

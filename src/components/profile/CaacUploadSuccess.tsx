@@ -1,4 +1,5 @@
 import React from 'react';
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-31py3suof4";
 
 interface CaacUploadSuccessProps {
@@ -7,7 +8,7 @@ interface CaacUploadSuccessProps {
 
 export function CaacUploadSuccess({ onBackToHome }: CaacUploadSuccessProps) {
   return (
-    <div className="relative h-full flex flex-col font-sans overflow-hidden" style={{ backgroundImage: "linear-gradient(rgba(245, 219, 155, 0.4) 11.201%, rgba(251, 242, 219, 0.18) 100%), linear-gradient(90deg, rgb(254, 251, 244) 0%, rgb(254, 251, 244) 100%)" }}>
+    <div className="relative h-full flex flex-col flex-1 min-h-0 font-sans overflow-hidden" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       
       {/* Scrollable Content */}
       <div className="flex-1 overflow-y-auto scrollbar-hide flex flex-col items-center px-[24px] pt-[80px] pb-[120px]">

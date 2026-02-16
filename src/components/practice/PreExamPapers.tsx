@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-t31ol1fo6j";
 import { VIPUpgradeModal } from "./VIPUpgradeModal";
 
@@ -122,14 +123,12 @@ export function PreExamPapers({ onBack }: { onBack: () => void }) {
   const [showVIP, setShowVIP] = useState(false);
 
   return (
-    <div className="relative size-full min-h-screen flex flex-col overflow-hidden" data-name="考前密卷" style={{ backgroundImage: "linear-gradient(rgb(245, 219, 155) 11.201%, rgba(251, 242, 219, 0.18) 100%), linear-gradient(90deg, rgb(254, 251, 244) 0%, rgb(254, 251, 244) 100%)" }}>
+    <div className="relative w-full flex flex-col flex-1 min-h-0" data-name="考前密卷" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       <SelectCity onBack={onBack} />
-      
-      <div className="flex-1 overflow-y-auto pb-[120px] px-4">
-         <PaperContent />
+      <div className="flex-1 min-h-0 overflow-y-auto pb-6 px-4">
+        <PaperContent />
       </div>
-
-      <div className="absolute bottom-0 w-full p-6 bg-gradient-to-t from-[#fefbf4] via-[#fefbf4]/90 to-transparent z-50">
+      <div className="shrink-0 w-full p-6 bg-gradient-to-t from-[#fefbf4] via-[#fefbf4]/90 to-transparent z-10 safe-area-bottom">
         <button 
           className="w-full max-w-[380px] mx-auto bg-[#c99619] text-white font-medium text-[17px] h-[50px] rounded-full shadow-lg flex items-center justify-center active:scale-95 transition-transform"
           onClick={() => setShowVIP(true)}

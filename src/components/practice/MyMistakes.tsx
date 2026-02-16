@@ -1,4 +1,5 @@
 import React from 'react';
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-t31ol1fo6j";
 
 function IconBack() {
@@ -182,15 +183,13 @@ const mistakeTypes = [
 
 export function MyMistakes({ onBack }: { onBack: () => void }) {
   return (
-    <div 
-        className="min-h-screen flex flex-col relative w-full overflow-hidden"
-        style={{ 
-            backgroundImage: "linear-gradient(rgb(245, 219, 155) 11.201%, rgba(251, 242, 219, 0.18) 100%), linear-gradient(90deg, rgb(254, 251, 244) 0%, rgb(254, 251, 244) 100%)" 
-        }}
+    <div
+      className="flex flex-col flex-1 min-h-0 relative w-full"
+      style={{ backgroundImage: SECONDARY_PAGE_BG }}
     >
       <Header onBack={onBack} />
       
-      <div className="flex-1 overflow-y-auto px-[16px] pt-[20px] pb-[40px] flex flex-col gap-[16px]">
+      <div className="flex-1 min-h-0 overflow-y-auto px-[16px] pt-[20px] pb-[40px] flex flex-col gap-[16px]">
         {/* Top Cards */}
         <div className="flex items-center justify-between w-full gap-[15px]">
             {/* Today's Mistakes */}

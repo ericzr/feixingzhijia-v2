@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import { getPublicUrl } from "../../utils/publicPath";
 
 interface FlightProxyApplyPageProps {
@@ -226,10 +227,8 @@ export function FlightProxyApplyPage({ onBack, onSubmitSuccess }: FlightProxyApp
 
   return (
     <div
-      className="relative w-full h-full flex flex-col overflow-hidden"
-      style={{
-        backgroundImage: "linear-gradient(180deg, rgba(245,219,155,0.4) 11.201%, rgba(251,242,219,0.18) 100%), linear-gradient(90deg, rgb(254,251,244) 0%, rgb(254,251,244) 100%)",
-      }}
+      className="relative w-full h-full flex flex-col flex-1 min-h-0 overflow-hidden"
+      style={{ backgroundImage: SECONDARY_PAGE_BG }}
     >
       {/* Header */}
       <div className="shrink-0 flex items-center justify-center pt-[50px] pb-3 w-full relative z-10">

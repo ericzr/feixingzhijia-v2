@@ -1,4 +1,5 @@
 import React from 'react';
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-fwlyzecpt8";
 
 function IconBack() {
@@ -220,10 +221,9 @@ function IconIllustration() {
 
 export function ExamRecord({ onBack, onStartExam }: { onBack: () => void, onStartExam?: () => void }) {
   return (
-    <div className="bg-[#fefbf4] min-h-screen flex flex-col relative w-full overflow-hidden">
+    <div className="w-full flex flex-col flex-1 min-h-0 relative" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       <Header onBack={onBack} />
-      
-      <div className="flex-1 overflow-y-auto px-[16px] pt-[16px] pb-[100px] flex flex-col gap-[16px]">
+      <div className="flex-1 min-h-0 overflow-y-auto px-[16px] pt-[16px] pb-6 flex flex-col gap-[16px]">
         
         {/* Top Card: History Stats */}
         <div className="bg-gradient-to-b from-[#f5db9b] to-[#fbf2db] rounded-[14px] shadow-[0px_1px_3px_0px_rgba(251,242,219,0.1),0px_1px_2px_-1px_rgba(251,242,219,0.1)] p-[16px] w-full">
@@ -270,8 +270,8 @@ export function ExamRecord({ onBack, onStartExam }: { onBack: () => void, onStar
         </div>
       </div>
 
-      {/* Footer Button */}
-      <div className="absolute bottom-0 left-0 w-full p-[32px] bg-gradient-to-t from-[#fefbf4] via-[#fefbf4] to-transparent">
+      {/* Footer Button: 固定在底部，不随内容滚动 */}
+      <div className="shrink-0 w-full p-[16px] pt-[24px] pb-[32px] bg-gradient-to-t from-[#fefbf4] via-[#fefbf4] to-transparent safe-area-bottom">
          <button 
            className="w-full bg-[#c99619] text-white font-medium text-[16px] h-[50px] rounded-[14px] shadow-[0px_10px_15px_-3px_rgba(251,242,219,0.5)] flex items-center justify-center"
            onClick={onStartExam}

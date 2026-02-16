@@ -1,4 +1,5 @@
 import React from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import { getPublicUrl } from "../../utils/publicPath";
 
 interface ClimateQueryPageProps {
@@ -65,11 +66,8 @@ const IconCloud = () => (
 export function ClimateQueryPage({ onBack }: ClimateQueryPageProps) {
   return (
     <div
-      className="relative w-full h-full flex flex-col overflow-hidden"
-      style={{
-        minHeight: "100%",
-        background: "linear-gradient(180deg, #f5db9b 0%, #fbf2db 28%, #fef8eb 55%, #fefbf4 100%)",
-      }}
+      className="relative w-full h-full flex flex-col flex-1 min-h-0 overflow-hidden"
+      style={{ backgroundImage: SECONDARY_PAGE_BG }}
     >
       {/* Header - 固定于页面顶部，无独立背景以延续整体页面渐变 */}
       <div

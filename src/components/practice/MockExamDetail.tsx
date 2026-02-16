@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { SECONDARY_PAGE_BG } from '../../constants/theme';
 import svgPaths from '../../imports/svg-jamhi0x1lm';
 import { FavoriteButton } from './FavoriteButton';
 import { AnswerSheetModal } from './AnswerSheetModal';
@@ -470,7 +471,7 @@ export function MockExamDetail({ onBack }: { onBack?: () => void }) {
   }
 
   return (
-    <div className="bg-[#fefbf4] relative size-full h-screen overflow-hidden flex flex-col">
+    <div className="relative size-full flex flex-col flex-1 min-h-0 overflow-hidden" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       <StatusBar />
       {/* Header and Content Wrapper */}
       <div className="flex-1 flex flex-col overflow-hidden relative">

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-fa272t6lbz";
 import successSvgPaths from "../../imports/svg-wky88hhbfd";
 
@@ -34,7 +35,7 @@ export function InvitationCode({ onBack }: InvitationCodeProps) {
   if (isSuccess) return <InvitationSuccessView onBack={() => setIsSuccess(false)} onStart={onBack} myInvitationCode={myInvitationCode} />;
 
   return (
-    <div className="flex flex-col w-full h-full relative overflow-hidden" style={{ backgroundImage: "linear-gradient(rgba(245,219,155,0.4) 11.201%,rgba(251,242,219,0.18) 100%),linear-gradient(90deg,rgb(254,251,244) 0%,rgb(254,251,244) 100%)" }}>
+    <div className="flex flex-col w-full h-full flex-1 min-h-0 relative overflow-hidden" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       <div className="flex items-center px-[12px] pt-[40px] pb-4 relative z-10">
         <button onClick={onBack} className="p-[12px] pt-[4px] active:opacity-60 transition-opacity" aria-label="返回">
           <div className="w-[7px] h-[14px]">
@@ -86,7 +87,7 @@ export function InvitationCode({ onBack }: InvitationCodeProps) {
 
 function InvitationSuccessView({ onBack, onStart, myInvitationCode }: { onBack: () => void; onStart: () => void; myInvitationCode: string | null }) {
   return (
-    <div className="relative w-full h-full flex flex-col overflow-hidden" style={{ backgroundImage: "linear-gradient(rgba(245,219,155,0.4) 11.201%,rgba(251,242,219,0.18) 100%),linear-gradient(90deg,rgb(254,251,244) 0%,rgb(254,251,244) 100%)" }}>
+    <div className="relative w-full h-full flex flex-col flex-1 min-h-0 overflow-hidden" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       {/* Header */}
       <div className="shrink-0 flex items-start p-[12px] pt-[40px] md:pt-[12px] w-full z-10">
         <button onClick={onBack} className="p-[12px] pt-[4px] relative shrink-0">

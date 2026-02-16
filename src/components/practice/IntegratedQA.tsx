@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import svgPaths from "../../imports/svg-qzq1qo8orq";
 
 function IconBack() {
@@ -122,9 +123,9 @@ export function IntegratedQA({ onBack }: { onBack: () => void }) {
   };
 
   return (
-    <div 
-      className="relative w-full h-full flex flex-col overflow-hidden" 
-      style={{ backgroundImage: "linear-gradient(rgb(245, 219, 155) 11.201%, rgba(251, 242, 219, 0.18) 100%), linear-gradient(90deg, rgb(254, 251, 244) 0%, rgb(254, 251, 244) 100%)" }}
+    <div
+      className="relative w-full h-full flex flex-col flex-1 min-h-0 overflow-hidden"
+      style={{ backgroundImage: SECONDARY_PAGE_BG }}
     >
       {/* Header */}
       <div className="shrink-0 flex items-center left-0 p-[12px] pt-[50px] md:pt-[20px] w-full relative z-10">

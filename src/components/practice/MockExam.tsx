@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SECONDARY_PAGE_BG } from '../../constants/theme';
 import svgPaths from '../../imports/svg-099w7j2n06';
 import { MockExamDetail } from './MockExamDetail';
 
@@ -301,9 +302,9 @@ export function MockExam({ onBack, onRealExamClick }: { onBack?: () => void, onR
   }
 
   return (
-    <div 
-      className="relative size-full min-h-screen overflow-y-auto" 
-      style={{ backgroundImage: "linear-gradient(rgb(245, 219, 155) 11.201%, rgba(251, 242, 219, 0.18) 100%), linear-gradient(90deg, rgb(254, 251, 244) 0%, rgb(254, 251, 244) 100%)" }}
+    <div
+      className="relative size-full flex flex-col flex-1 min-h-0 overflow-y-auto"
+      style={{ backgroundImage: SECONDARY_PAGE_BG }}
     >
       <StatusBar />
       <TopBar onBack={onBack} />
