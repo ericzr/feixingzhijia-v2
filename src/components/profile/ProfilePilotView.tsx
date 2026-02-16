@@ -20,7 +20,7 @@ interface ProfilePilotViewProps {
 
 export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectionsClick, onFlightApplicationClick, onAirspaceClick, onClimateQueryClick, onResumeClick, onInvitationCodeClick, onCaacBindingClick, onSettingsClick, isLoggedIn = false, onLoginClick }: ProfilePilotViewProps) {
   return (
-    <div className="flex flex-col w-full min-h-0 flex-1" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
+    <div className="flex flex-col w-full min-h-0 flex-1 overflow-x-hidden" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       {/* Header Section with Gradient - 顶部 40px 安全区并入，不再使用 sticky 色条避免滚动时多出一块遮挡 */}
       <div className="w-full h-[163px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-[40px] pb-[0px] flex flex-col gap-[20px] shrink-0 overflow-x-hidden md:h-auto md:py-6 md:rounded-b-2xl">
         {/* Top Icons */}
@@ -31,8 +31,8 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectio
           </div>
         </div>
 
-        {/* User Info & Winged VIP */}
-        <div className="content-stretch flex items-center justify-between px-[8px] py-0 relative w-full h-[63.996px] md:px-4">
+        {/* User Info & Winged VIP - min-w-0 防止被插画撑宽 */}
+        <div className="content-stretch flex items-center justify-between min-w-0 overflow-x-hidden px-[8px] py-0 relative w-full h-[63.996px] md:px-4">
           {/* Avatar & Text */}
           <div 
             className="content-stretch flex gap-[15.996px] h-[63.996px] items-center relative shrink-0 cursor-pointer active:opacity-80"
@@ -65,10 +65,11 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectio
               </div>
             </div>
           </div>
-          
-          {/* Pilot VIP Badge with Wings */}
-           <div className="flex items-center justify-center relative shrink-0 size-[67.144px]">
-             <div className="flex-none rotate-[7.307deg]">
+
+          {/* Pilot VIP Badge with Wings - 包装层仅裁右侧溢出，页面宽度与其他页一致 */}
+          <div className="flex-1 min-w-0 overflow-x-hidden flex justify-end">
+            <div className="flex items-center justify-center relative shrink-0 size-[67.144px]">
+              <div className="flex-none rotate-[7.307deg]">
                 <div className="opacity-20 relative rounded-[24982900px] size-[60px]" style={{ backgroundImage: "linear-gradient(133.012deg, rgb(245, 219, 155) 3.1676%, rgb(251, 242, 219) 93.798%)" }}>
                   <div aria-hidden="true" className="absolute border-[0.745px] border-[rgba(255,255,255,0.5)] border-solid inset-0 pointer-events-none rounded-[24982900px]" />
                   {/* CAAC Text */}
@@ -132,8 +133,9 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectio
                   </div>
                   <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_2px_4px_0px_rgba(0,0,0,0.05)]" />
                 </div>
-             </div>
-           </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

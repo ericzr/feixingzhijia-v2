@@ -1,13 +1,18 @@
 
   <!DOCTYPE html>
   <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>feixingzhijia（大黄蜂）</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>feixingzhijia（大黄蜂）</title>
+    <style>
+      /* 禁止页面横向滑动，避免插画等溢出内容撑宽页面 */
+      html, body { overflow-x: hidden; max-width: 100%; }
+      #root { overflow-x: hidden; max-width: 100%; }
+    </style>
+  </head>
 
-    <body>
+  <body>
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
     </body>
