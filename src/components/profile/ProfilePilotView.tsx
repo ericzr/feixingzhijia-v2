@@ -1,5 +1,6 @@
 import React from "react";
 import { SECONDARY_PAGE_BG } from "../../constants/theme";
+import { getPublicUrl } from "../../utils/publicPath";
 import svgPaths from "../../imports/svg-bzywbymcdw";
 import svgStar from "../../imports/svg-jja46fubuc";
 
@@ -22,7 +23,18 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectio
   return (
     <div className="flex flex-col w-full min-h-0 flex-1 overflow-x-hidden" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       {/* Header Section with Gradient - 顶部 40px 安全区并入，不再使用 sticky 色条避免滚动时多出一块遮挡 */}
-      <div className="w-full h-[163px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-[40px] pb-[0px] flex flex-col gap-[20px] shrink-0 overflow-x-hidden md:h-auto md:py-6 md:rounded-b-2xl">
+      <div className="relative w-full h-[163px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-[40px] pb-[0px] flex flex-col gap-[20px] shrink-0 overflow-x-hidden md:h-auto md:py-6 md:rounded-b-2xl">
+        {/* 顶部翅膀插画背景（1:1 PNG），整块铺在 Header 右侧，仅做装饰，不参与布局、不会撑宽页面 */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-70"
+          style={{
+            backgroundImage: `url(${getPublicUrl("images/profile-caac-wings.png")})`,
+            backgroundRepeat: "no-repeat",
+            // 调整：贴紧右侧边界，整体略向下，同时缩小一些
+            backgroundPosition: "right 0 bottom 8px",
+            backgroundSize: "auto 48%",
+          }}
+        />
         {/* Top Icons */}
         <div className="flex items-center justify-between w-full h-[39.973px]">
            {/* Scan Icon - Unified with Candidate View (Search Icon Removed) */}
@@ -31,7 +43,7 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectio
           </div>
         </div>
 
-        {/* User Info & Winged VIP - min-w-0 防止被插画撑宽 */}
+        {/* User Info - min-w-0 防止被插画撑宽 */}
         <div className="content-stretch flex items-center justify-between min-w-0 overflow-x-hidden px-[8px] py-0 relative w-full h-[63.996px] md:px-4">
           {/* Avatar & Text */}
           <div 
@@ -66,76 +78,8 @@ export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectio
             </div>
           </div>
 
-          {/* Pilot VIP Badge with Wings - 包装层仅裁右侧溢出，页面宽度与其他页一致 */}
-          <div className="flex-1 min-w-0 overflow-x-hidden flex justify-end">
-            <div className="flex items-center justify-center relative shrink-0 size-[67.144px]">
-              <div className="flex-none rotate-[7.307deg]">
-                <div className="opacity-20 relative rounded-[24982900px] size-[60px]" style={{ backgroundImage: "linear-gradient(133.012deg, rgb(245, 219, 155) 3.1676%, rgb(251, 242, 219) 93.798%)" }}>
-                  <div aria-hidden="true" className="absolute border-[0.745px] border-[rgba(255,255,255,0.5)] border-solid inset-0 pointer-events-none rounded-[24982900px]" />
-                  {/* CAAC Text */}
-                  <div className="absolute h-[27.99px] left-[4.61px] shadow-[0px_1px_4px_0px_#fbf2db] top-[19.6px] w-[49.772px]">
-                    <p className="absolute font-['Inter'] font-black italic leading-[28px] left-[3.97px] text-[#c99619] text-[18px] top-[-1.02px] tracking-[-1.4492px] whitespace-pre">CAAC</p>
-                  </div>
-                  {/* Wings */}
-                  <div className="absolute bg-[rgba(255,255,255,0.2)] h-[65.62px] left-[0.74px] rounded-[24982900px] top-[0.74px] w-[63.737px]">
-                     <div className="absolute h-[68px] left-[-78.75px] top-[-1.72px] w-[223px]">
-                        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 223 68">
-                          <g clipPath="url(#clip0_1693_983)">
-                            <path d={svgPaths.p17568500} fill="#C19839" />
-                            <path d={svgPaths.pabf6200} fill="url(#paint0_linear_1693_983)" />
-                            <path d={svgPaths.p3ce39bc0} fill="url(#paint1_linear_1693_983)" />
-                            <path d={svgPaths.p3a7f6800} fill="url(#paint2_linear_1693_983)" />
-                            <path d={svgPaths.p10ec4500} fill="url(#paint3_linear_1693_983)" />
-                            <path d={svgPaths.p3bfc3480} fill="url(#paint4_linear_1693_983)" />
-                            <path d={svgPaths.p64d9e00} fill="url(#paint5_linear_1693_983)" />
-                            <path d={svgPaths.pef4b500} fill="url(#paint6_linear_1693_983)" />
-                            <path d={svgPaths.p22fe6600} fill="url(#paint7_linear_1693_983)" />
-                          </g>
-                          <defs>
-                            <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1693_983" x1="177.471" x2="177.471" y1="19.6666" y2="10.2505">
-                              <stop offset="0.03" stopColor="#F9F2DD" />
-                              <stop offset="1" stopColor="#EDC45C" />
-                            </linearGradient>
-                            <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_1693_983" x1="45.4214" x2="45.4214" y1="19.6285" y2="10.3998">
-                              <stop offset="0.03" stopColor="#F9F2DD" />
-                              <stop offset="1" stopColor="#EDC45C" />
-                            </linearGradient>
-                            <linearGradient gradientUnits="userSpaceOnUse" id="paint2_linear_1693_983" x1="172.661" x2="172.661" y1="32.3706" y2="22.8404">
-                              <stop offset="0.03" stopColor="#F9F2DD" />
-                              <stop offset="1" stopColor="#EDC45C" />
-                            </linearGradient>
-                            <linearGradient gradientUnits="userSpaceOnUse" id="paint3_linear_1693_983" x1="50.2023" x2="50.2023" y1="32.3355" y2="22.8433">
-                              <stop offset="0.03" stopColor="#F9F2DD" />
-                              <stop offset="1" stopColor="#EDC45C" />
-                            </linearGradient>
-                            <linearGradient gradientUnits="userSpaceOnUse" id="paint4_linear_1693_983" x1="163.869" x2="163.869" y1="45.0161" y2="35.5767">
-                              <stop offset="0.03" stopColor="#F9F2DD" />
-                              <stop offset="1" stopColor="#EDC45C" />
-                            </linearGradient>
-                            <linearGradient gradientUnits="userSpaceOnUse" id="paint5_linear_1693_983" x1="59.0292" x2="59.0292" y1="45.0893" y2="35.5972">
-                              <stop offset="0.03" stopColor="#F9F2DD" />
-                              <stop offset="1" stopColor="#EDC45C" />
-                            </linearGradient>
-                            <linearGradient gradientUnits="userSpaceOnUse" id="paint6_linear_1693_983" x1="146.895" x2="146.895" y1="57.7934" y2="48.1665">
-                              <stop offset="0.03" stopColor="#F9F2DD" />
-                              <stop offset="1" stopColor="#EDC45C" />
-                            </linearGradient>
-                            <linearGradient gradientUnits="userSpaceOnUse" id="paint7_linear_1693_983" x1="75.9454" x2="75.9454" y1="57.7056" y2="47.985">
-                              <stop offset="0.03" stopColor="#F9F2DD" />
-                              <stop offset="1" stopColor="#EDC45C" />
-                            </linearGradient>
-                            <clipPath id="clip0_1693_983">
-                              <rect fill="white" height="68" width="223" />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                     </div>
-                  </div>
-                  <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_2px_4px_0px_rgba(0,0,0,0.05)]" />
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* 右侧不再放小圆徽章，只保留大背景插画；预留 flex-1 保持与其他视图对齐 */}
+          <div className="flex-1 min-w-0" />
         </div>
       </div>
 
