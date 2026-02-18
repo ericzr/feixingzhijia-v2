@@ -596,7 +596,7 @@ export function SchoolDetail({ onBack, onViewAllReviews, onViewAllCoaches, onVie
   };
 
   return (
-    <div className="bg-[#fefbf4] h-full flex flex-col relative overflow-hidden">
+    <div className="bg-white h-full flex flex-col relative overflow-hidden">
       <StickyHeader visible={showSticky} onBack={onBack} activeSection={activeStickyTab} onSectionClick={handleStickyTabClick} />
       
       {/* Header Background */}
@@ -620,7 +620,7 @@ export function SchoolDetail({ onBack, onViewAllReviews, onViewAllCoaches, onVie
             </div>
 
             {/* Tabs */}
-            <div ref={tabsRef} className="z-20 bg-[#fefbf4] pt-[16px] px-[60px] pb-[8px]">
+            <div ref={tabsRef} className="z-20 bg-white pt-[16px] px-[60px] pb-[8px]">
                <div className="flex justify-between items-center">
                   <div onClick={() => setActiveTab('class')} className={`flex flex-col items-center pb-[8px] cursor-pointer w-[60px] relative`}>
                      <span className={`text-[15px] font-medium ${activeTab === 'class' ? 'text-[#1d293d] font-bold' : 'text-[#99a1af]'}`}>班型</span>
