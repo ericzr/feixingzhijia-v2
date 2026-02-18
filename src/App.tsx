@@ -126,6 +126,14 @@ export default function App() {
     }
   }, [activeTab, currentPage]);
 
+  // 仅「我的」主 tab 时状态栏用米色，其余（含详情页、底部安全区）用白色
+  useEffect(() => {
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) return;
+    const isProfileMain = !showCitySelector && currentPage === "home" && activeTab === "profile";
+    meta.setAttribute("content", isProfileMain ? "#fbf2db" : "#ffffff");
+  }, [showCitySelector, currentPage, activeTab]);
+
   const handleExamTypeConfirm = (
     newDroneType: DroneType,
     newLicenseType: LicenseType,
