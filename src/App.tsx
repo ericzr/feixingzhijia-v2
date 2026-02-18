@@ -126,12 +126,17 @@ export default function App() {
     }
   }, [activeTab, currentPage]);
 
-  // 仅「我的」主 tab 时状态栏用米色，其余（含详情页、底部安全区）用白色
+  // 根背景与 theme-color：详情页整页白；其余页头部米黄、底部白；仅「我的」主 tab 状态栏米色
+  const ROOT_BG_SPLIT =
+    "linear-gradient(180deg, #fbf2db 0%, #fbf2db 120px, #ffffff 120px, #ffffff 100%)";
   useEffect(() => {
     const meta = document.querySelector('meta[name="theme-color"]');
-    if (!meta) return;
-    const isProfileMain = !showCitySelector && currentPage === "home" && activeTab === "profile";
-    meta.setAttribute("content", isProfileMain ? "#fbf2db" : "#ffffff");
+    if (meta) {
+      const isProfileMain = !showCitySelector && currentPage === "home" && activeTab === "profile";
+      meta.setAttribute("content", isProfileMain ? "#fbf2db" : "#ffffff");
+    }
+    const isDetailPage = currentPage === "school_detail" || currentPage === "job_detail";
+    document.body.style.background = isDetailPage ? "#ffffff" : ROOT_BG_SPLIT;
   }, [showCitySelector, currentPage, activeTab]);
 
   const handleExamTypeConfirm = (
