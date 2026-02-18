@@ -69,7 +69,10 @@ interface BottomNavProps {
 
 export function BottomNav({ activeTab = 'exam', onTabChange }: BottomNavProps) {
   return (
-    <div className="bg-white absolute bottom-0 left-0 w-full h-[65px] border-t border-[#e5e7eb] z-[100]">
+    <div
+      className="bg-white absolute bottom-0 left-0 w-full border-t border-[#e5e7eb] z-[100]"
+      style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
+    >
       <div className="grid grid-cols-3 h-[64px]">
         <div 
           className="flex flex-col gap-[4px] items-center justify-center cursor-pointer"

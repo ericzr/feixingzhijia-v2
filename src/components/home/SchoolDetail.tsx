@@ -596,7 +596,7 @@ export function SchoolDetail({ onBack, onViewAllReviews, onViewAllCoaches, onVie
   };
 
   return (
-    <div className="bg-white h-full flex flex-col relative overflow-hidden">
+    <div className="bg-white min-h-[100dvh] h-full flex flex-col relative overflow-hidden">
       <StickyHeader visible={showSticky} onBack={onBack} activeSection={activeStickyTab} onSectionClick={handleStickyTabClick} />
       
       {/* Header Background */}

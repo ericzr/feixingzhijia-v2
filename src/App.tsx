@@ -372,6 +372,7 @@ export default function App() {
   if (currentPage === "school_detail") {
     return (
       <MobileLayout bgClass="bg-white">
+        <div className="min-h-[100dvh] w-full flex-1 flex flex-col bg-white">
         <SchoolDetail
           onBack={() => setCurrentPage("home")}
           showPhone={showDetailPhone}
@@ -385,6 +386,7 @@ export default function App() {
             setCurrentPage("school_introduction")
           }
         />
+        </div>
       </MobileLayout>
     );
   }
@@ -523,7 +525,9 @@ export default function App() {
   if (currentPage === "job_detail") {
     return (
       <MobileLayout bgClass="bg-white">
-        <JobDetailPage onBack={() => setCurrentPage("home")} />
+        <div className="min-h-[100dvh] w-full flex-1 flex flex-col bg-white relative">
+          <JobDetailPage onBack={() => setCurrentPage("home")} />
+        </div>
       </MobileLayout>
     );
   }
