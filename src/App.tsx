@@ -37,6 +37,7 @@ import { CoachList } from "./components/home/CoachList";
 import { SchoolIntroductionDetail } from "./components/home/SchoolIntroductionDetail";
 import { FloatingActionButtons } from "./components/home/FloatingActionButtons";
 import { MobileLayout } from "./components/common/MobileLayout";
+import { SECONDARY_PAGE_BG } from "./constants/theme";
 
 import JobsPage from "./components/jobs/JobsPage";
 import JobDetailPage from "./components/jobs/JobDetailPage";
@@ -638,8 +639,14 @@ export default function App() {
           onJobClick={() => setCurrentPage("job_detail")}
         />
       ) : (
-        <ProfilePage
-          droneType={droneType}
+        <main
+          className="flex-1 overflow-y-auto pb-[80px]"
+          style={{
+            backgroundImage: SECONDARY_PAGE_BG,
+          }}
+        >
+          <ProfilePage
+            droneType={droneType}
           licenseType={licenseType}
           onSwitchType={() => setShowExamTypeSelector(true)}
           onMyMistakesClick={() =>
@@ -682,7 +689,8 @@ export default function App() {
           }
           isLoggedIn={isLoggedIn}
           onLoginClick={() => setCurrentPage("login")}
-        />
+          />
+        </main>
       )}
 
       <BottomNav
