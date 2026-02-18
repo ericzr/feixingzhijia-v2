@@ -37,7 +37,7 @@ import { CoachList } from "./components/home/CoachList";
 import { SchoolIntroductionDetail } from "./components/home/SchoolIntroductionDetail";
 import { FloatingActionButtons } from "./components/home/FloatingActionButtons";
 import { MobileLayout } from "./components/common/MobileLayout";
-import { SECONDARY_PAGE_BG } from "./constants/theme";
+import { SECONDARY_PAGE_BG, ROOT_BG_SPLIT } from "./constants/theme";
 
 import JobsPage from "./components/jobs/JobsPage";
 import JobDetailPage from "./components/jobs/JobDetailPage";
@@ -126,9 +126,7 @@ export default function App() {
     }
   }, [activeTab, currentPage]);
 
-  // 根背景与 theme-color：详情页整页白；其余页头部米黄、底部白；仅「我的」主 tab 状态栏米色
-  const ROOT_BG_SPLIT =
-    "linear-gradient(180deg, #fbf2db 0%, #fbf2db 120px, #ffffff 120px, #ffffff 100%)";
+  // theme-color：仅「我的」主 tab 状态栏米色；根背景由组件层 innerBgStyle 控制，body 仅作兜底白
   useEffect(() => {
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) {
@@ -136,7 +134,7 @@ export default function App() {
       meta.setAttribute("content", isProfileMain ? "#fbf2db" : "#ffffff");
     }
     const isDetailPage = currentPage === "school_detail" || currentPage === "job_detail";
-    document.body.style.background = isDetailPage ? "#ffffff" : ROOT_BG_SPLIT;
+    document.body.style.background = isDetailPage ? "#ffffff" : "#ffffff";
   }, [showCitySelector, currentPage, activeTab]);
 
   const handleExamTypeConfirm = (
@@ -176,7 +174,7 @@ export default function App() {
 
   if (showCitySelector) {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <CitySelector
           onClose={() => setShowCitySelector(false)}
         />
@@ -187,7 +185,7 @@ export default function App() {
   // Handle Sequential Practice Pages (Full Screen)
   if (currentPage === "sequential_intro") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <SequentialPracticeIntro
           onBack={() => setCurrentPage("home")}
           onStartPractice={() =>
@@ -203,7 +201,7 @@ export default function App() {
 
   if (currentPage === "sequential_detail") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <SequentialPracticeDetail
           onBack={() => setCurrentPage("sequential_intro")}
         />
@@ -213,7 +211,7 @@ export default function App() {
 
   if (currentPage === "random_practice_detail") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <RandomPracticeDetail
           onBack={() => setCurrentPage("sequential_intro")}
         />
@@ -223,7 +221,7 @@ export default function App() {
 
   if (currentPage === "mock_exam") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <MockExam
           onBack={() => setCurrentPage("home")}
           onRealExamClick={() =>
@@ -236,7 +234,7 @@ export default function App() {
 
   if (currentPage === "simulation_setup") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <SimulationSetup
           onBack={() => setCurrentPage("home")}
         />
@@ -246,7 +244,7 @@ export default function App() {
 
   if (currentPage === "simplified_practice") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <SimplifiedPractice
           onBack={() => setCurrentPage("home")}
         />
@@ -256,7 +254,7 @@ export default function App() {
 
   if (currentPage === "real_exam_external") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <RealExamExternal
           onBack={() => setCurrentPage("home")}
         />
@@ -266,7 +264,7 @@ export default function App() {
 
   if (currentPage === "pre_exam_papers") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <PreExamPapers onBack={() => setCurrentPage("home")} />
       </MobileLayout>
     );
@@ -274,7 +272,7 @@ export default function App() {
 
   if (currentPage === "integrated_qa") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <IntegratedQA onBack={() => setCurrentPage("home")} />
       </MobileLayout>
     );
@@ -282,7 +280,7 @@ export default function App() {
 
   if (currentPage === "comprehensive_qa") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <div className="flex-1 min-h-0 overflow-y-auto">
           <ComprehensiveQAPage onBack={() => setCurrentPage("home")} />
         </div>
@@ -292,7 +290,7 @@ export default function App() {
 
   if (currentPage === "daily_practice") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <DailyPractice onBack={() => setCurrentPage("home")} />
       </MobileLayout>
     );
@@ -300,7 +298,7 @@ export default function App() {
 
   if (currentPage === "chapter_practice") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <ChapterPractice
           onBack={() => setCurrentPage("home")}
         />
@@ -310,7 +308,7 @@ export default function App() {
 
   if (currentPage === "exam_record") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <ExamRecord
           onBack={() => setCurrentPage("home")}
           onStartExam={() =>
@@ -323,7 +321,7 @@ export default function App() {
 
   if (currentPage === "my_mistakes") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <MyMistakes onBack={() => setCurrentPage("home")} />
       </MobileLayout>
     );
@@ -331,7 +329,7 @@ export default function App() {
 
   if (currentPage === "my_favorites") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <MyFavorites onBack={() => setCurrentPage("home")} />
       </MobileLayout>
     );
@@ -339,7 +337,7 @@ export default function App() {
 
   if (currentPage === "invitation_code") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <InvitationCode onBack={() => setCurrentPage("home")} />
       </MobileLayout>
     );
@@ -347,7 +345,7 @@ export default function App() {
 
   if (currentPage === "caac_binding") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <CaacBinding
           onBack={() => setCurrentPage("home")}
           onSuccess={() => setCurrentPage("caac_success")}
@@ -358,7 +356,7 @@ export default function App() {
 
   if (currentPage === "caac_certified") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <CaacCertified
           onBack={() => setCurrentPage("home")}
           onUpdate={() => setCurrentPage("caac_binding")}
@@ -370,7 +368,7 @@ export default function App() {
 
   if (currentPage === "caac_success") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <CaacUploadSuccess
           onBackToHome={() => {
             setHasCertified(true);
@@ -406,7 +404,7 @@ export default function App() {
 
   if (currentPage === "school_introduction") {
     return (
-      <MobileLayout bgClass="bg-white">
+      <MobileLayout bgClass="bg-white" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <SchoolIntroductionDetail
           onBack={() => setCurrentPage("school_detail")}
         />
@@ -416,7 +414,7 @@ export default function App() {
 
   if (currentPage === "school_reviews") {
     return (
-      <MobileLayout bgClass="bg-white">
+      <MobileLayout bgClass="bg-white" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <ReviewList
           onBack={() => setCurrentPage("school_detail")}
         />
@@ -426,7 +424,7 @@ export default function App() {
 
   if (currentPage === "school_coach_list") {
     return (
-      <MobileLayout bgClass="bg-white">
+      <MobileLayout bgClass="bg-white" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <CoachList
           onBack={() => setCurrentPage("school_detail")}
         />
@@ -436,7 +434,7 @@ export default function App() {
 
   if (currentPage === "login") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <LoginPage
           onBack={() => setCurrentPage("home")}
           onLoginSuccess={() => {
@@ -451,7 +449,7 @@ export default function App() {
 
   if (currentPage === "settings") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <SettingsPage
           onBack={() => setCurrentPage("home")}
           onLogout={() => {
@@ -469,7 +467,7 @@ export default function App() {
 
   if (currentPage === "my_collections") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <MyCollectionsPage onBack={() => setCurrentPage("home")} />
       </MobileLayout>
     );
@@ -477,7 +475,7 @@ export default function App() {
 
   if (currentPage === "flight_application") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <FlightApplicationPage onBack={() => setCurrentPage("home")} onProxyApply={() => setCurrentPage("flight_proxy_apply")} onRecords={() => setCurrentPage("flight_records")} />
       </MobileLayout>
     );
@@ -485,7 +483,7 @@ export default function App() {
 
   if (currentPage === "flight_proxy_apply") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <FlightProxyApplyPage onBack={() => setCurrentPage("flight_application")} onSubmitSuccess={() => setCurrentPage("flight_records")} />
       </MobileLayout>
     );
@@ -493,7 +491,7 @@ export default function App() {
 
   if (currentPage === "airspace_view") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <AirspaceViewPage onBack={() => setCurrentPage("home")} />
       </MobileLayout>
     );
@@ -501,7 +499,7 @@ export default function App() {
 
   if (currentPage === "climate_query") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <ClimateQueryPage onBack={() => setCurrentPage("home")} />
       </MobileLayout>
     );
@@ -509,7 +507,7 @@ export default function App() {
 
   if (currentPage === "resume_edit") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <ResumeEditPage
           onBack={() => setCurrentPage("home")}
           onSave={() => setCurrentPage("home")}
@@ -521,7 +519,7 @@ export default function App() {
 
   if (currentPage === "institution_cert") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <InstitutionCertPage onBack={() => setCurrentPage("resume_edit")} />
       </MobileLayout>
     );
@@ -529,7 +527,7 @@ export default function App() {
 
   if (currentPage === "flight_records") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]">
+      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }}>
         <FlightRecordsPage onBack={() => setCurrentPage("flight_application")} />
       </MobileLayout>
     );
@@ -546,10 +544,19 @@ export default function App() {
   }
 
   return (
-    <MobileLayout bgClass={activeTab === "profile" ? "bg-[#fbf2db]" : "bg-white"}>
+    <MobileLayout
+      bgClass={activeTab === "profile" ? "bg-[#fbf2db]" : "bg-white"}
+      innerBgStyle={{ background: ROOT_BG_SPLIT }}
+    >
       {activeTab === "exam" ? (
         <>
-          {/* Header is absolute, so it stays on top of the scrolling main content */}
+          {/*
+            考试页参数设计（头部米黄 + 底部白）：
+            - 头部：Header 占 h-[96px]（含 40px StatusBar 安全区 + 56px 内容），未滚动时 bg-[rgb(251,242,219)] 覆盖顶部，故安全区呈米黄。
+            - 主区：main 使用 backgroundImage 渐变（米黄→白），与 SECONDARY_PAGE_BG 一致。
+            - 底部：BottomNav absolute bottom-0、bg-white、paddingBottom: env(safe-area-inset-bottom)，故底部及安全区为白。
+            - 容器：本层 MobileLayout 内层用 innerBgStyle=ROOT_BG_SPLIT（0~120px 米黄、以下白），与 Header 视觉一致，底部透出白。
+          */}
           <div className="absolute top-0 w-full z-50">
             <Header
               onCityClick={() => setShowCitySelector(true)}
