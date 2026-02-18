@@ -529,7 +529,7 @@ export default function App() {
   }
 
   return (
-    <MobileLayout bgClass="bg-white">
+    <MobileLayout bgClass={activeTab === "profile" ? "bg-[#fbf2db]" : "bg-white"}>
       {activeTab === "exam" ? (
         <>
           {/* Header is absolute, so it stays on top of the scrolling main content */}
