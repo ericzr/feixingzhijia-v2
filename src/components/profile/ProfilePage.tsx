@@ -1,4 +1,5 @@
 import React from "react";
+import { SECONDARY_PAGE_BG } from "../../constants/theme";
 import { ProfileCandidateView } from "./ProfileCandidateView";
 import { ProfilePilotView } from "./ProfilePilotView";
 
@@ -41,7 +42,7 @@ export default function ProfilePage({
   
   if (role === 'pilot') {
     return (
-      <div className="flex-1 min-h-0 bg-[#fefbf4] relative overflow-y-auto scrollbar-hide pb-[80px]">
+      <div className="flex-1 min-h-0 relative overflow-y-auto scrollbar-hide pb-[80px]" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
         <ProfilePilotView 
           onSwitchRole={onRoleToggle} 
           onMyFavoritesClick={onMyFavoritesClick}
@@ -61,7 +62,7 @@ export default function ProfilePage({
   }
 
   return (
-    <div className="flex-1 min-h-0 bg-[#fefbf4] relative overflow-y-auto scrollbar-hide pb-[80px]">
+    <div className="flex-1 min-h-0 relative overflow-y-auto scrollbar-hide pb-[80px]" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
       <ProfileCandidateView 
         onSwitchRole={onRoleToggle} 
         onMyMistakesClick={onMyMistakesClick}
