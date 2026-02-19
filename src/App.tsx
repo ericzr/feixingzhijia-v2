@@ -126,7 +126,7 @@ export default function App() {
     }
   }, [activeTab, currentPage]);
 
-  // theme-color：仅「我的」主 tab 状态栏米色；根背景：详情页全白，其余页头部米黄-底部白渐变
+  // theme-color、根背景、根级顶部安全条：详情页全白，其余页头部米黄-底部白
   useEffect(() => {
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) {
@@ -135,6 +135,8 @@ export default function App() {
     }
     const isDetailPage = currentPage === "school_detail" || currentPage === "job_detail";
     document.body.style.background = isDetailPage ? "#ffffff" : ROOT_BG_SPLIT;
+    const topStrip = document.getElementById("root-safe-area-top");
+    if (topStrip) (topStrip as HTMLElement).style.background = isDetailPage ? "#ffffff" : "#fbf2db";
   }, [showCitySelector, currentPage, activeTab]);
 
   const handleExamTypeConfirm = (

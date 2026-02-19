@@ -7,16 +7,25 @@
     <meta name="theme-color" content="#ffffff" />
     <title>feixingzhijia（大黄蜂）</title>
     <style>
-      /* 禁止页面横向滑动；根背景默认头部米黄-底部白渐变，安全区可透出；详情页全白由 JS 覆盖 */
+      /* 禁止页面横向滑动；根背景上米黄下白渐变；顶部安全区由固定条覆盖，避免被白层挡住 */
       html, body {
         overflow-x: hidden; max-width: 100%;
         background: linear-gradient(180deg, #fbf2db 0%, #fbf2db 120px, #ffffff 120px, #ffffff 100%);
       }
       #root { overflow-x: hidden; max-width: 100%; min-height: 100dvh; background: transparent; }
+      /* 根级固定条：覆盖头部安全区，默认米黄；详情页由 JS 改为白 */
+      #root-safe-area-top {
+        position: fixed; top: 0; left: 0; right: 0;
+        height: env(safe-area-inset-top, 40px); min-height: 40px;
+        background: #fbf2db;
+        z-index: 9999;
+        pointer-events: none;
+      }
     </style>
   </head>
 
   <body>
+      <div id="root-safe-area-top" aria-hidden="true"></div>
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
     </body>
