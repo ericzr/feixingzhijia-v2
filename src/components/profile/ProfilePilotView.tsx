@@ -22,27 +22,20 @@ interface ProfilePilotViewProps {
 export function ProfilePilotView({ onSwitchRole, onMyFavoritesClick, onCollectionsClick, onFlightApplicationClick, onAirspaceClick, onClimateQueryClick, onResumeClick, onInvitationCodeClick, onCaacBindingClick, onSettingsClick, isLoggedIn = false, onLoginClick }: ProfilePilotViewProps) {
   return (
     <div className="flex flex-col w-full min-h-0 flex-1 overflow-x-hidden" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
-      {/* Header Section with Gradient - 顶部 40px 安全区并入，不再使用 sticky 色条避免滚动时多出一块遮挡 */}
-      <div className="relative w-full h-[163px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-[40px] pb-[0px] flex flex-col gap-[20px] shrink-0 overflow-x-hidden md:h-auto md:py-6 md:rounded-b-2xl">
+      {/* Header Section with Gradient - 顶部 40px 安全区并入；删除空条后高度减 40px，模块间距不变、整体上提 */}
+      <div className="relative w-full h-[123px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-[40px] pb-[0px] flex flex-col gap-[20px] shrink-0 overflow-x-hidden md:h-auto md:py-6 md:rounded-b-2xl">
         {/* 顶部翅膀插画背景（1:1 PNG），整块铺在 Header 右侧，仅做装饰，不参与布局、不会撑宽页面 */}
         <div
           className="pointer-events-none absolute inset-0 opacity-70"
           style={{
             backgroundImage: `url(${getPublicUrl("images/profile-caac-wings.png")})`,
             backgroundRepeat: "no-repeat",
-            // 调整：贴紧右侧边界，整体略向下，同时缩小一些
-            backgroundPosition: "right 0 bottom 8px",
-            backgroundSize: "auto 48%",
+            // 贴紧右侧，整体再向下 5–7px，并略微放大
+            backgroundPosition: "right 0 bottom 0px",
+            backgroundSize: "auto 60%",
           }}
         />
-        {/* Top Icons */}
-        <div className="flex items-center justify-between w-full h-[39.973px]">
-           {/* Scan Icon - Unified with Candidate View (Search Icon Removed) */}
-           <div className="relative shrink-0 size-[39.973px]">
-            {/* Search Icon Removed Here */}
-          </div>
-        </div>
-
+        {/* Top Icons 行已移除，直接进入用户信息区域 */}
         {/* User Info - min-w-0 防止被插画撑宽 */}
         <div className="content-stretch flex items-center justify-between min-w-0 overflow-x-hidden px-[8px] py-0 relative w-full h-[63.996px] md:px-4">
           {/* Avatar & Text */}

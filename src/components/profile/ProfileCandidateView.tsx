@@ -29,15 +29,8 @@ export function ProfileCandidateView({
 }: ProfileCandidateViewProps) {
   return (
     <div className="flex flex-col w-full min-h-0 flex-1" style={{ backgroundImage: SECONDARY_PAGE_BG }}>
-      {/* Header Section with Gradient - 顶部 40px 安全区并入，不再使用 sticky 色条避免滚动时多出一块遮挡 */}
-      <div className="w-full h-[163px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-[40px] pb-[0px] flex flex-col gap-[20px] shrink-0 md:h-auto md:py-6 md:rounded-b-2xl">
-        {/* Top Icons - Scan Icon (Search Icon Removed) */}
-        <div className="flex items-center justify-between w-full h-[39.973px]">
-          <div className="relative shrink-0 size-[39.973px]">
-            {/* Search Icon Removed Here */}
-          </div>
-        </div>
-
+      {/* Header Section with Gradient - 顶部 40px 安全区并入；删除空条后高度减 40px，模块间距不变、整体上提 */}
+      <div className="w-full h-[123px] bg-gradient-to-b from-[#fbf2db] to-[rgba(249,250,251,0)] px-[16px] pt-[40px] pb-[0px] flex flex-col gap-[20px] shrink-0 md:h-auto md:py-6 md:rounded-b-2xl">
         {/* User Info & VIP */}
         <div className="content-stretch flex items-center justify-between px-[8px] py-0 relative w-full md:px-4">
           <div 
@@ -126,7 +119,12 @@ export function ProfileCandidateView({
             <div className="[grid-area:1_/_1] content-stretch flex flex-col gap-[5.98px] h-[70.941px] items-center pb-[0.75px] pt-0 px-0 relative shrink-0 w-full">
               <div className="h-[15.985px] relative shrink-0 w-[47.988px]">
                 <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                  <p className="absolute font-['Inter'] font-medium leading-[16px] left-[24px] not-italic text-[#62748e] text-[12px] text-center top-[0.74px] translate-x-[-50%] whitespace-pre">累计答题</p>
+                  <p
+                    className="absolute font-['Inter'] font-medium leading-[16px] left-[24px] not-italic text-[12px] text-center top-[0.74px] translate-x-[-50%] whitespace-pre"
+                    style={{ color: "#8B7355" }}
+                  >
+                    累计答题
+                  </p>
                 </div>
               </div>
               <div className="h-[27.99px] relative shrink-0 w-[17.474px]">
@@ -146,7 +144,12 @@ export function ProfileCandidateView({
               <div aria-hidden="true" className="absolute border-[#f9fafb] border-[0px_0.745px] border-solid inset-0 pointer-events-none" />
               <div className="h-[15.985px] relative shrink-0 w-[59.983px]">
                 <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                  <p className="absolute font-['Inter'] font-medium leading-[16px] left-[30px] not-italic text-[#62748e] text-[12px] text-center top-[0.74px] translate-x-[-50%] whitespace-pre">模拟平均分</p>
+                  <p
+                    className="absolute font-['Inter'] font-medium leading-[16px] left-[30px] not-italic text-[12px] text-center top-[0.74px] translate-x-[-50%] whitespace-pre"
+                    style={{ color: "#8B7355" }}
+                  >
+                    模拟平均分
+                  </p>
                 </div>
               </div>
               <div className="h-[27.99px] relative shrink-0 w-[17.474px]">
@@ -165,7 +168,12 @@ export function ProfileCandidateView({
             <div className="[grid-area:1_/_3] content-stretch flex flex-col gap-[5.98px] h-[70.941px] items-center pb-[20.987px] pt-0 px-0 relative shrink-0 w-full">
               <div className="h-[15.985px] relative shrink-0 w-[59.983px]">
                 <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                  <p className="absolute font-['Inter'] font-medium leading-[16px] left-[30px] not-italic text-[#62748e] text-[12px] text-center top-[0.74px] translate-x-[-50%] whitespace-pre">考试通过率</p>
+                  <p
+                    className="absolute font-['Inter'] font-medium leading-[16px] left-[30px] not-italic text-[12px] text-center top-[0.74px] translate-x-[-50%] whitespace-pre"
+                    style={{ color: "#8B7355" }}
+                  >
+                    考试通过率
+                  </p>
                 </div>
               </div>
               <div className="h-[27.99px] relative shrink-0 w-[28.619px]">

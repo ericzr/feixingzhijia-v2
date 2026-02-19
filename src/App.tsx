@@ -126,7 +126,11 @@ export default function App() {
     }
   }, [activeTab, currentPage]);
 
-  // theme-color、根背景、根级顶部安全条：详情页全白，其余页头部米黄-底部白
+  // theme-color、根背景、根级顶部安全条：
+  // - 详情页（航校/接单详情）整页白，头部安全区白
+  // - 接单一级页、考试页下滑至航校列表时头部安全区白
+  // - 城市选择、考试类型选择页头部安全区 #FEFBF4
+  // - 其它页面头部安全区米黄 #fbf2db，底部仍为白渐变
   useEffect(() => {
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) {
@@ -134,10 +138,22 @@ export default function App() {
       meta.setAttribute("content", isProfileMain ? "#fbf2db" : "#ffffff");
     }
     const isDetailPage = currentPage === "school_detail" || currentPage === "job_detail";
+    const isJobsMain = currentPage === "home" && activeTab === "jobs";
+    const isExamScrolledWhite = currentPage === "home" && activeTab === "exam" && isScrolled;
+    const stripShouldBeFefbf4 = showCitySelector || showExamTypeSelector;
+    const stripShouldBeWhite = !stripShouldBeFefbf4 && (isDetailPage || isJobsMain || isExamScrolledWhite);
+
     document.body.style.background = isDetailPage ? "#ffffff" : ROOT_BG_SPLIT;
     const topStrip = document.getElementById("root-safe-area-top");
-    if (topStrip) (topStrip as HTMLElement).style.background = isDetailPage ? "#ffffff" : "#fbf2db";
-  }, [showCitySelector, currentPage, activeTab]);
+    if (topStrip) {
+      const color = stripShouldBeFefbf4
+        ? "#FEFBF4"
+        : stripShouldBeWhite
+        ? "#ffffff"
+        : "#fbf2db";
+      (topStrip as HTMLElement).style.background = color;
+    }
+  }, [showCitySelector, showExamTypeSelector, currentPage, activeTab, isScrolled]);
 
   const handleExamTypeConfirm = (
     newDroneType: DroneType,
