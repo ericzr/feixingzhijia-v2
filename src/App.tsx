@@ -131,6 +131,7 @@ export default function App() {
   // - 接单一级页、考试页下滑至航校列表时头部安全区白
   // - 城市选择、考试类型选择页头部安全区 #FEFBF4
   // - 其它页面头部安全区米黄 #fbf2db，底部仍为白渐变
+  // - body 与 #root-safe-area-top 使用 0.2s 过渡，与 Header 的 duration-200 同步，避免头部色块逐步切换
   useEffect(() => {
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) {
@@ -143,6 +144,7 @@ export default function App() {
     const stripShouldBeFefbf4 = showCitySelector || showExamTypeSelector;
     const stripShouldBeWhite = !stripShouldBeFefbf4 && (isDetailPage || isJobsMain || isExamScrolledWhite);
 
+    document.body.style.transition = "background 0.2s ease";
     document.body.style.background = isDetailPage ? "#ffffff" : ROOT_BG_SPLIT;
     const topStrip = document.getElementById("root-safe-area-top");
     if (topStrip) {
@@ -401,7 +403,7 @@ export default function App() {
   if (currentPage === "school_detail") {
     return (
       <MobileLayout bgClass="bg-white">
-        <div className="min-h-[100dvh] w-full flex-1 flex flex-col bg-white">
+        <div className="h-full min-h-0 w-full flex-1 flex flex-col bg-white">
         <SchoolDetail
           onBack={() => setCurrentPage("home")}
           showPhone={showDetailPhone}
@@ -554,7 +556,7 @@ export default function App() {
   if (currentPage === "job_detail") {
     return (
       <MobileLayout bgClass="bg-white">
-        <div className="min-h-[100dvh] w-full flex-1 flex flex-col bg-white relative">
+        <div className="h-full min-h-0 w-full flex-1 flex flex-col bg-white relative">
           <JobDetailPage onBack={() => setCurrentPage("home")} />
         </div>
       </MobileLayout>

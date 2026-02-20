@@ -13,13 +13,14 @@
         background: linear-gradient(180deg, #fbf2db 0%, #fbf2db 120px, #ffffff 120px, #ffffff 100%);
       }
       #root { overflow-x: hidden; max-width: 100%; min-height: 100dvh; background: transparent; }
-      /* 根级固定条：覆盖头部安全区，默认米黄；详情页由 JS 改为白 */
+      /* 根级固定条：覆盖头部安全区，默认米黄；详情页由 JS 改为白；与 Header 同步过渡 */
       #root-safe-area-top {
         position: fixed; top: 0; left: 0; right: 0;
         height: env(safe-area-inset-top, 40px); min-height: 40px;
         background: #fbf2db;
         z-index: 9999;
         pointer-events: none;
+        transition: background 0.2s ease;
       }
     </style>
   </head>
