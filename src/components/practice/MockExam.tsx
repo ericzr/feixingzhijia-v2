@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SECONDARY_PAGE_BG } from '../../constants/theme';
 import svgPaths from '../../imports/svg-099w7j2n06';
 import { MockExamDetail } from './MockExamDetail';
@@ -294,8 +294,12 @@ function SecretExamPaperCard() {
   );
 }
 
-export function MockExam({ onBack, onRealExamClick }: { onBack?: () => void, onRealExamClick?: () => void }) {
+export function MockExam({ onBack, onRealExamClick, onExamStarted }: { onBack?: () => void, onRealExamClick?: () => void, onExamStarted?: (started: boolean) => void }) {
   const [isStarted, setIsStarted] = useState(false);
+
+  useEffect(() => {
+    onExamStarted?.(isStarted);
+  }, [isStarted, onExamStarted]);
 
   if (isStarted) {
     return <MockExamDetail onBack={() => setIsStarted(false)} />;

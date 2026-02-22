@@ -292,7 +292,7 @@ export function ProfileCandidateView({
           />
           <MenuItem 
             icon={<svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15 15"><path d={svgPathsPilot.p32f8f000} fill="#584B31" stroke="#584B31" strokeWidth="0.4" /></svg>}
-            label="绑定caac证书" 
+            label="绑定CAAC证书" 
             iconSize="size-[15px]"
             onClick={onCaacBindingClick}
           />

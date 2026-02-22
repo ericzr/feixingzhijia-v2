@@ -106,6 +106,8 @@ export default function App() {
   >("candidate");
   const [hasCertified, setHasCertified] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  /** 模拟考试：是否已进入「考试习题」页（用于头部/根背景切白；入口页保持米黄） */
+  const [isMockExamDetailView, setIsMockExamDetailView] = useState(false);
 
   const schoolListRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLElement>(null);
@@ -126,8 +128,14 @@ export default function App() {
     }
   }, [activeTab, currentPage]);
 
+  // 离开模拟考试页时重置「考试习题」视图标记
+  useEffect(() => {
+    if (currentPage !== "mock_exam") setIsMockExamDetailView(false);
+  }, [currentPage]);
+
   // theme-color、根背景、根级顶部安全条：
-  // - 详情页（航校/接单详情）整页白，头部安全区白
+  // - 详情页（航校/接单详情）、顺序练习/随机练习、模拟考试习题页整页白，头部安全区白
+  // - 模拟考试入口页（进入考试前）保持米黄
   // - 接单一级页、考试页下滑至航校列表时头部安全区白
   // - 城市选择、考试类型选择页头部安全区 #FEFBF4
   // - 其它页面头部安全区米黄 #fbf2db，底部仍为白渐变
@@ -139,13 +147,15 @@ export default function App() {
       meta.setAttribute("content", isProfileMain ? "#fbf2db" : "#ffffff");
     }
     const isDetailPage = currentPage === "school_detail" || currentPage === "job_detail";
+    const isPracticeDetailPage = currentPage === "sequential_detail" || currentPage === "random_practice_detail";
+    const isMockExamDetail = currentPage === "mock_exam" && isMockExamDetailView;
     const isJobsMain = currentPage === "home" && activeTab === "jobs";
     const isExamScrolledWhite = currentPage === "home" && activeTab === "exam" && isScrolled;
     const stripShouldBeFefbf4 = showCitySelector || showExamTypeSelector;
-    const stripShouldBeWhite = !stripShouldBeFefbf4 && (isDetailPage || isJobsMain || isExamScrolledWhite);
+    const stripShouldBeWhite = !stripShouldBeFefbf4 && (isDetailPage || isPracticeDetailPage || isMockExamDetail || isJobsMain || isExamScrolledWhite);
 
     document.body.style.transition = "background 0.2s ease";
-    document.body.style.background = isDetailPage ? "#ffffff" : ROOT_BG_SPLIT;
+    document.body.style.background = isDetailPage || isPracticeDetailPage || isMockExamDetail ? "#ffffff" : ROOT_BG_SPLIT;
     const topStrip = document.getElementById("root-safe-area-top");
     if (topStrip) {
       const color = stripShouldBeFefbf4
@@ -155,7 +165,7 @@ export default function App() {
         : "#fbf2db";
       (topStrip as HTMLElement).style.background = color;
     }
-  }, [showCitySelector, showExamTypeSelector, currentPage, activeTab, isScrolled]);
+  }, [showCitySelector, showExamTypeSelector, currentPage, activeTab, isScrolled, isMockExamDetailView]);
 
   const handleExamTypeConfirm = (
     newDroneType: DroneType,
@@ -221,7 +231,7 @@ export default function App() {
 
   if (currentPage === "sequential_detail") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }} outerTransparent topSafeAreaBeige>
+      <MobileLayout bgClass="bg-white">
         <SequentialPracticeDetail
           onBack={() => setCurrentPage("sequential_intro")}
         />
@@ -231,7 +241,7 @@ export default function App() {
 
   if (currentPage === "random_practice_detail") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }} outerTransparent topSafeAreaBeige>
+      <MobileLayout bgClass="bg-white">
         <RandomPracticeDetail
           onBack={() => setCurrentPage("sequential_intro")}
         />
@@ -241,12 +251,18 @@ export default function App() {
 
   if (currentPage === "mock_exam") {
     return (
-      <MobileLayout bgClass="bg-[#fefbf4]" innerBgStyle={{ background: ROOT_BG_SPLIT }} outerTransparent topSafeAreaBeige>
+      <MobileLayout
+        bgClass={isMockExamDetailView ? "bg-white" : "bg-[#fefbf4]"}
+        innerBgStyle={isMockExamDetailView ? undefined : { background: ROOT_BG_SPLIT }}
+        outerTransparent={!isMockExamDetailView}
+        topSafeAreaBeige={!isMockExamDetailView}
+      >
         <MockExam
           onBack={() => setCurrentPage("home")}
           onRealExamClick={() =>
             setCurrentPage("real_exam_external")
           }
+          onExamStarted={setIsMockExamDetailView}
         />
       </MobileLayout>
     );
